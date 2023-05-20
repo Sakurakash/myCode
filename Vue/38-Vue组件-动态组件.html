@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>38-Vue组件-动态组件</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<button @click.prevent="toggle">切换</button>
+<!--	<home v-if="isShow"></home>-->
+<!--	<baidu v-else></baidu>-->
+<!--	<keep-alive> 标签可以保存组件的状态-->
+	<keep-alive>
+		<component v-bind:is="name"></component>
+	</keep-alive>
+</div>
+<template id="home">
+	<div>
+		<p>我是首页</p>
+		<input type="checkbox">
+	</div>
+</template>
+<template id="baidu">
+	<div>
+		<img src="bdlogo.png" alt="">
+	</div>
+</template>
+<script>
+	Vue.component("home", {
+		template: "#home"
+	});
+	Vue.component("baidu", {
+		template: "#baidu"
+	});
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+			isShow: true,
+	        name: "home"
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+			toggle(){
+				this.isShow = !this.isShow;
+				this.name = this.name === "home" ? "baidu" : "home"
+			}
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-h5新增存储方案</title>
+    <script>
+        // sessionStorage的生命周期为一次会话,会话关闭后就消失;
+        /*sessionStorage.setItem("name", "zs");
+        sessionStorage.setItem("age", "33");
+        sessionStorage.setItem("name", "ls");//增和改;无key时创建key,有key时修改value;
+        sessionStorage.removeItem("name");//删;
+        let item = sessionStorage.getItem("age");//查;
+        console.log(item);*/
+        // sessionStorage.clear();//清空;
+
+        // localStorage的生命周期只要不清空,就会一直存在;
+        localStorage.setItem("name", "zs");
+        localStorage.setItem("age", "33");
+        localStorage.setItem("name", "ls");//增和改;无key时创建key,有key时修改value;
+        localStorage.removeItem("name");//删;
+        let item = localStorage.getItem("age");//查;
+        console.log(item);
+        localStorage.clear();//清空;
+    </script>
+</head>
+<body>
+
+</body>
+</html>

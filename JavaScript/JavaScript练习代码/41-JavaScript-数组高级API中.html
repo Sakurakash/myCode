@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>41-JavaScript-数组高级API中</title>
+    <script>
+        let arr = [1, 3, 5, 7, 9];
+
+        /*Array.prototype.myFindIndex = function (fn){
+            let res = -1;
+            for (let i = 0; i < this.length; i++){
+                if (fn(this[i])) {
+                    res = i;
+                    break;
+                }
+            }
+            return res;
+        }*/
+
+        Array.prototype.myFind = function (fn){
+            for (let i = 0; i < this.length; i++){
+                if (fn(this[i])) {
+                    return this[i];
+                }
+            }
+
+        }
+
+        /*let index = arr.myFindIndex(function (currentValue, currentIndex, currentArray){
+            if (currentValue === 9){
+                return true;
+            }
+        })*/
+
+        let index = arr.myFind(function (currentValue, currentIndex, currentArray){
+            if (currentValue === 2){
+                return true;
+            }
+        })
+
+        console.log(index);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

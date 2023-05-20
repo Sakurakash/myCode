@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>77-JavaScript-缓动动画</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .line1, .line2{
+            width: 500px;
+            height: 20px;
+            background: blue;
+        }
+        .line2{
+            width: 200px;
+            background: purple;
+        }
+    </style>
+</head>
+<body>
+<button id="start1">开始到500</button>
+<button id="start2">开始到200</button>
+<button id="end">结束</button>
+<div class="box"></div>
+<div class="line1"></div>
+<div class="line2"></div>
+<script>
+    //拿取元素;
+    let startBtn1 = document.querySelector("#start1");
+    let startBtn2 = document.querySelector("#start2");
+    let endBtn = document.querySelector("#end");
+    let oBox = document.querySelector(".box");
+    let boxTime = null;
+    //监听事件;
+    function easeAnimation(ele, target) {
+        boxTime = setInterval(function () {
+            let begin = parseInt(ele.style.marginLeft) || 0;
+            let step = (target - begin) * 0.3;
+            begin = begin + step;
+            console.log(step);
+            if (Math.abs(step) <= 1){
+                clearInterval(boxTime);
+                begin = target;
+            }
+            ele.style.marginLeft = begin + "px";
+        }, 30);
+    }
+    startBtn1.onclick = function () {
+        clearInterval(boxTime);
+        easeAnimation(oBox, 500);
+    }
+    startBtn2.onclick = function () {
+        clearInterval(boxTime);
+        easeAnimation(oBox, 200);
+    }
+
+    endBtn.onclick = function () {
+        clearInterval(boxTime);
+    }
+</script>
+</body>
+</html>

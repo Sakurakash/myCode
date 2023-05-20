@@ -1,0 +1,8 @@
+$size: 200px;
+$w: width;
+$s: div;
+#{$s}{//sass中变量为属性值可以直接设置,但若为选择器和属性名称则必须使用#{}(变量插值)的形式;
+  #{$w}: $size;
+  height: $size;
+  background: blue;
+}

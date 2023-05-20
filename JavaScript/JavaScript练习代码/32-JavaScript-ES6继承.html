@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>32-JavaScript-ES6继承</title>
+    <script>
+        class Person{
+            constructor(myName, myAge) {
+                this.name = myName;
+                this.age = myAge;
+            }
+            say(){
+                this.test = "test";
+                console.log(this.name, this.age);
+            }
+        }
+        let p = new Person("wq", 40);
+        p.say();
+        console.log(p.test);
+
+        // class Student extends Person{
+        //     constructor(myName, myAge, myScore) {
+        //         super(myName, myAge);
+        //         this.score = myScore;
+        //     }
+        //     study(){
+        //         console.log(this.score);
+        //         console.log("day day up up");
+        //     }
+        // }
+        // let s = new Student("zs", 24, 98);
+        // s.say();
+        // s.study();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

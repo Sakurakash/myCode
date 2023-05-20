@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-jQuery-holdReady方法</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        //holdReady用以暂停将执行的入口函数;
+        $.holdReady(true);
+        $(document).ready(function () {
+            alert("ready");
+        })
+    </script>
+</head>
+<body>
+<button>btn</button>
+<script>
+    let btn = document.querySelector("button");
+    btn.onclick = function () {
+        $.holdReady(false);
+    }
+</script>
+</body>
+</html>

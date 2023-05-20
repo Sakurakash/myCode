@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18-jQuery尺寸和位置操作</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+            border: 50px solid #000;
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            /*// 1.width(),height()设置和获取元素宽高(不加边框);
+            // $(".father").width(100);
+            console.log($(".father").width());
+            console.log($(".father").height());
+            console.log($(".son").width());
+            console.log($(".son").height());*/
+            /*// 2.offset获取和设置元素相对窗口边缘位置;
+            /!*$(".father").offset({
+                left: 400,
+                top: 400
+            });*!/
+            console.log($(".father").offset().left);
+            console.log($(".father").offset().top);
+            console.log($(".son").offset().left);
+            console.log($(".son").offset().top);*/
+            // 3.position用来获取元素与定位父元素的相对位置(不能设置);
+            console.log($(".father").position().left);
+            console.log($(".father").position().top);
+            console.log($(".son").position().left);
+            console.log($(".son").position().top);
+        })
+    </script>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

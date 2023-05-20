@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>翻转菜单练习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .first{
+            width: 600px;
+            height: 40px;
+            margin: 100px auto;
+            background-color: gray;
+
+        }
+        span{
+            display: inline-block;
+            width: 120px;
+            line-height: 40px;
+            background-color: black;
+        }
+        .first>li{
+            list-style: none;
+            width: 120px;
+            float: left;
+            margin-left: 60px;
+            line-height: 40px;
+            text-align: center;
+            color: white;
+        }
+        .second>li{
+            transform: rotateY(180deg);
+            list-style: none;
+            transition: transform 0.2s,opacity 0.2s;
+            background-color: black;
+            position: relative;
+            opacity: 0;
+            z-index: 1;
+        }
+        .first>li:hover .second>li{
+            transform:none;
+            opacity: 1;
+        }
+        .first>li:hover .second>li:nth-child(1){
+            transition-delay: 0ms;
+        }
+        .first>li:hover .second>li:nth-child(2){
+            transition-delay: 200ms;
+        }
+        .first>li:hover .second>li:nth-child(3){
+            transition-delay: 400ms;
+        }
+        .first>li:hover .second>li:nth-child(4){
+            transition-delay: 600ms;
+        }
+        .first>li .second>li:nth-child(4){
+            transition-delay: 0ms;
+        }
+        .first>li .second>li:nth-child(3){
+            transition-delay: 200ms;
+        }
+        .first>li .second>li:nth-child(2){
+            transition-delay: 400ms;
+        }
+        .first>li .second>li:nth-child(1){
+            transition-delay: 600ms;
+        }
+        .father{
+            width: 600px;
+            height: 400px;
+            background-color: red;
+            margin:0 auto;
+            position: relative;
+            top: -100px;
+        }
+        .son{
+            position: absolute;
+            top: 0;
+            z-index: 0;
+        }
+
+    </style>
+</head>
+<body>
+        <ul class="first">
+            <li><span>一级菜单</span>
+                <ul class="second">
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                </ul>
+            </li>
+            <li><span>一级菜单</span>
+                <ul class="second">
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                </ul>
+            </li>
+            <li><span>一级菜单</span>
+                <ul class="second">
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="father">
+            <div class="son">
+                我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字
+            </div>
+            </div>
+
+</body>
+</html>

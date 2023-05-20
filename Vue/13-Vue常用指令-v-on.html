@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>13-Vue常用指令-v-on</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+<!--    <button onclick="alert(`弹出内容on`)">我是按钮</button>-->
+<!--    <button v-on:click="myFn">我是按钮</button>-->
+    <button @click="myFn('name', 'age', $event)">我是按钮</button>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            name: "sakuraKen",
+        },
+		methods: {
+			myFn(data1, data2, e){
+				// alert("弹出内容v-on");
+				console.log(this.name);
+				console.log(data1, data2);
+				console.log(e.offsetX);
+				// v-on指令可传递参数,还可以传递事件对象;若要在回调中使用data中的参数,需要在参数前加this;
+			}
+		}
+    });
+</script>
+</body>
+</html>

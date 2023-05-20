@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>51-Vuex-基本使用</title>
+	<script src="vue.js"></script>
+	<script src="vuex.js"></script>
+</head>
+<body>
+<div id="app">
+	<grandfather></grandfather>
+</div>
+<template id="grandfather">
+	<div>
+		<p>爷爷中的{{ this.$store.state.msg }}</p>
+		<father></father>
+	</div>
+</template>
+<template id="father">
+	<div>
+		<p>父亲中的{{ this.$store.state.msg }}</p>
+		<son></son>
+	</div>
+</template>
+<template id="son">
+	<div>
+		<p>儿子中的{{ this.$store.state.msg }}</p>
+	</div>
+</template>
+<script>
+	const store = new Vuex.Store({
+		// state就是保存共享数据的地方;
+		state: {
+			msg: "数据"
+		}
+	});
+	// 爷爷组件
+	Vue.component("grandfather",{
+		template: "#grandfather",
+		// 祖先元素添加键名store,保存键值Vuex对象,其所有的后代即可使用Vuex对象中的数据;
+		store: store,
+		// 父亲组件
+		components: {
+			"father": {
+				template: "#father",
+				// 儿子组件
+				components: {
+					"son": {
+						template: "#son"
+					}
+				}
+			}
+		}
+	});
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    },
+	    // 用于定义局部组件
+	    components: {
+
+	    }
+    });
+</script>
+</body>
+</html>

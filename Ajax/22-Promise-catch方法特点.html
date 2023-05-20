@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>22-Promise-catch方法特点</title>
+	<script>
+		/*//传递参数
+		let promise = new Promise(function (resolve, reject) {
+			// resolve("111");
+			reject("aaa");
+		});
+		let p2 = promise.catch(function (data) {
+			console.log("失败1", data);
+			return "bbb";//在给第二个回调函数传递参数的时候,无论是成功的回调函数传递的,还是失败的回调函数传递的,都会传给成功的回调函数
+		});
+		p2.then(function (data) {
+			console.log("成功2", data);
+		},function (data) {
+			console.log("失败2", data);
+		});*/
+
+		/*//多次调用
+		let promise = new Promise(function (resolve, reject) {
+			// resolve("111");
+			reject("aaa");
+		});
+		promise.catch(function (data) {
+			console.log("失败1", data);
+		});
+		promise.catch(function (data) {
+			console.log("失败2", data);
+		});
+		let p2 = promise.catch(function (data) {
+			console.log("失败3", data);
+		});//同一个Promise对象可以调用多个then，多个then都会执行；
+		console.log(p2);
+		console.log(p2 === promise);//Promise对象返回的是一个新的Promise对象;*/
+
+		/*//传递Promise对象
+		let promise = new Promise(function (resolve, reject) {
+			// resolve("111");
+			reject("aaa");
+		});
+		let ppp = new Promise(function (resolve, reject) {
+			// resolve("222");
+			reject("bbb");
+		});
+		let p2 = promise.then(function (data) {
+			console.log("成功1", data);
+		},function (data) {
+			console.log("失败1", data);
+			return ppp;//下一个promise对象执行的是成功的回调还是失败的回调由返回的对象决定;
+		});
+		p2.catch(function (data) {
+			console.log("失败2", data);
+		});*/
+
+		//返回前面的异常
+		let promise = new Promise(function (resolve, reject) {
+			// resolve("111");
+			reject("aaa");
+		});
+		promise.catch(function (data) {
+			console.log("失败1", data);
+			异常;
+		}).catch(function (e) {
+			console.log("失败2", e);
+		});
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

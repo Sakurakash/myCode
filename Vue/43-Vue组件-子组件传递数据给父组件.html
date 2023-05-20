@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>43-Vue组件-子组件传递数据给父组件</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <father></father>
+</div>
+<template id="father">
+	<div>
+		<button @click.prevent="say">父组件按钮</button>
+		<son @parent="say"></son>
+	</div>
+</template>
+<template id="son">
+	<div>
+		<button @click.prevent="sonSay">子组件按钮</button>
+	</div>
+</template>
+<script>
+	Vue.component("father", {
+		template: "#father",
+		methods: {
+			say(data){
+				if (data){
+					console.log(data);
+					alert("父组件方法" + data);
+				}else {
+					alert("父组件方法");
+				}
+			}
+		},
+		components: {
+			"son": {
+				template: "#son",
+				methods: {
+					sonSay(){
+						this.$emit("parent", "sakuraKen");// 这里可以给父组件方法传递参数;
+					}
+				}
+			}
+		}
+	});
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    },
+	    // 用于定义局部组件
+	    components: {
+
+	    }
+    });
+</script>
+</body>
+</html>

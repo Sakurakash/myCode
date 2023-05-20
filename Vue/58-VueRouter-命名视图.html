@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>57-VueRouter-嵌套路由</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.orange, .red{
+			width: 500px;
+			height: 500px;
+		}
+		.skyblue, .yellow{
+			float: left;
+			width: 250px;
+			height: 250px;
+		}
+		.orange{
+			background-color: orange;
+		}
+		.red{
+			background-color: red;
+		}
+		.router-link-active{
+			background-color: #fff;
+		}
+		.test-active{
+			background-color: #12f;
+		}
+	</style>
+	<script src="vue.js"></script>
+	<script src="vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+	<router-view name="name1"></router-view>
+	<router-view name="name2"></router-view>
+</div>
+<template id="one">
+	<div class="orange">
+		<p>我是第一个组件</p>
+	</div>
+</template>
+<template id="two">
+	<div class="red">
+		<p>我是第二个组件</p>
+	</div>
+</template>
+<script>
+	// 1.定义组件
+	const one = {
+		template: "#one"
+	}
+	const two = {
+		template: "#two",
+	}
+	// 2.定义路由规则
+	const routes = [
+		// 数组中的一个对象就是一条规则
+		{
+			path: '/',
+			components: {
+				name1: one,
+				name2: two
+			}// 类似具名插槽, 指定的key值会匹配router-view的name
+		},
+	];
+	// 3.根据自定义的路由规则创建路由对象
+	const router = new VueRouter({
+		routes: routes,
+	});
+    let vue = new Vue({
+        el: "#app",
+	    router: router,
+        // MVVM中的model;
+        data: {
+
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    },
+	    // 用于定义局部组件
+	    components: {
+			one: one,
+		    two: two
+	    }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>55-JavaScript-定时器</title>
+</head>
+<body>
+<button id = "start">开始</button>
+<button id = "close">结束</button>
+<script>
+    let i = 0;
+    let id = null;
+
+    //重复定时器使用方法;
+    /*setInterval(function () {
+        console.log(`时间过去了${++i}秒`);
+    }, 1000);*/
+    //重复定时器实例;
+    let startBtn = document.querySelector("#start");
+    startBtn.onclick = function () {
+        id = setInterval(function () {
+        console.log(`时间过去了${++i}秒`);
+        }, 1000);
+    }
+    let closeBtn = document.querySelector("#close");
+    closeBtn.onclick = function () {
+        clearInterval(id);
+    }
+
+    //一次性定时器使用方法;
+    /*setTimeout(function () {
+        console.log("测试文本");
+    }, 1500);*/
+    //一次性定时器实例;
+    /*let startBtn = document.querySelector("#start");
+    startBtn.onclick = function () {
+        id = setTimeout(function () {
+            console.log("测试文本");
+        }, 1500);
+    }
+    let closeBtn = document.querySelector("#close");
+    closeBtn.onclick = function () {
+        clearInterval(id);
+    }*/
+</script>
+</body>
+</html>

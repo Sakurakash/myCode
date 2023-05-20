@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>24-手撕Promise</title>
+	<script>
+		// 定义常量保存对象状态
+		const PENDING = "pending";
+		const FULFILLED = "fulfilled";
+		const REJECTED = "rejected";
+		class myPromise{
+			constructor(handle) {
+				this.status = PENDING;
+				this.value = undefined;
+				this.reason = undefined;
+				this.onResolvedCallbacks = [];
+				this.onRejectedCallbacks = [];
+				// 判断传入的形参是否是一个函数,不是的话抛出一个异常
+				if (!this.isFunction(handle)){
+					throw new Error("请输入一个函数");
+				}
+				// 给传递的函数传入两个回调函数
+				// handle是传递进来的回调函数,通过handle调用时handle函数内部的this指向window
+				// 传入形参时的this指向实例,但形参内部的this指向为undefined,要将形参回调函数的内部this指向更改;
+				handle(this.resolve.bind(this), this.reject.bind(this));
+			}
+			then(onResolved, onRejected){
+				// 判断是否传入成功的回调函数
+				if (this.isFunction(onResolved)){
+					if (this.status === FULFILLED){
+						onResolved(this.value);// 状态匹配立即执行
+					}else if (this.status === PENDING){
+						this.onResolvedCallbacks.push(onResolved);
+					}
+				}else if (this.isFunction(onRejected)){
+					if (this.status === REJECTED){
+						onRejected(this.value);// 状态匹配立即执行
+					}else if (this.status === PENDING){
+						this.onResolvedCallbacks.push(onRejected);
+					}
+				}
+			}
+			resolve(value){
+				// 防止重复修改状态
+				if (this.status === PENDING){
+					this.status = FULFILLED;
+					this.value = value;
+					this.onResolvedCallbacks.forEach(fn => fn(this.value));// 箭头函数形式;
+				}
+			}
+			reject(reason){
+				// 防止重复修改状态
+				if (this.status === PENDING){
+					this.status = REJECTED;
+					this.reason = reason;
+					this.onRejectedCallbacks.forEach(fn => fn(this.reason));
+				}
+			}
+			isFunction(fn){
+				return typeof fn === "function";
+			}
+		}
+		let promise = new Promise(function (resolve, reject) {
+			resolve("成功111");
+			setTimeout(function () {
+				resolve("成功222");
+				// resolve();
+			}, 500)
+		});
+		promise.then(function (data) {
+			console.log(data);
+		},function (data) {
+			console.log(data);
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>83-JavaScript-事件冒泡和捕获</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .inside{
+            width: 100px;
+            height: 100px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son">
+        <div class="inside"></div>
+    </div>
+</div>
+<script>
+    let fBox = document.querySelector(".father");
+    let sBox = document.querySelector(".son");
+    let inBox = document.querySelector(".inside");
+
+    // fBox.onclick = function () {
+    //     console.log("father");
+    // }
+    // sBox.onclick = function () {
+    //     console.log("son");
+    // }
+    sBox.addEventListener("click", function () {
+        console.log("son捕获");
+    }, true);
+    sBox.addEventListener("click", function () {
+        console.log("son冒泡");
+    }, false);
+    fBox.addEventListener("click", function () {
+        console.log("father捕获");
+    }, true);
+    fBox.addEventListener("click", function () {
+        console.log("father冒泡");
+    }, false);
+</script>
+</body>
+</html>

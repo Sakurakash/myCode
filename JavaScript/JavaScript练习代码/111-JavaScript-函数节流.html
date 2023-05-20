@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>111-JavaScript-函数节流</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color: red;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src="../../工具/tools.js"></script>
+</head>
+<body>
+<div></div>
+<script>
+    /*需求:让盒子的宽高永远等于浏览器窗口宽高的一半*/
+    let oDiv = document.querySelector("div");
+    resetSize();
+    function resetSize() {
+        let {width, height} = getScreen();
+        oDiv.style.width = width/2 + "px";
+        oDiv.style.height = height/2 + "px";
+    }
+    /*let timerId = null;
+    let flag = true;
+    window.onresize = function () {
+        if (!flag){
+            return;
+        }
+        flag = false;
+        timerId && clearTimeout(timerId);
+        timerId = setTimeout(function () {
+            flag = true;
+            resetSize();
+        }, 500);
+    }*/
+    window.onresize = throttle(function () {
+        resetSize();
+    }, 500);
+</script>
+</body>
+</html>

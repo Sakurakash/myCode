@@ -1,0 +1,16 @@
+$w: 300px;//sass中的变量使用$定义;
+$h: 200px;
+//$h: 300px;//后定义的会覆盖先定义的;
+.box1{
+  //$h: 300px;//存在局部变量;
+  width: $w;
+  height: $h;
+  background: red;
+  margin-bottom: 20px;
+}
+.box2{
+  width: $w;
+  height: $h;
+  background: blue;
+}
+//$h: 200px;//不可以先使用后定义;

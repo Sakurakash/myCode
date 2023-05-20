@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>35-Vue组件-data和methods</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<button @click.prevent="VueMsg">vue按钮</button>
+	<p>{{ temp }}</p>
+	<baidu></baidu>
+</div>
+<template id="template">
+	<div>
+		<img src="bdlogo.png">
+		<button @click.prevent="msg">按钮</button>
+		<p>{{ content }}</p>
+	</div>
+</template>
+<script>
+	Vue.component("baidu", {
+		template: "#template",
+		methods: {
+			msg(){
+				alert("组件方法");
+			}
+		},
+		/*data: {
+			content: "组件数据"// 错误使用
+		}*/
+		data: function () {
+			return {
+				content: "组件数据"// 正确使用
+			}
+		}
+	});
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+			temp: "vue数据"
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+	        VueMsg(){
+		        alert("vue方法");
+	        }
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    }
+    });
+</script>
+</body>
+</html>

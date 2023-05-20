@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>21-jQuery事件解绑</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            let test1 = function () {
+                alert("click1");
+            }
+            let test2 = function () {
+                alert("click2");
+            }
+            $("button").click(test1)
+            $("button").click(test2)
+            $("button").on("mouseleave", function () {
+                alert("mouseleave1");
+            })
+            $("button").on("mouseleave", function () {
+                alert("mouseleave2");
+            })
+            // $("button").off("click", test1);
+            $("button").off("click", test2);
+            $("button").off("mouseleave");
+        })
+    </script>
+</head>
+<body>
+<button>按钮</button>
+</body>
+</html>

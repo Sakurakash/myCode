@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>105-JavaScript-返回顶部</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+            vertical-align: bottom;
+        }
+        img:nth-child(3){
+            display: none;
+            position: fixed;
+        }
+        span{
+            display: none;
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            font-size: 40px;
+            text-align: center;
+            line-height: 100px;
+            right: 50px;
+            bottom: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<img src="../images/nba-top.jpg" alt="">
+<img src="../images/nba-nav.jpg" alt="">
+<img src="../images/nba-nav.jpg" alt="">
+<img src="../images/nba-body.jpg" alt="">
+<span>TOP</span>
+<script src="../../工具/tools.js"></script>
+<script>
+    let oImgTop = document.querySelector("img:nth-child(1)");
+    let oImgNav = document.querySelector("img:nth-child(3)");
+    let oSpan = document.querySelector("span");
+    window.onscroll = function () {
+        if (getPageScroll().y >= oImgTop.offsetHeight){
+            oImgNav.style.display = "block";
+            oImgNav.style.position = "fixed";
+            oImgNav.style.top = "0";
+            oImgNav.style.left = "0";
+            oSpan.style.display = "block";
+        }else {
+            oImgNav.style.display = "";
+            oSpan.style.display = "";
+        }
+    }
+    oSpan.onclick = function () {
+        ease(0);
+        /*window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });*/
+    }
+</script>
+</body>
+</html>

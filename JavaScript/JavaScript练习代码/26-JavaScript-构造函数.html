@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>26-JavaScript-构造函数</title>
+    <script>
+        function Person(myName, myAge) {
+            this.name = myName;
+            this.age = myAge;
+        }
+        Person.prototype.say = {
+            // constructor : Person,
+            say : function () {
+                console.log("hello");
+            }
+        }
+        let a = new Person("zs", 23);
+        let b = new Person("ws", 223);
+        console.log(a);
+        console.log(b);
+        console.log(a.say === b.say);
+        console.log(Person.prototype.constructor === Person);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

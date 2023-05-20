@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>87-JavaScript-事件位置获取</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            margin-top: 2000px;
+            margin-left: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<script>
+    let oDiv = document.querySelector(".box");
+    oDiv.onclick = function (event) {
+        /*// offsetX/Y:事件触发相对于元素自身的位置;
+        console.log("offsetX : ", event.offsetX);
+        console.log("offsetY : ", event.offsetY);*/
+
+        /*// clientX/Y:事件触发相对于浏览器可视区域(<--不包括滚动出去的部分-->)的位置;
+        console.log("clientX : ", event.clientX);
+        console.log("clientY : ", event.clientY);
+        // pageX/Y:事件触发相对于整个网页(<--包括滚动出去的部分-->)的位置;
+        console.log("--------------------------");
+        console.log("pageX : ", event.pageX);
+        console.log("pageY : ", event.pageY);*/
+
+        /*// screenX/Y:事件触发相对于显示器的位置;
+        console.log("screenX ", event.screenX);
+        console.log("screenY ", event.screenY);*/
+    }
+</script>
+</body>
+</html>

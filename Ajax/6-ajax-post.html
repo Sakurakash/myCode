@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-ajax-post</title>
+    <script src="myAjax.js"></script>
+    <script>
+        window.onload = function () {
+            let btn = document.querySelector("button");
+            btn.onclick = function () {
+                /*// 1.创建异步对象;
+                let xhr = new XMLHttpRequest();
+                // 2.设置请求方式和请求地址;
+                xhr.open("POST", "6-ajax-post.php", true);
+                xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");//必须在send和open之间;
+                // 3.发送请求;
+                xhr.send("userName=zs&userPwd=123456");
+                // 4.监听状态的变化;
+                xhr.onreadystatechange = function () {
+                    // 5.处理返回的结果;
+                    if (xhr.readyState === 4){
+                        if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304){
+                            console.log("接收到数据");
+                            console.log(xhr.responseText);
+                        }else {
+                            console.log("接收失败");
+                        }
+                    }
+                }*/
+                ajax({
+                        type: "POST",
+                        url: "6-ajax-post.php",
+                        data: {"userName": "test", "userPwd": "1234567"},
+                        timeout: 3000,
+                        success: function (xhr) {
+                            console.log("接收到数据");
+                            console.log(xhr.responseText);
+                        },
+                        error: function (xhr){
+                            console.log("接收失败");
+                        }
+                    })
+            }
+        }
+    </script>
+</head>
+<body>
+<button>按钮</button>
+</body>
+</html>

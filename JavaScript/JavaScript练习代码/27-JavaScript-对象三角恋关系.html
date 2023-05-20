@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>27-JavaScript-对象三角恋关系</title>
+    <script>
+        function Person(myName, myAge) {
+            this.name = myName;
+            this.age = myAge;
+            // this.say = function () {
+            //     console.log("hello");
+            // }
+        }
+        Person.prototype = {
+            constructor: Person,
+            // say: function () {
+            //     console.log("hello prototype");
+            // }
+        }
+        let obj1 = new Person("zs", 23);
+        obj1.__proto__.__proto__ = {
+            constructor: Object,
+            say: function () {
+                console.log("hello Object prototype");
+            }
+        }
+        // let obj2 = new Person("ssa", 53);
+        console.log(obj1.__proto__.__proto__);
+        obj1.say();
+        // console.log(obj1);
+        // console.log(obj2);
+        // console.log(Person.prototype);
+        // console.log(Person === Person.prototype.constructor);
+        // console.log(obj1.__proto__);
+        // console.log(Person.prototype === obj1.__proto__);
+        // console.log(Function.prototype);
+        // console.log(Function === Function.prototype.constructor);
+        // console.log(Person.prototype.constructor === Object);
+        // console.log(Function.__proto__ === Function.prototype);
+        // console.log(Object);
+        // console.log(Object.__proto__ === Function.prototype);
+        // console.log(Object.prototype.constructor === Object);
+        // console.log(Person.prototype.constructor === Person);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

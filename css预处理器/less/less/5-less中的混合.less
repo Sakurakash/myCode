@@ -1,0 +1,19 @@
+//创建的类名加括号则不会出现在编译的css当中;
+.center(){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.father{
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  .center();
+  .son{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    .center();
+  }
+}

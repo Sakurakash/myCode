@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-Vue常用指令-绑定类名</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.size{
+			font-size: 100px;
+		}
+		.color{
+			color: red;
+		}
+		.background{
+			background-color: skyblue;
+		}
+	</style>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+<!--    <p :class="[`size`, `color`, `background`]">{{ name }}</p>-->
+<!--    <p :class="[`size`, `color`, flag ? `background` : '']">{{ name }}</p>-->
+<!--    <p :class="[`size`, `color`, {'background' : flag}]">{{ name }}</p>-->
+    <p :class="obj">{{ name }}</p>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            name: "sakuraKen",
+	        flag: true,
+	        obj: {
+		        'size': true,
+		        'color': true,
+		        'background': true
+	        }
+        },
+    });
+</script>
+</body>
+</html>

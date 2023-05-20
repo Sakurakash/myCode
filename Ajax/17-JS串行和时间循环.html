@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>17-JS串行和时间循环</title>
+    <script>
+        console.log("同步任务1");
+        console.log("同步任务2");
+        setTimeout(function () {
+            console.log("异步任务1");
+        }, 2000);
+        setTimeout(function () {
+            console.log("异步任务2");
+        }, 2000);
+        alert("同步任务3");
+        // 在所有同步任务执行完成之后才会开始执行异步任务,JS会不断遍历异步任务,直到满足条件后立即执行;
+    </script>
+</head>
+<body>
+
+</body>
+</html>

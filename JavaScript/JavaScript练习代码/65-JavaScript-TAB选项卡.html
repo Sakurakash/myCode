@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>65-JavaScript-TAB选项卡上</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 500px;
+            height: 400px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            font-size: 20px;
+        }
+        ul{
+            list-style: none;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+        }
+        ul>li{
+            width: 100px;
+            height: 100%;
+            background-color: skyblue;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        ul>li:last-child{
+            border-right: none;
+        }
+        .box>.bottom{
+            width: 100%;
+            height: 350px;
+        }
+        .box>.bottom>.content{
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        .box>.bottom>.content:nth-child(1){
+            background-color: red;
+            display: block;
+        }
+        .box>.bottom>.content:nth-child(2){
+            background-color: blue;
+        }
+        .box>.bottom>.content:nth-child(3){
+            background-color: green;
+        }
+        .box>.bottom>.content:nth-child(4){
+            background-color: yellow;
+        }
+        .box>.bottom>.content:nth-child(5){
+            background-color: purple;
+        }
+        .current{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li class="current">新闻</li>
+        <li>视频</li>
+        <li>音乐</li>
+        <li>军事</li>
+        <li>财经</li>
+    </ul>
+    <div class="bottom">
+        <div class="content">新闻的内容</div>
+        <div class="content">视频的内容</div>
+        <div class="content">音乐的内容</div>
+        <div class="content">军事的内容</div>
+        <div class="content">财经的内容</div>
+    </div>
+</div>
+<script>
+    let oItems = document.querySelectorAll("ul>li");
+    let oContents = document.querySelectorAll(".content");
+    let previousIndex = 0;
+    for (let i = 0; i < oItems.length; i++){
+        oItems[i].onclick = function() {
+            //清空上次设置
+            oItems[previousIndex].className = "";
+            oContents[previousIndex].style.display = "none";
+            //设置本次
+            this.className = "current";
+            oContents[i].style.display = "block";
+            //保存索引值
+            previousIndex = i;
+        };
+    }
+</script>
+</body>
+</html>

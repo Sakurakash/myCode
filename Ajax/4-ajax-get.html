@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-ajax-get</title>
+    <script>
+        window.onload = function () {
+            let btn = document.querySelector("button");
+            btn.onclick = function () {
+                // 1.创建异步对象;
+                let xhr = new XMLHttpRequest();
+                // 2.设置请求方式和请求地址;
+                xhr.open("GET", "4-ajax-get.txt", true);
+                // 3.发送请求;
+                xhr.send();
+                // 4.监听状态的变化;
+                xhr.onreadystatechange = function () {
+                    // 5.处理返回的结果;
+                    if (xhr.readyState === 4){
+                        if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304){
+                            console.log("接收到数据");
+                            console.log(xhr.responseText);
+                        }else {
+                            console.log("接收失败");
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<button>按钮</button>
+</body>
+</html>

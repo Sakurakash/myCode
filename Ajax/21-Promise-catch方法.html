@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>21-Promise-catch方法</title>
+	<script>
+		// catch方法是then(undefined, () => {});属于语法糖;
+		let promise = new Promise(function (resolve, reject) {
+			// resolve();
+			reject();
+		})
+		/*promise.then(function () {
+			console.log("成功");
+		}).catch(function () {
+			console.log("失败");
+		});//链式编程不报错;*/
+
+		/*promise.then(function () {
+			console.log("成功");
+		});
+		promise.catch(function () {
+			console.log("失败");
+		});//分开监听会报错(返回了新的Promise对象未监听);*/
+
+		let ppp = promise.then(function () {
+			console.log("成功");
+		});
+		promise.catch(function () {
+			console.log("失败1");
+		});
+		ppp.catch(function () {
+			console.log("失败2");
+		})//分开监听不报错(返回的新的Promise对象也监听了);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

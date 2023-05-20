@@ -1,0 +1,16 @@
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.father:extend(.center){
+  width: 300px;
+  height: 300px;
+  background: red;
+  .son:extend(.center){
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+  }
+}

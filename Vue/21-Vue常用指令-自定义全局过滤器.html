@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>21-Vue常用指令-自定义全局过滤器</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+<!--可添加多个过滤器, 过滤器的返回值会替代原插值(过滤器只能在插值和v-bind中使用)-->
+	<p>{{ name | format1 | format2 }}</p>
+</div>
+<script>
+	Vue.filter("format1", function (value) {
+		console.log(value);
+		return value.replace(/学院/g, "大学");
+	});
+	Vue.filter("format2", function (value) {
+		console.log(value);
+		return value.replace(/大学/g, "幼儿园");
+	});
+    let vue = new Vue({
+        el: "#app",
+        data: {
+			name: "陕西科技学院, 西安工业学院, 西安科技学院"
+        },
+	    methods: {
+
+	    },
+	    computed: {
+
+	    }
+    });
+</script>
+</body>
+</html>

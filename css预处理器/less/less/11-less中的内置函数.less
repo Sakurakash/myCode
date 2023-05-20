@@ -1,0 +1,12 @@
+@str: "./../images/ad1.jpg";
+
+@str2: replace(@str, 1, 2);
+div{
+  width: 200px;
+  height: 200px;
+  //background: url(@str2);
+  background: desaturate(yellow, 50%);
+}
+div:hover{
+  background: saturate(yellow, 50%);
+}

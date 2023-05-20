@@ -1,0 +1,5 @@
+@import "custom.css";
+.size{
+    height: 500px;
+    transform: translateX(300px);
+}

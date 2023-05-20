@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-Vue常用指令-v-text和html</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--插值方式: 直接插入相应位置,不会解析html-->
+    <p>数据: {{ name }}</p>
+    <p>数据: {{ msg }}</p>
+    <!--v-text指令: 直接替换元素内容,不会解析html,等价于innerText-->
+    <p v-text="name">数据: sakuraKen</p>
+    <p v-text="msg">数据: <span>大华</span></p>
+    <!--v-html指令: 直接替换元素内容,会解析html,等价于innerHTML-->
+    <p v-html="name">数据: sakuraKen</p>
+    <p v-html="msg">数据: <span>大华</span></p>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            name: "sakuraKen",
+            msg: "<span>大华</span>",
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的jsonp</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $.ajax("http://127.0.0.1/project/Ajax/14-jsonp.php",{
+            dataType: "jsonp",
+            success: function (msg) {
+                console.log(msg);
+            },
+            error: function () {
+                alert("请求失败");
+            }
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

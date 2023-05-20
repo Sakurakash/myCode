@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-同源策略</title>
+    <script src="myAjax.js"></script>
+    <script>
+        ajax({
+            type: "get",
+            url: "4-ajax-get.php",
+            success: function (msg) {
+                alert("请求成功");
+            },//通过服务器打开请求成功;
+            error: function (xhr) {
+                alert("请求失败");
+            }//通过本地打开请求失败;
+        });
+        // 总结:因同源策略,ajax只能在一级域名,二级域名,端口号都相同的情况下访问下请求数据;
+    </script>
+</head>
+<body>
+
+</body>
+</html>

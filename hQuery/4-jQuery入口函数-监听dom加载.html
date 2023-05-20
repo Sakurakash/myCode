@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-jQuery入口函数-监听dom加载</title>
+    <script src="hQuery.js"></script>
+    <script>
+        /*window.onload = function () {
+            console.log("onload");
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            let ele = document.querySelectorAll("div");
+            console.log(ele);
+        });*/
+        $(function () {
+            let res = document.querySelectorAll("div");
+            console.log(res);
+        })
+    </script>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

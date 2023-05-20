@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.-fullpage自定义菜单</title>
+    <link rel="stylesheet" href="../css/fullpage.css">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/easings.js"></script>
+    <script src="../js/scrolloverflow.js"></script>
+    <script src="../js/fullpage.js"></script>
+</head>
+<body>
+<ul id="myMenu" style = "position: fixed; z-index: 999">
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">第一节</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">第二节</a></li>
+    <li data-menuanchor="thirdPage"><a href="#thirdPage">第三节</a></li>
+    <li data-menuanchor="fourthPage"><a href="#fourthPage">第四节</a></li>
+</ul>
+<div id="fullpage">
+    <div class="section">Some section1</div>
+    <div class="section">Some section2</div>
+    <div class="section">Some section3</div>
+    <div class="section">Some section4</div>
+</div>
+<script>
+    new fullpage('#fullpage', {
+        sectionsColor: [`#f00`, `#0f0`, `#00f`, `#000`],
+        navigation: true,
+        navigationTooltips: [1, 2, 3, 4],
+        showActiveTooltip: true,
+        continuousVertical: true,
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+        menu: '#myMenu'
+    });
+</script>
+</body>
+</html>

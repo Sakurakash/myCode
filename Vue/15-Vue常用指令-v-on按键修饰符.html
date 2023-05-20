@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>15-Vue常用指令-v-on按键修饰符</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<!--按下回车键时触发事件	-->
+<!--	<input @keyup.enter="myFn">-->
+	<!--按下对应keycode键时触发事件	-->
+<!--	<input @keyup.113="myFn">-->
+	<!--按下自定义keycode键时触发事件	-->
+	<input @keyup.myf2="myFn">
+</div>
+<script>
+	Vue.config.keyCodes.myf2 = 113;//直接在对象中添加相应的值
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            name: "sakuraKen",
+        },
+		methods: {
+			myFn(){
+				console.log("按下了");
+			}
+		}
+    });
+</script>
+</body>
+</html>

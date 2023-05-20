@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>72-JavaScript-计算时间差</title>
+</head>
+<body>
+<script>
+    let date1 = new Date("2022-12-3 00:30:30");
+    let date2 = new Date("2022-12-13 02:40:40");
+    // console.log(date1.valueOf());
+    // console.log(date2.valueOf());
+    // console.log(date2 - date1 === date2.valueOf() - date1.valueOf());
+    // console.log(date2 - date1);
+    let differTime = date2 - date1;
+    let differSecond = differTime/1000;
+    //计算天
+    let date = Math.floor(differSecond/60/60/24);
+    console.log(date);
+    //计算小时
+    let hour = Math.floor(differSecond/60/60%24);
+    console.log(hour);
+    //计算分钟
+    let minute = Math.floor(differSecond/60%60);
+    console.log(minute);
+    //计算秒
+    let second = Math.floor(differSecond%60);
+    console.log(second);
+</script>
+</body>
+</html>

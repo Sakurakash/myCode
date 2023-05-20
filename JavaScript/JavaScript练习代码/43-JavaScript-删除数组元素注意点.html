@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>43-JavaScript-删除数组元素注意点</title>
+    <script>
+        arr = [1, 2, 3, 4, 5];
+        let len = arr.length - 1;
+        /*for (let i = len; i < arr.length; i--){
+            arr.splice(i, 1);
+        }*/
+        /*for (let i = 0; i < arr.length; i++){
+            arr.splice(0,1)
+        }*/
+        for (let i = 0; i < arr.length; i++){
+            delete arr[i];
+        }
+        console.log(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

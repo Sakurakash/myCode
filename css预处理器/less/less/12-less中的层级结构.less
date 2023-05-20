@@ -1,0 +1,28 @@
+.center(){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.father{
+  width: 300px;
+  height: 300px;
+  background: red;
+  .center;
+  &::before{
+    content: "";
+    width: 200px;
+    height: 200px;
+    background: pink;
+    .center;
+  }
+  /*.son{
+    &:hover{//使用伪类必须要在前面加&;
+      background: pink;
+    }
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    .center;
+  }*/
+}

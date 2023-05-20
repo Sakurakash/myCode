@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>97-JavaScript-获取网页宽高</title>
+</head>
+<body>
+<script>
+    // 高版本浏览器获取宽高方式
+    // console.log(window.innerHeight);
+    // console.log(window.innerWidth);
+
+    // 低版本浏览器获取宽高方式
+    // console.log(document.documentElement);
+    // console.log(document.documentElement.clientHeight);
+    // console.log(document.documentElement.clientWidth);
+
+    console.log(document.compatMode);//判断是标准模式(CSS1Compat)还是混杂/怪异模式(BackCompat);
+
+    //混杂模式下获取宽高;
+    // console.log(document.body.clientHeight);
+    // console.log(document.body.clientWidth);
+
+    function getScreen() {
+        let width , height;
+        if (window.innerWidth){
+            width = window.innerWidth;
+            height = window.innerHeight;
+        }else if (document.compatMode === "BackCompat"){
+            width = document.body.clientWidth;
+            height = document.body.clientHeight;
+        }else {
+            width = document.documentElement.clientWidth;
+            height = document.documentElement.clientHeight;
+        }
+        return {width : width, height : height};
+    }
+    let {width, height} = getScreen();
+    console.log(width);
+    console.log(height);
+</script>
+</body>
+</html>

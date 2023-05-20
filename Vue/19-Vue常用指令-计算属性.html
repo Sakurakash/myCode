@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>19-Vue常用指令-计算属性</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<p>{{ msg }}</p>
+	<p>{{ msg.split("") }}</p>
+	<p>{{ msg.split("").reverse() }}</p>
+	<p>{{ msg.split("").reverse().join("") }}</p>
+
+	<p>{{ msg2 }}</p>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+			msg: "apple"
+        },
+	    computed: {
+			msg2: function () {
+				return "apple".split("").reverse().join("");
+			}
+	    }
+    });
+</script>
+</body>
+</html>

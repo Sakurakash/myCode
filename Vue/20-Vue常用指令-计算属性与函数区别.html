@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>20-Vue常用指令-计算属性与函数区别</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<p>{{ msg1() }}</p>
+	<p>{{ msg1() }}</p>
+	<p>{{ msg1() }}</p>
+	<hr>
+	<p>{{ msg2 }}</p>
+	<p>{{ msg2 }}</p>
+	<p>{{ msg2 }}</p>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+
+        },
+	    methods: {
+		    msg1(){
+			    console.log("msg1被调用");// 函数每次调用都会执行;
+			    return "apple".split("").reverse().join("");
+		    }
+	    },
+	    computed: {
+			msg2: function () {
+				console.log("msg2被调用");// 只要返回结果没有变化,计算属性就只会执行一次;
+				return "apple".split("").reverse().join("");
+			}
+	    }
+    });
+</script>
+</body>
+</html>

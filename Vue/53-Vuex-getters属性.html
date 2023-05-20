@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>53-Vuex-getters属性</title>
+	<script src="vue.js"></script>
+	<script src="vuex.js"></script>
+</head>
+<body>
+<div id="app">
+    <father></father>
+</div>
+<template id="father">
+	<div>
+<!--		{{ test() }}-->
+<!--		{{ test() }}-->
+		{{ this.$store.getters.test }}
+		{{ this.$store.getters.test }}
+		{{ this.$store.getters.test }}
+	</div>
+</template>
+<script>
+	const store = new Vuex.Store({
+		state: {
+			msg: "共享的数据"
+		},
+		getters: {
+			test(state){
+				console.log("方法被调用");
+				return state.msg + "被使用了";
+			}
+		}
+	});
+	Vue.component("father", {
+		template: "#father",
+		store: store,
+		// data: function () {
+		// 	return {
+		// 		msg: "data中的数据"
+		// 	};
+		// },
+		// methods: {
+		// 	test(){
+		// 		console.log("方法被调用");
+		// 		return this.msg + "被使用了";
+		// 	}
+		// },
+		// computed: {
+		// 	test(){
+		// 		console.log("方法被调用");
+		// 		return this.msg + "被使用了";
+		// 	}
+		// }
+	});
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+
+        },
+        // 用于存储监听事件的回调函数;
+	    methods: {
+
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    },
+	    // 用于定义局部组件
+	    components: {
+
+	    }
+    });
+</script>
+</body>
+</html>

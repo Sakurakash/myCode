@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>22-JavaScript-递归函数</title>
+    <script>
+        function login() {
+            let pwd = prompt();
+            if (pwd !== "123456"){
+                login();
+            }
+        }
+        login();
+        alert("welcome!");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

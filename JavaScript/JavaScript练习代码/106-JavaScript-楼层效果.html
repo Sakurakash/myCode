@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>106-JavaScript-楼层效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        ul{
+            width: 100%;
+            height: 100%;
+        }
+        ul>li{
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 100px;
+        }
+        ol{
+            position: fixed;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        ol>li{
+            list-style: none;
+            font-size: 20px;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #000;
+            background-color: purple;
+        }
+        .selected{
+            background-color: #f90;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>我是第1层</li>
+    <li>我是第2层</li>
+    <li>我是第3层</li>
+    <li>我是第4层</li>
+    <li>我是第5层</li>
+</ul>
+<ol>
+    <li class="selected">第1层</li>
+    <li>第2层</li>
+    <li>第3层</li>
+    <li>第4层</li>
+    <li>第5层</li>
+</ol>
+<script src="../../工具/tools.js"></script>
+<script>
+    //初始化楼层颜色;
+    let oItems = document.querySelectorAll("ul>li");
+    let colors = ["blue", "red", "yellow", "green", "pink"];
+    for (let i = 0; i < oItems.length; i++){
+        oItems[i].style.backgroundColor = colors[i];
+    }
+    //计算滚动距离;
+    let ulHeight = getScreen().height;
+    //设置按钮点击事件;
+    let olItems = document.querySelectorAll("ol>li");
+    let currentItem = olItems[0];
+    let timerId = null;
+    for (let i = 0; i < olItems.length; i++){
+        olItems[i].onclick = function () {
+            currentItem.className = "";
+            this.className = "selected";
+            ease(ulHeight * i);
+            currentItem = this;
+        }
+    }
+</script>
+</body>
+</html>

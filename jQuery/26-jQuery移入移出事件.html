@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>26-jQuery移入移出事件</title>
+    <style>
+        .father{
+        width: 200px;
+        height: 200px;
+        background: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            /*$(".father").mouseover(function () {
+                console.log("移入事件");
+            })
+            $(".father").mouseout(function () {
+                console.log("移出事件");
+            })*/
+
+            /*$(".father").mouseenter(function () {
+                console.log("移入事件");
+            })
+            $(".father").mouseleave(function () {
+                console.log("移出事件");
+            })*/
+
+            $(".father").hover(function () {
+                console.log("移入事件");
+            }, function () {
+                console.log("移出事件");
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

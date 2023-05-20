@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>79-JavaScript-动画增强</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .line1, .line2{
+            width: 500px;
+            height: 20px;
+            background: blue;
+        }
+        .line2{
+            width: 200px;
+            background: purple;
+        }
+    </style>
+</head>
+<body>
+<button id="start1">开始到500</button>
+<button id="start2">开始到200</button>
+<button id="end">结束</button>
+<div class="box"></div>
+<div class="line1"></div>
+<div class="line2"></div>
+<script>
+    let startBtn1 = document.querySelector("#start1");
+    let startBtn2 = document.querySelector("#start2");
+    let endBtn = document.querySelector("#end");
+    let oBox = document.querySelector(".box");
+    let boxTime = null;
+    startBtn1.onclick = function () {
+        clearInterval(boxTime);
+        linearAnimation(oBox, {"width" : 500, "height" : 300}, function () {
+            alert("执行完毕");
+        });
+    }
+    startBtn2.onclick = function () {
+        clearInterval(boxTime);
+        linearAnimation(oBox, {"width" : 200});
+    }
+    endBtn.onclick = function () {
+        clearInterval(boxTime);
+    }
+    function linearAnimation(ele, obj, fn) {
+        boxTime = setInterval(function () {
+            //判断所有参数变化完毕的依据;
+            let flag = true;
+            for (let key in obj){
+                //取出每一个属性和对应值;
+                let attr = key;
+                let target = obj[key];
+                //获取原始值;
+                let style = getComputedStyle(ele);
+                let begin = parseInt(style[attr]);
+                //设置步长值;
+                let step = begin - target > 0 ? -13 : 13;
+                //设置走过一步后的值;
+                begin = begin + step;
+                //判断是否是最后一步;
+                if (Math.abs(target - begin) > Math.abs(step)){
+                    flag = false;
+                } else {
+                    begin = target;
+                }
+                //将走过一步后的值赋给原值;
+                ele.style[attr] = begin + "px";
+            }
+            if (flag){
+                clearInterval(boxTime);
+                fn && fn();
+            }
+        }, 30);
+    }
+</script>
+</body>
+</html>

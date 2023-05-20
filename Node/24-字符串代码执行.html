@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>24-字符串代码执行</title>
+</head>
+<body>
+
+</body>
+<script>
+	let name = "zs";
+	let str = "console.log(name);";
+	// eval(str);
+	let fn = new Function(str);
+	//两种方法都有依赖问题,存在注入风险
+</script>
+</html>

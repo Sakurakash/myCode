@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>23-JavaScript-作用域链</title>
+    <script>
+        let num = 123;
+        function one() {
+            let num = 456;
+            function two() {
+                // let num = 789;
+                console.log(num);
+            }
+            two();
+        }
+        one();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-fullpage常用方法</title>
+    <link rel="stylesheet" href="../css/fullpage.css">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/easings.js"></script>
+    <script src="../js/scrolloverflow.js"></script>
+    <script src="../js/fullpage.js"></script>
+</head>
+<body>
+<div class="custom" style="position: fixed; z-index: 999">
+    <button id="pre">上一屏</button>
+    <button id="next">下一屏</button>
+    <input type="text">
+    <button id="assign">指定屏</button>
+    <button id="cur">获取当前屏</button>
+</div>
+<div id="fullpage">
+    <div class="section">Some section1</div>
+    <div class="section">Some section2</div>
+    <div class="section">Some section3</div>
+    <div class="section">Some section4</div>
+</div>
+<script>
+    new fullpage('#fullpage', {
+        sectionsColor: [`#f00`, `#0f0`, `#00f`, `#000`],
+        navigation: true,
+        navigationTooltips: [1, 2, 3, 4],
+        showActiveTooltip: true,
+        continuousVertical: true,
+    });
+    let oPreBtn = document.querySelector("#pre");
+    let oNextBtn = document.querySelector("#next");
+    let oInput = document.querySelector("input");
+    let oAssignBtn = document.querySelector("#assign");
+    let oCurBtn = document.querySelector("#cur");
+    // 滚动到上一屏
+    oPreBtn.onclick = function () {
+        fullpage_api.moveSectionUp();
+    }
+    // 滚动到下一屏
+    oNextBtn.onclick = function () {
+        fullpage_api.moveSectionDown();
+    }
+    // 滚动到指定屏
+    oAssignBtn.onclick = function () {
+        let num = oInput.value;
+        fullpage_api.moveTo(num);
+    }
+    // 获取当前屏
+    oCurBtn.onclick = function () {
+        console.log(fullpage_api.getActiveSection());
+    }
+</script>
+</body>
+</html>

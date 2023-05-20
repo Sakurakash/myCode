@@ -1,0 +1,14 @@
+.animate(@name, @time,...){//...表示可以接收任意参数,只能写在最后,前面的形参代表至少应传入的形参;
+  transition: @arguments;//@arguments接收一个参数列表,记录所有的形参;
+}
+div{
+  width: 200px;
+  height: 200px;
+  background: red;
+  .animate(all, 2s);
+}
+div:hover{
+  width: 400px;
+  height: 400px;
+  background: blue;
+}

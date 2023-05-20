@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>49-JavaScript-获取DOM元素下</title>
+</head>
+<body>
+<div>
+    <h1>1</h1>
+    <h2>2</h2>
+    <p class="item">3</p>
+    <p>4</p>
+    <span>5</span>
+</div>
+
+<script>
+    /*let odiv = document.querySelector("div");
+    console.log(odiv.children);
+    console.log(odiv.childNodes);
+    for (let node of odiv.childNodes){
+        if (node.nodeType === Node.ELEMENT_NODE){
+            console.log(node);
+        }
+    }*/
+    /*let odiv = document.querySelector("div");
+    console.log(odiv.firstChild);
+    console.log(odiv.lastChild);
+    console.log(odiv.firstElementChild);
+    console.log(odiv.lastElementChild);*/
+    let odiv = document.querySelector(".item");
+    console.log(odiv.parentElement);
+    console.log(odiv.parentNode);
+    console.log(odiv.previousSibling);
+    console.log(odiv.nextSibling);
+    console.log(odiv.previousElementSibling);
+    console.log(odiv.nextElementSibling);
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>37-JavaScript-对象遍历</title>
+    <script>
+        class Person{
+            constructor() {
+                this.name = "zs";
+                this.age = 12;
+                this.say = function () {
+                    console.log(this.name, this.age);
+                }
+            }
+        }
+        let p = new Person();
+        for(let key in p){
+            if (p[key] instanceof Function){
+                continue;
+            }
+            console.log(key);
+            console.log(p[key]);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

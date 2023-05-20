@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>102-JavaScript-网页滚动距离</title>
+    <style>
+        p{
+            width: 120%;
+        }
+    </style>
+</head>
+<body>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+<p>我是文本</p>
+</body>
+<script>
+    window.onscroll = function () {
+        //ie9及以上浏览器;
+        /*console.log(window.pageXOffset);//已被弃用,改用scrollX;
+        console.log(window.scrollX);
+        console.log(window.pageYOffset);//已被弃用,改用scrollY;
+        console.log(window.scrollY);*/
+        //ie9以下;
+        /*console.log(document.documentElement.scrollLeft);
+        console.log(document.documentElement.scrollTop);*/
+        //怪异模式
+        /*console.log(document.body.scrollTop);
+        console.log(document.body.scrollLeft);*/
+        let {x, y} = getScroll();
+        console.log(x, y);
+    }
+    function getScroll() {
+        let x , y;
+        if (window.scrollX){
+            x = window.scrollX;
+            y = window.scrollY;
+        }else if (document.compatMode === "BackCompat"){
+            x = document.body.scrollLeft;
+            y = document.body.scrollTop;
+        }else {
+            x = document.documentElement.scrollLeft;
+            y = document.documentElement.scrollTop;
+        }
+        return {x : x, y : y};
+    }
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>23-Vue常用指令-自定义过滤器练习</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ time | dateFormat("YYYY-MM-DD")}}</p>
+</div>
+<script>
+	Vue.filter("dateFormat", function (value, formatStr) {
+		value = new Date(value);
+		let year = value.getFullYear() + "";
+		let month = value.getMonth() + 1 + "";
+		let day = value.getDate() + "";
+		let hour = value.getHours() + "";
+		let minute = value.getMinutes() + "";
+		let second = value.getSeconds() + "";
+		if (formatStr){
+			return `${year}-${month}-${day}`
+		}
+		return `${year}-${month}-${day}  ${hour}:${minute}:${second}`
+	})
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+            time: Date.now()
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    }
+    });
+</script>
+</body>
+</html>

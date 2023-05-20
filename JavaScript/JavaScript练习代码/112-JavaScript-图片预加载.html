@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>112-JavaScript-图片预加载</title>
+</head>
+<body>
+<script>
+    let urls = [];
+    function preLoadImage(url, fn) {
+        let oImg = document.createElement("img");
+        oImg.src = url;
+        oImg.onload = function () {
+            fn(oImg);
+        }
+    }
+    function preLoadImages(urls, fn) {
+        let totalCount = urls.length;
+        let count = 0;
+        let oImages = [];
+        for (let i = 0; i < urls.length; i++){
+            let url = urls[i];
+            preLoadImage(url, function (oImg) {
+                oImages.push(oImg);
+                count++;
+                if (count === totalCount){
+                    fn(oImages);
+                }
+            });
+        }
+    }
+</script>
+</body>
+</html>

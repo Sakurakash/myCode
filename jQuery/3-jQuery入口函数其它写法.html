@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-jQuery入口函数其它写法</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        //第一种写法;
+        $(document).ready(function () {
+            // alert("第一种写法");
+        })
+        //第二种写法;
+        jQuery(document).ready(function () {
+            // alert("第二种写法");
+        })
+        //第三种写法;(推荐)
+        $(function () {
+            // alert("第三种写法");
+        })
+        //第四种写法;
+        jQuery(function () {
+            alert("第四种写法");
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

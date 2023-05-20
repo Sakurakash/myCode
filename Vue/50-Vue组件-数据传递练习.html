@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>50-Vue组件-数据传递练习</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<father></father>
+</div>
+<template id="father">
+	<div>
+		<son1 @parent="change"></son1>
+		<son2 :num="num"></son2>
+	</div>
+</template>
+<template id="son1">
+	<div>
+		<button @click.prevent="add">增加</button>
+		<button @click.prevent="sub">减少</button>
+		<input type="text" :value="num">
+	</div>
+</template>
+<template id="son2">
+	<div>
+		{{ num }}
+	</div>
+</template>
+<script>
+	Vue.component("father",{
+		template: "#father",
+		methods: {
+			change(newCount){
+				this.num = newCount;
+			}
+		},
+		data: function () {
+			return {
+				num: 0
+			}
+		},
+		components: {
+			"son1": {
+				template: "#son1",
+				data: function () {
+					return {
+						num: 0
+					}
+				},
+				methods: {
+					add(){
+						this.num++;
+						this.sonChange();
+					},
+					sub(){
+						this.num--;
+						this.sonChange();
+					},
+					sonChange(){
+						this.$emit("parent", this.num);// 这里可以给父组件方法传递参数;
+					}
+				}
+			},
+			"son2": {
+				template: "#son2",
+				props: ["num"],
+				methods: {
+
+				}
+			}
+		}
+	});
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    },
+	    // 用于定义局部组件
+	    components: {
+
+	    }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>64-JavaScript-表单效果</title>
+</head>
+<body>
+<form action="https://www.bilibili.com">
+    <input type="text" placeholder="请输入搜索关键字" name="test">
+    <input type="submit" value="搜索">
+</form>
+<script>
+    let oText = document.querySelector("input[type=text]");
+    let oSubmit = document.querySelector("input[type=submit]");
+    oSubmit.disabled = true;
+    oText.oninput = function () {
+        oSubmit.disabled = this.value.length === 0;
+    }
+</script>
+</body>
+</html>

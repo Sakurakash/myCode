@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>33-JavaScript-instanceof关键字</title>
+    <script>
+        // class Person{
+        //     constructor(myName) {
+        //         this.name = myName;
+        //     }
+        // }
+
+        function Person(myName){
+            this.name = myName;
+        }
+        let per = new Person();
+
+        // class Student extends Person{
+        //     constructor(myName) {
+        //         super(myName);
+        //     }
+        // }
+        function Student(myName){
+            Person.call(this, myName);
+        }
+        Student.prototype = new Person();
+        Student.prototype.constructor = Student;
+        let stu = new Student();
+
+        console.log(stu instanceof Person);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-fullpage常用回调函数</title>
+    <link rel="stylesheet" href="../css/fullpage.css">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/easings.js"></script>
+    <script src="../js/scrolloverflow.js"></script>
+    <script src="../js/fullpage.js"></script>
+</head>
+<body>
+<div id="fullpage">
+    <div class="section">Some section1</div>
+    <div class="section">Some section2</div>
+    <div class="section">Some section3</div>
+    <div class="section">Some section4</div>
+</div>
+<script>
+    new fullpage('#fullpage', {
+        navigation: true,
+        onLeave: function (origin, destination, direction) {
+            console.log("滚动之前调用", origin, destination, direction);
+        },
+        afterLoad: function (origin, destination, direction) {
+            console.log("滚动之后调用", origin, destination, direction);
+        }
+    })
+</script>
+</body>
+</html>

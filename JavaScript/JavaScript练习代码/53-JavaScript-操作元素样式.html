@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>53-JavaScript-操作元素样式</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            border: 50px solid #000;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    let oDiv = document.querySelector("div");
+    // oDiv.setAttribute("class", "box");
+    oDiv.className = "box";
+
+   /* oDiv.style.width = "300px";
+    oDiv.style.height = "300px";
+    oDiv.style.backgroundColor = "blue";
+    console.log(oDiv.style.width);*/
+
+    oDiv.style.width = "166px";
+    oDiv.style.height = "166px";
+    // let style = window.getComputedStyle(oDiv);
+    // console.log(style.width);
+    console.log(oDiv.offsetWidth);
+    console.log(oDiv.offsetHeight);
+</script>
+</body>
+</html>

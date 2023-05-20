@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>85-JavaScript-阻止事件冒泡</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+<script>
+    let fBox = document.querySelector(".father");
+    let sBox = document.querySelector(".son");
+    // fBox.onclick = function () {
+    //     console.log("father");
+    // }
+    // sBox.onclick = function () {
+    //     console.log("son");
+    // }
+    fBox.addEventListener("click", function (event) {
+        console.log("father捕获");
+        event.stopPropagation();
+        // event.cancelBubble = true;//已被废弃
+    }, true);
+    sBox.addEventListener("click", function () {
+        console.log("son捕获");
+    }, true);
+    sBox.addEventListener("click", function () {
+        console.log("son冒泡");
+    }, false);
+    fBox.addEventListener("click", function () {
+        console.log("father冒泡");
+    }, false);
+</script>
+</body>
+</html>

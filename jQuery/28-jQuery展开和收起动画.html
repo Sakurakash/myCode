@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>28-jQuery展开和收起动画</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 400px;
+            list-style: none;
+        }
+        .nav{
+            margin: 100px auto;
+            border-radius: 2px;
+        }
+        .sub{
+            margin-top: 20px;
+            display: none;
+        }
+        ul>li{
+            font-size: 20px;
+        }
+        .sub>li{
+            width: 100%;
+            padding-left: 40px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #000;
+            background: blue;
+        }
+        .nav>li{
+            background: red;
+            text-align: left;
+            border-bottom: 1px solid #000;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $(".nav>li").click(function () {
+                $(this).children().slideToggle();
+            })
+        })
+    </script>
+</head>
+<body>
+<ul class="nav">
+    <li>
+        一级菜单
+        <ul class="sub">
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+        </ul>
+    </li>
+    <li>
+        一级菜单
+        <ul class="sub">
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+        </ul>
+    </li>
+    <li>
+        一级菜单
+        <ul class="sub">
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+        </ul>
+    </li>
+    <li>
+        一级菜单
+        <ul class="sub">
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-jQuery-prop方法</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        //prop方法貌似不能再设置及查询不在attribute的属性了;
+        $(function () {
+            let oSpan = $("span");
+            let oCheck = $("input");
+            // console.log(oSpan.prop("class"));
+            oSpan.prop("demo", "123");
+            // oSpan.removeProp("class");
+            console.log(oCheck.attr("checked"));
+            console.log(oCheck.attr("disabled"));
+            console.log(oCheck.prop("checked"));
+            console.log(oCheck.prop("disabled"));
+        })
+    </script>
+</head>
+<body>
+<span class="span1" name="hello"></span>
+<span class="span2" name="world"></span>
+<input type="checkbox" checked disabled>
+</body>
+</html>

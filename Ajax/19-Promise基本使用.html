@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>19-Promise基本使用</title>
+	<script>
+		// console.log(1);
+		let promise = new Promise(function (resolve, reject) {
+			console.log(2);//pending;
+			// resolve();  //fulfilled;
+			reject();      //rejected; 只可从默认状态修改一次状态，再次修改无效；
+		});
+		promise.then(function () {
+			console.log("then");
+		});
+		promise.catch(function () {
+			console.log("catch");
+		});
+		// console.log(3);// 输出1,2,3,证明Promise不是异步的;
+		console.log(promise);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>29-jQuery自定义动画</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background: red;
+            margin-top: 20px;
+        }
+        .two{
+            background: deeppink;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $("button").eq(0).click(function () {
+                $(".one").animate({width: 500}, 500, "linear", function () {
+                })
+                $(".two").animate({width: 500}, 500, "swing", function () {
+                })
+            })
+            $("button").eq(1).click(function () {
+                $(".one").animate({width: "+=100"}, 200, "linear", function () {
+                })
+            })
+            $("button").eq(2).click(function () {
+                $(".one").animate({width: "hide"}, 200, "linear", function () {
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<button>操作属性</button>
+<button>累加属性</button>
+<button>关键字</button>
+<div class="one"></div>
+<div class="two"></div>
+</body>
+</html>

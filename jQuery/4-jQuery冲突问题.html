@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-jQuery冲突问题</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        jQuery.noConflict();//释放$符号的使用权;
+        /*$(function () {
+            // alert("hello world");
+        })*/
+        /*jQuery(function () {
+            alert("hello world");
+        })*/
+        let flag = jQuery.noConflict();
+        flag(function () {
+            alert("hello world");
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>60-Vue生命周期方法-创建阶段</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ msg }}</p>
+</div>
+<script>
+    let vue = new Vue({
+	    // beforeCreate阶段方法与数据还没有被初始化;
+	    beforeCreate: function () {
+		    // console.log(this.msg);
+		    // console.log(this.say);
+	    },
+	    // created阶段是最早能访问到方法与数据的阶段;
+	    created: function () {
+		    // console.log(this.msg);
+		    // this.say();
+	    },
+	    // beforeMount阶段已经编译好了最终模板,但还没有渲染到界面中;
+	    beforeMount: function () {
+			// let oP = document.querySelector("p");
+		    // console.log(oP);
+		    // console.log(oP.innerText);
+		    // console.log(oP.innerHTML);
+	    },
+	    // mounted阶段已经将最终模板渲染到了界面中；
+	    mounted: function () {
+		    let oP = document.querySelector("p");
+		    console.log(oP.innerText);
+		    console.log(oP.innerHTML);
+	    },
+        el: "#app",
+
+        // MVVM中的model;
+        data: {
+            msg: "数据"
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+		    say(){
+			    console.log("方法被调用");
+		    }
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    },
+	    // 用于定义局部组件
+	    components: {
+
+	    }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>61-JavaScript-商品展示</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 430px;
+            margin: 100px auto;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        div>ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        div>ul>li{
+            border: 2px solid transparent;
+            box-sizing: border-box;
+        }
+        div>ul>li>img{
+            width: 80px;
+            height: 80px;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="../images/pic1.jpg">
+    <ul>
+        <li><img src="../images/pic1.jpg"></li>
+        <li><img src="../images/pic2.jpg"></li>
+        <li><img src="../images/pic3.jpg"></li>
+        <li><img src="../images/pic4.jpg"></li>
+        <li><img src="../images/pic5.jpg"></li>
+    </ul>
+</div>
+<script>
+    let oImgBtn = document.querySelectorAll("ul>li>img");
+    let oImg = document.querySelector("div>img");
+    for (let value of oImgBtn){
+        value.onmouseenter = change;
+        value.onmouseleave = restart;
+    }
+    function change() {
+        oImg.src = this.src;
+        this.parentElement.style.border = "2px solid #000";
+    }
+    function restart() {
+        this.parentElement.style.border = "2px solid transparent";
+    }
+</script>
+</body>
+</html>

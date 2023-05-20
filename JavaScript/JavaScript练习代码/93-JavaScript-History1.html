@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>93-JavaScript-History1</title>
+</head>
+<body>
+<h1>初始界面</h1>
+<button id = btn1>前进</button>
+<button id = btn2>刷新</button>
+<a href="93-JavaScript-History2.html">新的界面</a>
+<script>
+    let btn1 = document.querySelector("#btn1");
+    let btn2 = document.querySelector("#btn2");
+    
+    btn1.onclick = function () {
+        // window.history.forward();
+        window.history.go(1);
+    }
+    btn2.onclick = function () {
+        window.history.go(0);//0或者不传参数代表刷新
+    }
+</script>
+</body>
+</html>

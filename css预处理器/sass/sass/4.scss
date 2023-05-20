@@ -1,0 +1,11 @@
+div{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background: blue;
+  top: 50%;
+  //left: (200px/2);//sass和less中的+-*/运算都需要加括号();
+  //left: (200px * 2);
+  //left: (200px + 500);
+  left: (200px - 100);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>81-JavaScript-添加事件三种方式</title>
+</head>
+<body>
+<button>开始</button>
+</body>
+<script>
+    let btn = document.querySelector("button");
+    //1.通过onclick等直接添加(后添加的会被覆盖)
+    /*btn.onclick = function () {
+        alert("666");
+    }
+    btn.onclick = function () {
+        alert("777");
+    }*/
+
+    //2.通过addEventListener()方法添加(低版本浏览器不支持);
+    /*btn.addEventListener("click", function () {
+        alert("666");
+    });
+    btn.addEventListener("click", function () {
+        alert("777");
+    });*/
+
+    //3.通过attachEvent()方法添加(太过于古老,已经废弃);
+    btn.attachEvent("click", function () {
+       alert("666");
+    });
+    btn.attachEvent("click", function () {
+        alert("777");
+    });
+</script>
+</html>

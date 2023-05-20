@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>63-JavaScript-表单事件</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            margin: 15px;
+            width: 300px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <input type="text">
+</form>
+<script>
+    let oText = document.querySelector("input");
+    /*oText.onfocus = function () {
+        console.log("获取焦点");
+    }*/
+    /*oText.onblur = function () {
+        console.log("失去焦点");
+    }*/
+    /*oText.onchange = function () {
+        console.log(this.value);
+    }*/
+    oText.oninput = function () {
+        console.log(this.value);
+    }
+</script>
+</body>
+</html>

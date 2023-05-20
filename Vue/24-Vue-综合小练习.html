@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>24-Vue-综合小练习</title>
+	<script src="vue.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#app{
+			width: 800px;
+			margin: 0 auto;
+		}
+		form{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+		table{
+			width: 100%;
+			background: black;
+			height: 20px;
+			word-break: keep-all;
+		}
+		table tr{
+			background: #fff;
+			height: 100%;
+		}
+		table td{
+			background: #fff;
+			height: 100%;
+		}
+		table td>input{
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			width: 100%;
+			height: 100%;
+			font-size: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div id="app">
+	<form v-show="isShow">
+		<input type="text" placeholder="序号" v-model="person.id">
+		<input type="text" placeholder="姓名" v-model="person.name">
+		<input type="text" placeholder="分数" v-model="person.score">
+		<input type="submit" value="新增" @click.prevent="create">
+		<input type="submit" value="查询" @click.prevent="query">
+	</form>
+    <table>
+	    <tr>
+		    <th>序号</th>
+		    <th>姓名</th>
+		    <th>分数</th>
+		    <th>时间</th>
+		    <th>操作</th>
+	    </tr>
+	    <tr v-for="(person, index) in persons">
+		    <td><input type="text" v-model="person.id" :disabled="isDisabled"></td>
+		    <td><input type="text" v-model="person.name" :disabled="isDisabled"></td>
+		    <td><input type="text" v-model="person.score" :disabled="isDisabled"></td>
+		    <td><input type="text" :value="person.time | dateFormat('YYYY-MM-DD')" disabled></td>
+		    <td>
+			    <a href="#" @click.prevent="edit">编辑</a>
+			    <a href="#" @click.prevent="del(index)">删除</a>
+			    <a href="#" @click.prevent="formEdit">更多操作</a>
+		    </td>
+	    </tr>
+    </table>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+	        isDisabled: true,
+	        isShow: false,
+	        persons:[{
+				id: 1,
+				name: "张三",
+				score: 99,
+		        time: Date.now()
+	        },{
+		        id: 2,
+		        name: "李四",
+		        score: 88,
+		        time: Date.now()
+	        },{
+		        id: 3,
+		        name: "王五",
+		        score: 77,
+		        time: Date.now()
+	        }
+	        ],
+	        allPersons:[{
+		        id: 1,
+		        name: "张三",
+		        score: 99,
+		        time: Date.now()
+	        },{
+		        id: 2,
+		        name: "李四",
+		        score: 88,
+		        time: Date.now()
+	        },{
+		        id: 3,
+		        name: "王五",
+		        score: 77,
+		        time: Date.now()
+	        }
+	        ],
+	        person: {
+				id: "",
+				name: "",
+				score: "",
+	        }
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+			edit(){
+				this.isDisabled = !this.isDisabled;
+			},
+	        formEdit(){
+		        this.isShow = !this.isShow;
+	        },
+	        del(index){
+		        this.persons.splice(index, 1);
+		        this.allPersons.splice(index, 1);
+	        },
+	        create(){
+				if (this.person.id === "" || this.person.name === "" || this.person.score === ""){
+					return;
+				}
+		        this.person.time = Date.now();
+		        this.persons.push(this.person);
+		        this.allPersons.push(this.person);
+		        this.person = {
+			        id: "",
+			        name: "",
+			        score: "",
+		        };
+	        },
+	        query(){
+		        this.persons = this.persons.filter((ele) => {
+					let flag1 = true, flag2 = true, flag3 = true;
+					if (this.person.id){
+						flag1 = ele.id + "" === this.person.id + "";
+					}
+			        if (this.person.name){
+				        flag2 = ele.name + "" === this.person.name + "";
+			        }
+			        if (this.person.score){
+				        flag3 = ele.score + "" === this.person.score + "";
+			        }
+					return flag1 && flag2 && flag3;
+		        });
+		        if (this.person.id === "" && this.person.name === "" && this.person.score === ""){
+			        this.persons = this.allPersons;
+		        }
+	        }
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+		    "dateFormat": function (value, formatStr) {
+			    value = new Date(value);
+			    let year = value.getFullYear() + "";
+			    let month = value.getMonth() + 1 + "";
+			    let day = value.getDate() + "";
+			    let hour = value.getHours() + "";
+			    let minute = value.getMinutes() + "";
+			    let second = value.getSeconds() + "";
+			    if (formatStr){
+				    return `${year}-${month}-${day}`
+			    }
+			    return `${year}-${month}-${day}  ${hour}:${minute}:${second}`
+		    }
+	    }
+    });
+</script>
+</body>
+</html>

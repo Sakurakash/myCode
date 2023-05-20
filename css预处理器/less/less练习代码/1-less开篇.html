@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-less开篇</title>
+    <style type="text/less">
+        .center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .father{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            .center;
+            .son{
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+            .center;
+            }
+        }
+    </style>
+    <script src="../../../工具/less.js"></script>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

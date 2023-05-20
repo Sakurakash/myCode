@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>64-Vue-组件渲染方式</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+<!--	通过标签来渲染,会被渲染到vue实例控制区域中-->
+<!--    <one></one>-->
+</div>
+<template id="one">
+	<p>我是组件</p>
+</template>
+<script>
+	Vue.component("one", {
+		template: "#one",
+	})
+    let vue = new Vue({
+        el: "#app",
+	    render: function (createElement) {
+			// 通过render来渲染,会直接替换vue实例控制区域
+		    return createElement("one");
+	    },
+        // MVVM中的model;
+        data: {
+
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    },
+	    // 用于定义局部组件
+	    components: {
+
+	    }
+    });
+</script>
+</body>
+</html>

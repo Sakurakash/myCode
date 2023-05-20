@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15-jQuery类操作相关方法</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .class1{
+            width: 100px;
+            height: 100px;
+            background: skyblue;
+        }
+        .class2{
+            border: 10px solid #000;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            let buttons = document.querySelectorAll("button");
+            buttons[0].onclick = function (){
+                $("div").addClass("class1");
+            }
+            buttons[1].onclick = function (){
+                $("div").addClass("class2");
+            }
+            buttons[2].onclick = function (){
+                $("div").removeClass("class1");
+            }
+            buttons[3].onclick = function (){
+                $("div").removeClass("class2");
+            }
+            buttons[4].onclick = function (){
+                $("div").toggleClass("class1 class2");
+            }
+        })
+    </script>
+</head>
+<body>
+<button>添加类1</button>
+<button>添加类2</button>
+<button>删除类1</button>
+<button>删除类2</button>
+<button>切换类</button>
+<div></div>
+</body>
+</html>

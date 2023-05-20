@@ -1,0 +1,13 @@
+@mixin animate($name, $args...){
+  transition: $name $args;
+}
+div{
+  width: 200px;
+  height: 200px;
+  background: red;
+  &:hover{
+    width: 400px;
+    height: 400px;
+    @include animate(all, 0.2s  linear 1s);
+  }
+}

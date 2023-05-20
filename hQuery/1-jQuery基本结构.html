@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-jQuery基本结构</title>
+    <script>
+        (function (window, undefined) {
+            let hQuery = function () {
+                return new hQuery.prototype.init();
+            }
+            hQuery.prototype = {
+                constructor: hQuery,
+                init: function () {
+                }
+            }
+            hQuery.prototype.init.prototype = hQuery.prototype;
+            window.hQuery = window.$ = hQuery;
+        })(window);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

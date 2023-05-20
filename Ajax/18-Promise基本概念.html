@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18-Promise基本概念</title>
+	<script>
+		function request() {
+			return new Promise(function (resolve, reject) {
+				setTimeout(function () {
+					resolve("拿到的数据");
+				}, 500);
+			});
+		}
+		request().then(function (data) {
+			console.log(data, 1);
+			return request();
+		}).then(function (data) {
+			console.log(data, 2);
+			return request();
+		}).then(function (data) {
+			console.log(data, 3);
+			return request();
+		});
+		// 使用Promise对象可以避免回调函数层层嵌套的问题;
+	</script>
+</head>
+<body>
+
+</body>
+</html>

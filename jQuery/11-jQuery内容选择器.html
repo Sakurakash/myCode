@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-jQuery内容选择器</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 50px;
+            height: 100px;
+            margin-bottom: 30px;
+            background: skyblue;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // let $div = $("div");
+            // console.log($div);
+
+            /*// :empty选择内容为空的元素(不包含文本和子元素);
+            let $div = $("div:empty");
+            console.log($div);*/
+
+            /*// :parent选择内容为包含文本和子元素的元素;
+            let $div = $("div:parent");
+            console.log($div);*/
+
+            /*// :contains选择内容为包含指定文本的元素;
+            let $div = $("div:contains(我是div)");
+            console.log($div);*/
+
+            // :has选择内容为包含指定子元素的元素;
+            // let $div = $("div:has(span)");
+            let $div = $("div:has(p)");
+            console.log($div);
+        })
+    </script>
+</head>
+<body>
+
+<div></div>
+<div>我是div</div>
+<div>我是div???</div>
+<div><span></span></div>
+<div><p></p></div>
+
+</body>
+</html>

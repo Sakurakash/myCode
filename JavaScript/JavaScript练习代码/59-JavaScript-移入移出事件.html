@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>59-JavaScript-移入移出事件</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    let oDiv = document.querySelector("div");
+    //1.移入事件
+    /*oDiv.onmouseover = function () {
+        console.log("移入事件");
+    }*/
+    /*oDiv.onmouseenter = function () {
+        console.log("移入事件");
+    }*/
+
+    //2.移出事件
+    /*oDiv.onmouseout = function () {
+        console.log("移出事件");
+    }*/
+    /*oDiv.onmouseleave = function () {
+        console.log("移出事件");
+    }*/
+
+    //3.移动事件
+    oDiv.onmousemove = function () {
+        console.log("移动事件");
+    }
+</script>
+</body>
+</html>

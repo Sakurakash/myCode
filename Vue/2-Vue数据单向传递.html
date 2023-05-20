@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-Vue单向传递</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<!--我们把"数据"交给"vue实例对象",vue实例对象将数据交给"界面"-->
+<!--     model ==> view model         ==>      view-->
+<div id="app">
+<!--    MVVM中的view-->
+    <p>{{ name }}</p>
+</div>
+<script>
+    // 1.创建一个vue实例对象;
+    // MVVM中的view model;
+    let vue = new Vue({
+        // 2.告诉vue实例对象要操控界面上哪个区域;
+        el: "#app",
+        // 3.告诉vue实例对象被操控区域的数据内容是什么;
+        data: {
+            // MVVM中的model;
+            name: "sakuraKen"
+        }
+    });
+</script>
+</body>
+</html>

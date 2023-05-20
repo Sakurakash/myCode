@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>78-JavaScript-轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            position: relative;
+            width: 670px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        ul>li{
+            flex-shrink: 0;
+        }
+        p{
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            line-height: 60px;
+        }
+        p>span{
+            display: inline-block;
+            width: 30px;
+            height: 60px;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            background-color: rgba(0,0,0,0.5);
+        }
+    </style>
+    <script src="../../工具/tools.js"></script>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li><img src="../images/ad1.jpg"></li>
+        <li><img src="../images/ad2.jpg"></li>
+        <li><img src="../images/ad3.jpg"></li>
+        <li><img src="../images/ad1.jpg"></li>
+    </ul>
+    <p>
+        <span class="left">&lt;</span>
+        <span class="right">&gt;</span>
+    </p>
+</div>
+</body>
+<script>
+    //拿到所需要操作的元素;
+    let oBox = document.querySelector(".box");
+    let leftBtn = document.querySelector(".left");
+    let rightBtn = document.querySelector(".right");
+    let oUl = document.querySelector(".box>ul");
+    let oItems = document.querySelectorAll("ul>li>img");
+    let imgWidth = parseInt(getComputedStyle(oItems[0]).width);
+    let currentIndex = 0;
+    //监听按钮点击事件;
+    let id = setInterval(function () {
+        rightBtn.onclick();
+    }, 1500);
+    leftBtn.onclick = function () {
+        currentIndex++;
+        if (currentIndex > 0){
+            currentIndex = -(oItems.length - 1);
+            oUl.style.marginLeft = -(oItems.length - 1) * imgWidth + "px";
+            currentIndex++;
+        }
+        // linearAnimation(oUl, -currentIndex * 670);
+        easeAnimation(oUl, {marginLeft : currentIndex * imgWidth});
+    }
+    rightBtn.onclick = function () {
+        currentIndex--;
+        if (currentIndex <= -oItems.length){
+            currentIndex = 0;
+            oUl.style.marginLeft = 0 + "px";
+            currentIndex--;
+        }
+        // linearAnimation(oUl, -currentIndex * 670);
+        easeAnimation(oUl, {marginLeft : currentIndex * imgWidth});
+    }
+    oBox.onmouseleave = function () {
+        id = setInterval(function () {
+            rightBtn.onclick();
+        }, 1500);
+    }
+    oBox.onmouseenter = function () {
+        clearInterval(id);
+    }
+</script>
+</html>

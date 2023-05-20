@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>39-JavaScript-对象深拷贝</title>
+    <script>
+        class Person {
+            name = "zs";
+            age = 18;
+            obj = {
+                cat : "mm"
+            }
+            arr = [1, 3, 5];
+        }
+        let p1 = new Person();
+
+        let p2 = {};
+        /*for (let key in p1){
+            p2[key] = p1[key];
+        }
+        Object.assign(p2, p1);
+        console.log(p2);
+        p2.name = "ls";
+        console.log(p1.name);
+        console.log(p2.name);*/
+
+        depCopy(p2, p1);
+        function depCopy(target, source) {
+            // 1.通过遍历拿到source中所有的属性
+            for(let key in source){
+                // console.log(key);
+                // 2.取出当前遍历到的属性对应的取值
+                let sourceValue = source[key];
+                // console.log(sourceValue);
+                // 3.判断当前的取值是否是引用数据类型
+                if(sourceValue instanceof Object){
+                    // console.log(sourceValue.constructor);
+                    // console.log(new sourceValue.constructor);
+                    let subTarget = new sourceValue.constructor;
+                    target[key] = subTarget;
+                    depCopy(subTarget, sourceValue);
+                }else{
+                    target[key] = sourceValue;
+                }
+            }
+        }
+        p1.arr[0] = 2;
+        p2.obj.cat = "gg";
+        console.log(p1);
+        console.log(p2);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

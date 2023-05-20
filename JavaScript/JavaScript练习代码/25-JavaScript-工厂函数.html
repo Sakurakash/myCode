@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>25-JavaScript-工厂函数</title>
+    <script>
+        function create(myName, myAge) {
+            let obj = {};
+            obj.name = myName;
+            obj.age = myAge;
+            obj.say = function () {
+                console.log("hello");
+            }
+            return obj;
+        }
+        console.log(create("zs", 44));
+        console.log(create("ss", 4));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

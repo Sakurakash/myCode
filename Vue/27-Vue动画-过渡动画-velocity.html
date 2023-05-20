@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>27-Vue动画-过渡动画-velocity</title>
+	<script src="vue.js"></script>
+	<script src="velocity.min.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+<div id="app">
+	<button @click.prevent="toggle">按钮</button>
+	<transition v-bind:css="false"
+	            v-on:before-enter="beforeEnter"
+	            v-on:enter="enter"
+	            v-on:after-enter="afterEnter" appear>
+		<div class="box" v-show="isShow"></div>
+	</transition>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+	        isShow: true
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+	        toggle(){
+				this.isShow = !this.isShow;
+	        },
+			beforeEnter(el){
+				el.style.opacity = "0";
+				el.style.marginLeft = "0";
+	        },
+	        enter(el, done){
+				Velocity(el, {opacity: 1, marginLeft: "500px"}, 1500);
+				done();
+	        },
+	        afterEnter(el){
+
+	        }
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>28-JavaScript-封装性</title>
+    <script>
+        function Person() {
+            this.name = "wyh";
+            let age = "非法数据";
+            this.setAge = function (myAge) {
+                if (myAge >= 0){
+                    age = myAge;
+                }
+            }
+            this.getAge = function () {
+                return age;
+            }
+        }
+        Person.prototype = {
+            constructor: Person,
+            say: function () {
+                console.log("hello");
+            }
+        }
+        let obj = new Person();
+        obj.setAge(-1);
+        console.log(obj.getAge());;
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>71-JavaScript-日期对象</title>
+</head>
+<body>
+<script>
+    // console.log(Date.now());
+    let date1 = new Date("2022-12-2 23:10:10");
+    // let date1 = new Date(32, 11, 2, 23, 10, 10);
+    // console.log(date1.valueOf());
+    // console.log(date1);
+    // console.log(date2);
+    console.log(date1.getFullYear());
+    console.log(date1.getMonth() + 1);
+    console.log(date1.getDate());
+    console.log(date1.getHours());
+    console.log(date1.getMinutes());
+    console.log(date1.getSeconds());
+    console.log(date1.getDay());
+    
+    function formatDate(date) {
+        return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}  ${date.getHours()}:${date1.getMinutes()}:${date.getSeconds() } 星期${date.getDay()}`
+    }
+    console.log(formatDate(date1));
+</script>
+</body>
+</html>

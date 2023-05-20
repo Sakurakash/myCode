@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>31-Vue动画-列表动画</title>
+	<script src="vue.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.v-enter{
+			opacity: 0;
+		}
+		.v-enter-to{
+			opacity: 1;
+		}
+		.v-enter-active{
+			transition: all 1s;
+		}
+		.v-leave{
+			opacity: 1;
+		}
+		.v-leave-to{
+			opacity: 0;
+		}
+		.v-leave-active{
+			transition: all 1s;
+		}
+	</style>
+</head>
+<body>
+<div id="app">
+	<form>
+		<input type="text" v-model="person.name">
+		<input type="submit" value="新增" @click.prevent="add">
+	</form>
+<!--    <ul>-->
+<!--	 transition-group默认会将所有的动画元素添加到span中,可以通过tag属性来指定添加到什么元素中   -->
+	    <transition-group appear tag="ul">
+		    <li v-for="(person, index) in persons" :key="person.id" @click.prevent="del(index)">
+			    <input type="checkbox">
+			    {{ index }} => {{ person.name }}
+		    </li>
+	    </transition-group>
+<!--    </ul>-->
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+            persons: [
+	            {name: "张三", id: 1},
+	            {name: "李四", id: 2},
+	            {name: "王五", id: 3}
+            ],
+	        person: {
+				name: ""
+	        }
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+			add(){
+				this.person.id = this.persons.length + 1;//给新创建的对象绑定一个独一无二的id;
+				this.persons.unshift(this.person);
+				this.person = {};
+			},
+	        del(index){
+		        this.persons.splice(index, 1);
+	        }
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    }
+    });
+</script>
+</body>
+</html>

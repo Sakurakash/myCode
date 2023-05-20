@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15-jsonp封装</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script src="myJsonp.js"></script>
+</head>
+<body>
+<script>
+    /*$.ajax({
+        url: "http://127.0.0.1/project/Ajax/15-jsonp.php",
+        // data: {teacher: "zs", age: 33},
+        dataType: "jsonp",
+        jsonp: "cb",
+        jsonpCallback: "lnj",
+        success: function (msg) {
+            console.log(msg);
+        },
+        error: function () {
+            alert("请求失败");
+        }
+    });*/
+    myJSONP({
+        url: "http://127.0.0.1/project/Ajax/15-jsonp.php",
+        data: {teacher: "zs", age: 33},
+        jsonp: "cb",
+        jsonpCallback: "lnj",
+        success: function (msg) {
+            console.log(msg);
+        },
+        error: function () {
+            alert("请求失败");
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>90-JavaScript-日期格式化高级</title>
+</head>
+<body>
+<script>
+    let time = new Date();
+    let res = dateFormat("YYYY-MM-DD hh:mm:ss", time);
+    console.log(res);
+    function dateFormat(fmt, date) {
+        //1.1.创建对象;
+        let obj = {
+            "Y+" : date.getFullYear(),
+            "M+" : date.getMonth() + 1,
+            "D+" : date.getDate(),
+            "h+" : date.getHours(),
+            "m+" : date.getMinutes(),
+            "s+" : date.getSeconds()
+        }
+        for (let key in obj){
+            //1.2.匹配字符;
+            let findKey = fmt.match(key);// + 表示匹配一个及以上连续的值;
+            if (findKey){
+                findKey = fmt.match(key)[0];
+                //1.3.获取对应字符的值;
+                let findValue = obj[key] + "";
+                //1.4.获取应截距的字符串数量;
+                let keyStr = findValue.substring(findValue.length - findKey.length);
+                if (findValue.length < findKey.length){
+                    keyStr = "0" + findValue;
+                }
+                //1.5.用获取到的值替换字符;
+                fmt = fmt.replace(findKey, keyStr);
+            }
+        }
+        return fmt;
+    }
+</script>
+</body>
+</html>

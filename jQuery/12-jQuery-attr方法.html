@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12-jQuery-attr方法</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            let oSpan = $("span");
+            console.log(oSpan.attr("class"));
+            oSpan.attr("class", "box");
+            oSpan.attr("abc", "abc");
+            oSpan.removeAttr("name abc");
+        })
+    </script>
+</head>
+<body>
+<span class="span1" name="hello"></span>
+<span class="span2" name="world"></span>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>93-JavaScript-History2</title>
+</head>
+<body>
+<h1>新的界面</h1>
+<button id = btn1>后退</button>
+<script>
+    let btn1 = document.querySelector("#btn1");
+
+    btn1.onclick = function () {
+        // window.history.back();
+        window.history.go(-1);
+    }
+</script>
+</body>
+</html>

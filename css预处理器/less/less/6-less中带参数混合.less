@@ -1,0 +1,13 @@
+//可以给创建的类中的样式指定默认值;
+.whc(@w: 200px, @h: 200px, @c: pink){
+  width: @w;
+  height: @h;
+  background: @c;
+}
+.box1{
+  .whc();
+}
+.box2{
+  //若不是逐个输入形参,须在值前加上变量名;
+  .whc(@h: 300px, @c: blue);
+}

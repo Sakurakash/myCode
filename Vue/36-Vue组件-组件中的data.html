@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>36-Vue组件-组件中的data</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<test></test>
+	<test></test>
+	<test></test>
+</div>
+<template id="test">
+	<div>
+		<button @click="add">累加</button>
+		<p>{{ number }}</p>
+	</div>
+</template>
+<script>
+	Vue.component("test", {
+		template: "#test",
+		// 每次使用新的组件,都会将data中的数据重新绑定一份给组件
+		// 这样不同组件当中的数据都是独立的,不会导致数据混乱;
+		data: function () {
+			return {
+				number: 0
+			}
+		},
+		methods: {
+			add(){
+				this.number++;
+			}
+		}
+	});
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    }
+    });
+</script>
+</body>
+</html>

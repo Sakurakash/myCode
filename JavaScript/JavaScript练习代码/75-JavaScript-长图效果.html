@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>75-JavaScript-长图效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 640px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .box-top, .box-bottom{
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            left: 0;
+            z-index: 999;
+        }
+        .box-bottom{
+            bottom: 0;
+        }
+        .box>img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="box-top"></div>
+    <div class="box-bottom"></div>
+    <img src="../images/long.gif">
+</div>
+<script>
+    let oTop = document.querySelector(".box-top");
+    let oBottom = document.querySelector(".box-bottom");
+    let oImg = document.querySelector(".box>img");
+    let offsetY = 0;
+    oTop.onmouseenter = function () {
+        this.time = setInterval( () => {
+            oImg.style.top = offsetY + "px";
+            if (offsetY >= 0){
+                clearInterval(this.time);
+                return;
+            }
+            offsetY += 5;
+        }, 5);
+    }
+    oTop.onmouseleave = function () {
+        clearInterval(this.time);
+    }
+    oBottom.onmouseenter = function () {
+        this.time = setInterval( () => {
+            oImg.style.top = offsetY + "px";
+            if (offsetY <= -1263){
+                clearInterval(this.time);
+                return;
+            }
+            offsetY -= 5;
+        }, 5);
+    }
+    oBottom.onmouseleave = function () {
+        clearInterval(this.time);
+    }
+</script>
+</body>
+</html>

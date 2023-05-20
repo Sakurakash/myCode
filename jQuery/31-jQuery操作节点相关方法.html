@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>31-jQuery操作节点相关方法</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // 1.添加节点
+            $("button").eq(0).click(function () {
+                let oLi = $("<li>新增的li</li>");
+                $("ul").append(oLi);
+                // oLi.appendTo("ul");
+                // $("ul").after(oLi);
+                // oLi.insertAfter("ul");
+                // $("ul").prepend(oLi);
+                // oLi.prependTo("ul");
+                // $("ul").before(oLi);
+                // oLi.insertBefore("ul");
+            })
+            // 2.删除节点
+            $("button").eq(1).click(function () {
+                // $(".item").remove();
+                $(".item").detach();
+                // $("div").empty();
+            })
+            // 3.替换节点
+            $("button").eq(2).click(function () {
+                let oLi = $("<li>新增的li</li>");
+                // $("ul").replaceWith(oLi);
+                oLi.replaceAll("ul");
+            })
+            // 4.复制节点
+            $("button").eq(3).click(function () {
+                let oLi = $("ul>li:first-child").clone(true);//为true时会连同事件一起复制;
+                $("ul").append(oLi);
+            })
+            $("li").click(function () {
+                alert("有事件");
+            })
+        })
+    </script>
+</head>
+
+<body>
+<button>添加节点</button>
+<button>删除节点</button>
+<button>替换节点</button>
+<button>复制节点</button>
+<ul>
+    <li class="item">我是第1个li</li>
+    <li>我是第2个li</li>
+    <li class="item">我是第3个li</li>
+    <li>我是第4个li</li>
+    <li class="item">我是第5个li</li>
+</ul>
+<div>
+    我是div
+    <p>我是段落</p>
+</div>
+</body>
+</html>

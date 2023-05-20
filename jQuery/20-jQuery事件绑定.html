@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-jQuery事件绑定</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            /*$("button").click(function () {
+                alert("click1");
+            })
+            $("button").click(function () {
+                alert("click2");
+            })*/
+            $("button").on("click", function () {
+                alert("click1");
+            })
+            $("button").on("click", function () {
+                alert("click2");
+            })
+        })
+    </script>
+</head>
+<body>
+<button>按钮</button>
+</body>
+</html>

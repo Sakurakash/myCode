@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>52-Vuex-修改共享数据</title>
+	<script src="vue.js"></script>
+	<script src="vuex.js"></script>
+</head>
+<body>
+<div id="app">
+	<father></father>
+</div>
+<template id="father">
+	<div>
+		<son1></son1>
+		<son2></son2>
+	</div>
+</template>
+<template id="son1">
+	<div>
+		<button @click.prevent="add">增加</button>
+		<button @click.prevent="sub">减少</button>
+		<input type="text" :value="this.$store.state.count">
+	</div>
+</template>
+<template id="son2">
+	<div>
+		<button @click.prevent="add">增加</button>
+		<button @click.prevent="sub">减少</button>
+		<input type="text" :value="this.$store.state.count">
+	</div>
+</template>
+<script>
+	const store = new Vuex.Store({
+		state: {
+			count: 0
+		},
+		mutations: {
+			// mutations中的方法默认传递state参数;
+			mAdd(state){
+				state.count++;
+			},
+			mSub(state){
+				state.count--;
+			}
+		}
+	});
+	Vue.component("father",{
+		template: "#father",
+		store: store,
+		methods: {
+
+		},
+		components: {
+			"son1": {
+				template: "#son1",
+				methods: {
+					add(){
+						// 都通过调用mutations中的方法来修改共享数据,这样方便排查问题
+						// this.$store.state.count++;
+						this.$store.commit("mAdd");
+					},
+					sub(){
+						// this.$store.state.count--;
+						this.$store.commit("mSub");
+					}
+				}
+			},
+			"son2": {
+				template: "#son2",
+				methods: {
+					add(){
+						// this.$store.state.count++;
+						this.$store.commit("mAdd");
+					},
+					sub(){
+						// this.$store.state.count--;
+						this.$store.commit("mSub");
+					}
+				}
+			}
+		}
+	});
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    },
+	    // 用于定义局部组件
+	    components: {
+
+	    }
+    });
+</script>
+</body>
+</html>

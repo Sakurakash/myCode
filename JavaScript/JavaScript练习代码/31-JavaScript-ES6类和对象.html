@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>31-JavaScript-ES6类和对象</title>
+    <script>
+        class Person{
+            constructor(myName, myAge) {
+                this.name = myName;
+                this.age = myAge;
+            }
+            // say(){
+            //     console.log(this.name, this.age);
+            // }
+            static test(){
+                console.log("hello");
+            }
+        }
+        Person.prototype.num = 666;
+        Person.prototype.say = function () {
+            console.log("hello");
+        }
+        let per = new Person();
+        console.log(per);
+        console.log(per.constructor === Person);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>30-JavaScript-bind-call-apply方法</title>
+    <script>
+        let obj = {
+            name : "zs"
+        }
+        /*function person(a, b) {
+            console.log(a, b);
+            console.log(this);
+        }
+        let fn = person.bind(obj, 1, 2);
+        fn();
+        person.call(obj, 1, 2);
+        person.apply(obj, [1, 2]);*/
+        /*function Person(a, b) {
+            console.log(a + b);
+            this.test = function () {
+                console.log(this);
+            }
+        }
+        let per = new Person();
+        let fn = per.test.bind(obj, 2, 4);
+        fn();
+        per.test.call(obj, 2, 4);
+        per.test.apply(obj, [2, 4]);*/
+
+        function Person(myName, myAge) {
+            this.name = myName;
+            this.age = myAge;
+        }
+        Person.prototype = {
+            say : function () {
+                console.log(this.name, this.age);
+            }
+        }
+        let per = new Person("rabbit", 28);
+        per.say();
+
+        function Student(myName, myAge) {
+            Person.call(this, myName, myAge);
+            this.score = 99;
+            this.sco = function () {
+                console.log("score = " + this.score);
+            }
+        }
+        Student.prototype = new Person();
+        Student.prototype.constructor = Student;
+        let stu = new Student("wyh" ,21);
+        stu.say();
+        stu.sco();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

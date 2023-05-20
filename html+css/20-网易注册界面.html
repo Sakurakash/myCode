@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易注册界面</title>
+    <style>
+        html {
+            line-height: 1.15; /* 1 */
+            -webkit-text-size-adjust: 100%; /* 2 */
+        }
+        body {
+            margin: 0;
+        }
+        main {
+            display: block;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+        }
+        hr {
+            box-sizing: content-box; /* 1 */
+            height: 0; /* 1 */
+            overflow: visible; /* 2 */
+        }
+        pre {
+            font-family: monospace, monospace; /* 1 */
+            font-size: 1em; /* 2 */
+        }
+        a {
+            background-color: transparent;
+        }
+        b,
+        strong {
+            font-weight: bolder;
+        }
+        code,
+        kbd,
+        samp {
+            font-family: monospace, monospace; /* 1 */
+            font-size: 1em; /* 2 */
+        }
+        small {
+            font-size: 80%;
+        }
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+        img {
+            border-style: none;
+        }
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit; /* 1 */
+            font-size: 100%; /* 1 */
+            line-height: 1.15; /* 1 */
+            margin: 0; /* 2 */
+        }
+        button,
+        input { /* 1 */
+            overflow: visible;
+        }
+        button,
+        select { /* 1 */
+            text-transform: none;
+        }
+        button,
+        body{
+            background-color: #EFF8FF;
+            background-image: url(网易1.png);
+            background-size: 1920px;
+            background-repeat: no-repeat;
+            background-position: 0 700px;
+        }
+        .header{
+            height: 170px;
+        }
+        .img{
+            height: 29px;
+            margin-top: 16px;
+            margin-left: 32px;
+            float: left;
+            overflow: hidden;
+        }
+        .help{
+            float: right;
+            margin-top: 23px;
+            margin-right: 66px;
+            color:#666666;
+            font-size: 14px;
+        }
+        span{
+            font-size: 14px;
+            color:#666666;
+            margin-top: 23px;
+            margin-left: 50px;
+            float: left;
+        }
+        .content{
+            margin: 0 auto;
+        }
+        .欢迎{
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+        ul{
+            width: 500px;
+            margin:0 auto;
+            list-style: none;
+        }
+        [value]{
+            color: #BFBFBF;
+
+        }
+        input{
+            margin-top: 40px;
+            width: 400px;
+            height: 40px;
+            border: 1px solid #767676;
+        }
+        .free{
+            width: 204px;
+            line-height: 46px;
+            float: left;
+            text-align: center;
+            color: #3B78DD;
+            font-size: 18px;
+            border-bottom:2px solid #3B78DD;
+            background-color: #FFFFFF;
+        }
+        .vip{
+            width: 204px;
+            line-height: 46px;
+            text-align: center;
+            float: left;
+            font-size: 18px;
+            background-color: #F0F4FF;
+        }
+        .checkbox{
+            width: 14px;
+            height: 14px;;
+            border-bottom: 1px solid #CCCCCC;
+            font-size: 14px;
+            color: #adadad;
+        }
+        .submit{
+            background-color: #3B78DD;
+            color: white;
+        }
+        .footer{
+            margin-top: 300px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        .source{
+            display: inline;
+            color: #bdbdbd;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        
+    <div class="header">
+        <img class="img" src="网易.png" alt=""><span>丨&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国第一大电子邮件服务商</span>
+        <div class="help">帮助 &nbsp;丨&nbsp; 反馈</div>
+    </div>
+    <div class="content">
+        <ul>
+            <li class="欢迎">欢迎注册网易邮箱</li>
+            <li>
+                <div class="free">免费邮箱</div>
+                <div class="vip">VIP邮箱</div>
+            </li>
+            <li>
+                <input type="text" value="邮箱地址">
+            </li>
+            <li>
+                <input type="text" value="密码">
+            </li>
+            <input type="text" value="手机号码">
+            <div>
+                <label>
+                <input type="checkbox" class="checkbox" >
+                    同意《服务条款》、《隐私政策》和《儿童隐私政策》
+                </label>
+            </div>
+            <input type="submit"  class="submit" value="立即注册">
+        </ul>
+    </div>
+    <div class="footer">
+        关于网易 客户服务 隐私策略 | 网易公司版权所有©1997-2022&nbsp <div class="source"> &nbsp数据来源：艾媒咨询《2015—2018中国个人邮箱行业研究报告》</div>
+    </div>
+    </div>
+</body>
+</html>

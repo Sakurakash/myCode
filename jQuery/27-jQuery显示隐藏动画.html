@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>27-jQuery显示隐藏动画</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 400px;
+            background: red;
+            display: none;
+            position: fixed;
+            top: 30%;
+        }
+        p{
+            height: 3000px;
+        }
+        .left{
+            left: 0;
+        }
+        .right{
+            right: 0;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                let offset = $('html').scrollTop();
+                if (offset >= 500){
+                    $(".left,.right").show(1000);
+                }
+                else {
+                    $(".left,.right").hide(1000);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="left"></div>
+<div class="right"></div>
+<p>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>86-JavaScript-移入移出事件区别</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .inside{
+            width: 100px;
+            height: 100px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son">
+        <div class="inside"></div>
+    </div>
+</div>
+<script>
+    let fBox = document.querySelector(".father");
+    let sBox = document.querySelector(".son");
+    let testBox = document.querySelector(".inside");
+
+    //冒泡绑定mouseenter(相当于在每一层元素上触发一次该事件)
+    /*fBox.onmouseenter = function () {
+        console.log("父亲移入");
+    }
+    sBox.onmouseenter = function () {
+        console.log("儿子移入");
+    }
+    testBox.onmouseenter = function () {
+        console.log("孙子移入");
+    }*/
+
+    //冒泡绑定mouseover(与click事件机制相同)
+    /*fBox.onmouseover = function () {
+        console.log("父亲移入");
+    }
+    sBox.onmouseover = function () {
+        console.log("儿子移入");
+    }*/
+
+    // fBox.addEventListener("mouseenter", function () {
+    //     console.log("父亲移入捕获");
+    // }, true);
+    // sBox.addEventListener("mouseenter", function () {
+    //     console.log("儿子移入捕获");
+    // }, true);
+    // testBox.addEventListener("mouseenter", function () {
+    //     console.log("孙子移入捕获");
+    // }, true);
+    // testBox.addEventListener("mouseenter", function () {
+    //     console.log("孙子移入冒泡");
+    // }, false);
+    // sBox.addEventListener("mouseenter", function () {
+    //     console.log("儿子移入冒泡");
+    // }, false);
+    // fBox.addEventListener("mouseenter", function () {
+    //     console.log("父亲移入冒泡");
+    // }, false);
+
+    /*fBox.addEventListener("mouseover", function () {
+        console.log("父亲移入捕获");
+    }, true);
+    sBox.addEventListener("mouseover", function () {
+        console.log("儿子移入捕获");
+    }, true);
+    testBox.addEventListener("mouseover", function () {
+        console.log("孙子移入捕获");
+    }, true);
+    testBox.addEventListener("mouseover", function () {
+        console.log("孙子移入冒泡");
+    }, false);
+    sBox.addEventListener("mouseover", function () {
+        console.log("儿子移入冒泡");
+    }, false);
+    fBox.addEventListener("mouseover", function () {
+        console.log("父亲移入冒泡");
+    }, false);*/
+
+
+</script>
+</body>
+</html>

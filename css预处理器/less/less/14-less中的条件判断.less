@@ -1,0 +1,10 @@
+//.size(@w: 100px, @h: 200px) when (@w >= 400px), (@h >= 400px){
+//.size(@w: 100px, @h: 200px) when (@w >= 400px)and(@h >= 400px){
+.size(@w: 100px, @h: 200px) when (ispixel(@w)){
+  width: @w;
+  height: @h;
+}
+div{
+  .size(@h: 400px);
+  background: red;
+}

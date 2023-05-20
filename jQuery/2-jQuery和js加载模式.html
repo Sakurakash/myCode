@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-jQuery和js加载模式</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        //原生js入口函数会等到dom元素加载完毕之后才会执行,会等到图片也加载完毕,可以拿到图片宽高;
+        //jQuery入口函数也会等到dom元素加载完毕之后执行,但不会等到图片加载完毕,不可以拿到图片宽高;
+        /*window.onload = function () {
+            let oImg = document.querySelector("img");
+            console.log(oImg);
+            let width = getComputedStyle(oImg).width;
+            console.log("onload " + width);
+        }
+        $(document).ready(function () {
+            let $img = $("img");
+            console.log($img);
+            let $width = $img.width();
+            console.log("ready", $width);
+        })*/
+    </script>
+    <script>
+        //原生js入口函数后定义的会覆盖先定义的;
+        /*window.onload = function () {
+            alert("666");
+        }
+        window.onload = function () {
+            alert("888");
+        }*/
+        //jQuery编写多个入口函数不会覆盖先定义的;
+        $(document).ready(function () {
+            alert("666");
+        })
+        $(document).ready(function () {
+            alert("888");
+        })
+    </script>
+</head>
+<body>
+<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="">
+</body>
+</html>

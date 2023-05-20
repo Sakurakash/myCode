@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-fullpage基本使用</title>
+    <link rel="stylesheet" href="../css/fullpage.css">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/easings.js"></script>
+    <script src="../js/scrolloverflow.js"></script>
+    <script src="../js/fullpage.js"></script>
+</head>
+<body>
+<div id="fullpage">
+    <div class="section">Some section1</div>
+    <div class="section">Some section2</div>
+    <div class="section">Some section3</div>
+    <div class="section">Some section4</div>
+</div>
+<script>
+    new fullpage('#fullpage', {
+        //设置每一屏的背景颜色;
+        sectionsColor: [`#f00`, `#0f0`, `#00f`, `#000`],
+        //显示指示器;
+        navigation: true,
+        //设置指示器提示信息;
+        navigationTooltips: [1, 2, 3, 4],
+        //设置指示器提示信息常驻;
+        showActiveTooltip: true,
+        //设置指示器提示信息位置;
+        navigationPosition: `right`,
+        //设置是否在滚到最后一屏之后转到第一屏;
+        // loopBottom: true,
+        //设置是否在滚到第一屏之后转到最后一屏;
+        // loopTop: true,
+        //设置是否无限循环滚动;
+        continuousVertical: true
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8-Vue常用指令-v-show</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p v-if="show">{{ name }} 1</p>
+    <p v-if="hidden">{{ name }} 2</p>
+    <p v-show="show">{{ name }} 3</p>
+    <p v-show="hidden">{{ name }} 4</p>
+<!--    v-show和v-if使用方法类似,但v-show无论条件满足与否都会创建元素,条件不满足时会将display属性改为none;v-if条件不满足时会直接移除元素(不创建);-->
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            name: "sakuraKen",
+            show: true,
+            hidden: false,
+        }
+    });
+</script>
+</body>
+</html>

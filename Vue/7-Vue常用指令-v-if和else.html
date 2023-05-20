@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7-Vue常用指令-v-if和else</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--从model中获取值-->
+    <p v-if="show">我是true</p>
+    <p v-if="hidden">我是false</p>
+    <!--直接赋值-->
+    <p v-if="true">我是true</p>
+    <p v-if="false">我是false</p>
+    <!--赋值表达式-->
+    <p v-if="age >= 18">我是true</p>
+    <p v-if="age < 18">我是false</p>
+    <!--使用v-else,v-if条件不满足则会创建else(中间不可以有别的元素)-->
+    <p v-if="age >= 19">我是true</p>
+    <p v-else>我是false</p>
+    <!--使用v-else-if,与else if类似(中间不可以有别的元素)-->
+    <p v-if="age >= 30">大叔</p>
+    <p v-else-if="age >= 20">大哥</p>
+    <p v-else-if="age >= 10">小兄弟</p>
+    <p v-else>小朋友</p>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            show: true,
+            hidden: false,
+            age: 18
+        }
+    });
+</script>
+</body>
+</html>

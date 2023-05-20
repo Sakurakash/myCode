@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8-jQuery-map方法</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        let arr = [1, 3, 5, 7, 9];
+        let obj = {0: 1, 1: 3, 2: 5, 3: 7, 4: 9, length: 5};
+
+        let res1 = arr.map(function (value, index) {
+            return index + value;
+        })//正常
+        console.log(res1);
+
+        /*obj.map(function (value, index) {
+            console.log(index, value);
+        })//报错*/
+
+        let res2 = $.map(arr, function (value, index) {
+            return index + value;
+        })//正常
+        console.log(res2);
+
+        let each = $.each(arr, function (value, index) {
+            return index + value;
+        })//正常
+        console.log(each);
+
+        let res3 = $.map(obj, function (value, index) {
+            return index + value;
+        })//正常
+        console.log(res3);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

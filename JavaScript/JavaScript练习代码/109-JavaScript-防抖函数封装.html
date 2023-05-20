@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>109-JavaScript-防抖函数封装</title>
+</head>
+<body>
+<input type="text">
+<script>
+    let oInput = document.querySelector("input");
+
+    function debounce(fn, delay) {
+        let timerId = null;
+        return function (event) {
+            let self = this;
+            let args = arguments;
+            timerId && clearTimeout(timerId);
+            timerId = setTimeout(function () {
+                fn.apply(self, args);
+            }, delay || 1000);
+        }
+    }
+    function test(event) {
+        console.log(event);
+    }
+    oInput.oninput = debounce(test, 2000);
+</script>
+</body>
+</html>

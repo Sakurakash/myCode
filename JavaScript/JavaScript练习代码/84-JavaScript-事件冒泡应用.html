@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>84-JavaScript-事件冒泡应用</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 200px;
+            list-style: none;
+            margin: 100px auto;
+        }
+        ul>li{
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            font-size: 30px;
+            text-align: center;
+        }
+        .selected{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="selected">我是第一个li</li>
+    <li>我是第二个li</li>
+    <li>我是第三个li</li>
+    <li>我是第四个li</li>
+    <li>我是第五个li</li>
+</ul>
+<script>
+    /*let oItems = document.querySelectorAll("ul>li");
+    let currentItem = oItems[0];
+    for (let item of oItems){
+        item.onclick = change;
+    }
+    function change() {
+        currentItem.className = "";
+        this.className = "selected";
+        currentItem = this;
+    }*/
+    let oUl = document.querySelector("ul");
+    let currentItem = document.querySelector("ul>li");
+    oUl.onclick = function (event) {
+        currentItem.className = "";
+        let oItem = event.target;
+        oItem.className = "selected";
+        currentItem = oItem;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@mixin whc($w: 200px, $h: 200px, $c: red){
+  width: $w;
+  height: $h;
+  background: $c;
+}
+.box1{
+  @include whc(300px, 300px, pink);
+  margin-bottom: 20px;
+}
+.box2{
+  @include whc($c: blue);
+}

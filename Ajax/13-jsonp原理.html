@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsonp原理</title>
+</head>
+<body>
+<!--    <script src="http://127.0.0.1/project/Ajax/14-jsonp.php?cb=num"></script>-->
+<script>
+    // 通过dom方法将script添加到body中是异步的,会先执行后面的代码;
+    let oScript = document.createElement("script");
+    oScript.src = "http://127.0.0.1/project/Ajax/13-jsonp.php?cb=num";
+    document.body.appendChild(oScript);
+</script>
+<script>
+    function num(data) {
+        console.log(data);
+    }
+</script>
+</body>
+</html>

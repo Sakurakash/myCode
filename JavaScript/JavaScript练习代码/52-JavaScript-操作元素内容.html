@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>52-JavaScript-操作元素内容</title>
+</head>
+<body>
+<div>
+    我是div
+    <h1>我是标题</h1>
+    <p>我是段落</p>
+</div>
+<script>
+    let oDiv = document.querySelector("div");
+    // console.log(oDiv.innerHTML);  //包含标签
+    // console.log(oDiv.innerText);  //不含标签，无空格
+    // console.log(oDiv.textContent);  //不含标签
+    // oDiv.innerHTML = "123";
+    // oDiv.innerText = "456";
+    // oDiv.textContent = "789";
+    oDiv.innerHTML = "<span>123</span>";
+    // oDiv.innerText = "<span>456</span>";
+    // oDiv.textContent = "<span>789</span>";
+    function setText (obj, text) {
+        if (obj.innerText in obj){
+            obj.innerText = text;
+        }else {
+            obj.textContent = text;
+        }
+    }
+    setText(oDiv, "函数输入的文字");
+</script>
+</body>
+</html>

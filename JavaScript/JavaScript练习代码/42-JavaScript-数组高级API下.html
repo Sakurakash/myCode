@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>42-JavaScript-数组高级API下</title>
+    <script>
+        arr = [1, 2, 3, 4, 5];
+
+        /*Array.prototype.myFilter = function (fn){
+            let arr1 = [];
+            for (let i = 0, j = 0; i < this.length; i++){
+                if (fn(this[i])) {
+                    arr1[j] = this[i];
+                    j++;
+                }
+            }
+            return arr1;
+        }*/
+
+        Array.prototype.myMap = function (fn){
+            let arr1 = [];
+            for (let i = 0; i < this.length; i++){
+                arr1[i] = fn(this[i]);
+            }
+            return arr1;
+        }
+
+        /*let index = arr.myFilter(function (currentValue, currentIndex, currentArray){
+            if (currentValue % 2 === 0){
+                return true;
+            }
+        });*/
+
+        let index = arr.myMap(function (currentValue, currentIndex, currentArray){
+            if (currentValue % 2 === 0){
+                return currentValue;
+            }
+        });
+
+        console.log(index);
+    </script>
+</head>
+<body>
+</body>
+</html>

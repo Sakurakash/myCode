@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>50-JavaScript-节点增删改查</title>
+</head>
+<body>
+<div>
+    <h1>1</h1>
+    <h2>2</h2>
+</div>
+<script>
+    let oDiv = document.querySelector("div");
+    let oSpan = document.createElement("span");
+    let oA = document.createElement("a");
+    // oDiv.appendChild(oSpan);
+    oDiv.appendChild(oA);
+    oDiv.insertBefore(oSpan, oA);
+    oDiv.removeChild(oSpan);
+    oA.parentElement.removeChild(oA);
+    // oA.parentNode.removeChild(oA);
+    let oDiv2 = oDiv.cloneNode(true);
+    console.log(oDiv2);
+</script>
+</body>
+</html>

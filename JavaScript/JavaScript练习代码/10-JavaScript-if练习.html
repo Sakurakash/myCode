@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-JavaScript-if练习</title>
+    <script>
+/*        let num = prompt("输入一个整数");
+        num%2 === 0?  alert("YES") : alert("NO");
+        if(num%2 === 0){
+            alert("这个数是偶数");
+        }else {
+            alert("这个数是奇数");
+        }*/
+
+/*        let day = +prompt("请输入一个1-7的整数");
+        if(day === 1){
+            alert("今天是星期一")
+        }else if(day === 2){
+            alert("今天是星期二")
+        }else if(day === 3){
+            alert("今天是星期三")
+        }else if(day === 4){
+            alert("今天是星期四")
+        }else if(day === 5){
+            alert("今天是星期五")
+        }else if(day === 6){
+            alert("今天是星期六")
+        }else if(day === 7){
+            alert("今天是星期日")
+        }else{
+            alert("回到火星去")
+        }*/
+
+/*        let str = prompt("输入一个整数");
+        let mooth = +str;
+        if(mooth === 3 || mooth === 4 || mooth === 5){
+            alert("春季");
+        }else if(mooth === 6 || mooth === 7 || mooth === 8){
+            alert("夏季");
+        }else if(mooth === 9 || mooth === 10 || mooth === 11){
+            alert("秋季");
+        }else if(mooth === 12 || mooth === 1 || mooth === 2){
+            alert("冬季");
+        }else {
+            alert("回到火星去");
+        }*/
+
+        // let a = 5, b = 3, c = 4;
+        let a = +prompt();
+        let b = +prompt();
+        let c = +prompt();
+        let temp = a;
+        if(a>b){
+            a = b;
+            b = temp;
+        }
+        if(b>c){
+            temp = b;
+            b = c;
+            c = temp;
+}
+        if(a>b){
+            temp = a;
+            a = b;
+            b = temp;
+        }
+
+        let a1 = a + "";
+        let b1 = b + "";
+        let c1 = c + "";
+        alert (a1 + "<" + b1 + "<" + c1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

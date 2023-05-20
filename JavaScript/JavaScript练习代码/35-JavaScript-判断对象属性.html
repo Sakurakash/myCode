@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>35-JavaScript-判断对象属性</title>
+    <script>
+        class Person{
+            name = null;
+            age = 0;
+        }
+        Person.prototype.height = 180;
+        let p = new Person();
+        console.log("name" in p);
+        console.log("height" in p);
+        console.log(p.hasOwnProperty("name"));
+        console.log(p.hasOwnProperty("height"));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

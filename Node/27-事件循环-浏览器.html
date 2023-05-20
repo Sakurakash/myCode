@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>27-事件循环-浏览器</title>
+</head>
+<body>
+<script>
+	/*setTimeout(function () {
+		console.log("setTimeout1");
+	}, 0);
+	Promise.resolve().then(function () {
+		console.log("Promise1");
+	});
+	console.log("同步代码1");
+	setTimeout(function () {
+		console.log("setTimeout2");
+	}, 0);
+	console.log("同步代码2");
+	Promise.resolve().then(function () {
+		console.log("Promise2");
+	});
+	// 同步1, 同步2, p1, p2, s1, s2
+	*/
+	setTimeout(function () {
+		console.log("setTimeout1");
+		Promise.resolve().then(function () {
+			console.log("Promise1");
+		});
+		console.log("同步代码1");
+		Promise.resolve().then(function () {
+			console.log("Promise2");
+		});
+	}, 0);
+	setTimeout(function () {
+		console.log("setTimeout2");
+		Promise.resolve().then(function () {
+			console.log("Promise3");
+		});
+		console.log("同步代码2");
+		Promise.resolve().then(function () {
+			console.log("Promise4");
+		});
+	}, 0);
+	// s1, 同1, p1, p2, s2, 同2, p3, p4
+</script>
+</body>
+</html>

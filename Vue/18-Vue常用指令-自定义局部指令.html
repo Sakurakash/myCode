@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>18-Vue常用指令-自定义局部指令</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app1">
+	<p v-color="`red`">我是段落</p>
+</div>
+<div id="app2">
+	<p v-color="`green`">我是段落</p>
+</div>
+<script>
+    let vue1 = new Vue({
+        el: "#app1",
+        data: {
+        }
+    });
+	let vue2 = new Vue({
+		el: "#app2",
+		data: {
+		},
+		directives: {
+			"color": {
+				bind: function (el, binding) {
+					el.style.color = binding.value;
+				}
+			}
+		}
+	});
+</script>
+</body>
+</html>

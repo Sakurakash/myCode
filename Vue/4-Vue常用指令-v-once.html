@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-Vue常用指令-v-once</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p v-once>原始数据: {{ name }}</p>
+    <p>当前数据: {{ name }}</p>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            name: "sakuraKen",
+        }
+    });
+</script>
+</body>
+</html>

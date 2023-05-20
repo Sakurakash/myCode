@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>89-JavaScript-正则表达式</title>
+</head>
+<body>
+<script>
+    let str = "ach2022-3-11def2022-11-14";
+
+    // let reg = new RegExp("AcH", "i");//通过构造函数创造正则表达式,加i可不区分大小写;
+    // let reg = new RegExp("\\d{4}-\\d{1,2}-\\d{1,2}");//通过构造函数创造正则表达式;
+    let reg = /\d{4}-\d{1,2}-\d{1,2}/g;//通过字面量创造正则表达式,加g可执行全局匹配;
+
+    //利用正则表达式匹配(查找)字符串;
+    /*let res = reg.test(str);
+    console.log(res);*/
+
+    //利用正则表达式提取字符串;
+    /*let res = str.match(reg);//正常情况下只能匹配一个,在正则表达式后加g可执行全局匹配;
+    console.log(res);
+    console.log(res[0]);
+    console.log(res[1]);*/
+
+    let res = str.replace(reg, "1-2-1-4");
+    console.log(res);
+</script>
+</body>
+</html>

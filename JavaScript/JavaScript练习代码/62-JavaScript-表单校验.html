@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>62-JavaScript-表单校验</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        form>input{
+            margin-top: 5px;
+            margin-left: 5px;
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            box-sizing: border-box;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+<form action="https://www.bilibili.com">
+    <input type="text" placeholder="请输入账号">
+    <input type="password" placeholder="请输入密码">
+    <input type="submit" value="注册">
+</form>
+<script>
+    let oText = document.querySelector("input[type=text]");
+    let oPassword = document.querySelector("input[type=password]");
+    let oSubmit = document.querySelector("input[type=submit]");
+    oSubmit.onclick = function () {
+        if (oText.value.length < 6){
+            oText.style.backgroundColor = "red";
+            return false;
+        }
+        if (oPassword.value.length < 6){
+            oText.style.backgroundColor = "transparent";
+            oPassword.style.backgroundColor = "red";
+            return false;
+        }else{
+            oPassword.style.backgroundColor = "transparent";
+        }
+    }
+</script>
+</body>
+</html>

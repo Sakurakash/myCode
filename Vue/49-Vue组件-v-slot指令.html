@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>49-Vue组件-v-slot指令</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<father></father>
+</div>
+<template id="father">
+	<son>
+		<template #default="abc">
+			<ul>
+				<li v-for="(value, index) in abc.names">{{ value }}</li>
+			</ul>
+		</template>
+	</son>
+</template>
+<template id="son">
+	<div>
+		<div>我是头部</div>
+		<slot name="default" :names="names">子组件默认数据1</slot>
+		<div>我是尾部</div>
+	</div>
+</template>
+<script>
+	Vue.component("father", {
+		template: "#father",
+		components: {
+			"son": {
+				template: "#son",
+				data: function () {
+					return {
+						names: ["张三", "李四", "王五"]
+					}
+				}
+			}
+		}
+	})
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    },
+	    // 用于定义局部组件
+	    components: {
+
+	    }
+    });
+</script>
+</body>
+</html>

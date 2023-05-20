@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>107-JavaScript-橱窗展示</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 800px;
+            height: 190px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            position: relative;
+        }
+        img{
+            vertical-align: bottom;
+        }
+        .progress{
+            width: 100%;
+            height: 30px;
+            background-color: #ccc;
+            position: relative;
+        }
+        .line{
+            height: 100%;
+            width: 100px;
+            background-color: deeppink;
+            border-radius: 15px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <script src="../../工具/tools.js"></script>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li><img src="../images/img1.jpg" alt=""></li>
+        <li><img src="../images/img2.jpg" alt=""></li>
+        <li><img src="../images/img3.jpg" alt=""></li>
+        <li><img src="../images/img4.jpg" alt=""></li>
+        <li><img src="../images/img5.jpg" alt=""></li>
+        <li><img src="../images/img6.jpg" alt=""></li>
+        <li><img src="../images/img7.jpg" alt=""></li>
+        <li><img src="../images/img8.jpg" alt=""></li>
+        <li><img src="../images/img9.jpg" alt=""></li>
+        <li><img src="../images/img10.jpg" alt=""></li>
+    </ul>
+    <div class="progress">
+        <div class="line"></div>
+    </div>
+</div>
+<script>
+    let oImages = document.querySelectorAll("ul img");
+    let oUl = document.querySelector("ul");
+    let oProgress = document.querySelector(".progress");
+    let oLine = document.querySelector(".line");
+    //初始化ul宽度和进度条宽度;
+    oUl.style.width = oImages[0].offsetWidth * oImages.length + "px";
+    let oLineWidth = oProgress.offsetWidth/oUl.offsetWidth*oProgress.offsetWidth;
+    oLineWidth = oLineWidth > oProgress.offsetWidth ? oProgress.offsetWidth : oLineWidth;
+    oLine.style.width = oLineWidth + "px";
+    //监听事件;
+    oLine.onmousedown = function (event) {
+        let x = event.pageX;
+        let begin = parseInt(oLine.style.left) || 0;
+        let maxOffset = oProgress.offsetWidth - oLine.offsetWidth;
+        document.onmousemove = function (event) {
+            let offsetX = event.pageX - x  + begin;
+            //安全校验;
+            offsetX = offsetX < 0 ? 0 : offsetX;
+            offsetX = offsetX > maxOffset ? maxOffset : offsetX;
+            oLine.style.left = offsetX + "px";
+            //进度条偏移量/进度条总量 = 图片偏移量/图片总量;
+            let oUlOffset = offsetX / oProgress.offsetWidth * oUl.offsetWidth;
+            oUl.style.left = -oUlOffset + "px";
+        }
+    }
+    document.onmouseup = function () {
+        document.onmousemove = null;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>68-JavaScript-排它思想</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 400px;
+            border: 1px solid #000;
+            margin: 100px auto;
+        }
+        .current{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="current">第1个li</li>
+    <li>第2个li</li>
+    <li>第3个li</li>
+    <li>第4个li</li>
+    <li>第5个li</li>
+</ul>
+<script>
+    let items = document.querySelectorAll("ul>li");
+    let previous = 0;
+    for (var i = 0; i < items.length; i++){
+        var item = items[i];
+        (function (index) {
+            item.onclick = function () {
+                let preItem = items[previous];
+                preItem.className = "";
+                this.className = "current";
+                previous = index;
+            }
+        })(i);
+    }
+    /*for (let j = 0; j < items.length; j++){
+                let oItem = items[j];
+                oItem.className = "";
+            }*/
+</script>
+</body>
+</html>

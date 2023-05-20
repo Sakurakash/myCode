@@ -1,0 +1,17 @@
+@w: 300px;
+@h: @w;
+@c: blue;//全局变量
+
+.box1{
+  @c: red;//局部变量;
+  width: @w;
+  height: @h;
+  background: @c;
+  margin-bottom: 20px;
+  @c: pink;//后定义的覆盖先定义的;
+}
+.box2{
+  width: @w;
+  height: @h;
+  background: @c;
+}

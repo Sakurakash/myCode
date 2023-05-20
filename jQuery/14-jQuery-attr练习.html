@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14-attr练习</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            let oInput = document.querySelector("input");
+            let btn = document.querySelector("button");
+            let oImg = $("img");
+            btn.onclick = function () {
+                let text = oInput.value;
+                oImg.attr("src", text);
+            }
+        })
+    </script>
+</head>
+<body>
+<input type="text">
+<button>点击更换图片</button>
+<img src="http://e.hiphotos.baidu.com/image/pic/item/a1ec08fa513d2697e542494057fbb2fb4316d81e.jpg" alt="" style="float: right">
+</body>
+</html>

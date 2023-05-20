@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>30-Vue-v-for注意点</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<form>
+		<input type="text" v-model="person.name">
+		<input type="submit" value="新增" @click.prevent="add">
+	</form>
+    <ul>
+<!--	    使用v-bind(:key)给li绑定一个独一无二的id,这样数据每次发生变化都会重新渲染,不会产生数据混乱的问题-->
+	    <li v-for="(person, index) in persons" :key="person.id">
+		    <input type="checkbox">
+		    {{ index }} => {{ person.name }}
+	    </li>
+    </ul>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        // MVVM中的model;
+        data: {
+            persons: [
+	            {name: "张三", id: 1},
+	            {name: "李四", id: 2},
+	            {name: "王五", id: 3}
+            ],
+	        person: {
+				name: ""
+	        }
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+			add(){
+				this.person.id = this.persons.length + 1;//给新创建的对象绑定一个独一无二的id;
+				this.persons.unshift(this.person);
+				this.person = {};
+			}
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    }
+    });
+</script>
+</body>
+</html>

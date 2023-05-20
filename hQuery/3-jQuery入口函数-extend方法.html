@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-jQuery入口函数-extend方法</title>
+    <script>
+        function hQuery() {
+
+        }
+        // 以下代码作用为: 使方法可以添加在hQuery类或及其实例上
+        hQuery.extend = hQuery.prototype.extend = function (obj) {
+            for (let key in obj){
+                this[key] = obj[key];
+            }
+        };
+        hQuery.extend({
+            test: function () {
+                console.log("test test");
+            }
+        });
+        hQuery.test();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

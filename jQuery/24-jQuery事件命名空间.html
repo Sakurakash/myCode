@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>24-jQuery事件命名空间</title>
+    <style>
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            let test1 = function () {
+                alert("click1");
+            }
+            let test2 = function () {
+                alert("click2");
+            }
+            $(".son").on("click.zs", test1);
+            $(".son").on("click.ls", test2);
+            // $(".son").trigger("click.zs");
+            $(".son").trigger("click.ls");
+        })
+    </script>
+</head>
+<body>
+<div class="son"></div>
+</body>
+</html>

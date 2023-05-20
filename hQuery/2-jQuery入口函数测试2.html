@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-jQuery入口函数测试2</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .div1{
+            width: 200px;
+            background: red;
+        }
+        .div2{
+            height: 200px;
+            background: pink;
+        }
+    </style>
+    <script src="hQuery.js"></script>
+<!--    <script src="../jQuery/jquery-1.12.4.js"></script>-->
+    <script>
+        window.onload = function () {
+            /*console.log($("div").css({
+                height: "30px",
+                background: "green"
+            }));*/
+            // console.log($("input").val("新值"));
+            // console.log($("div").hasClass("abed"));
+            // console.log($("div").addClass("dd abed"));
+            // console.log($("div").removeClass("ee be db"));
+            // console.log($("div").toggleClass("ee"));
+            /*$(".btn1").on("click", function () {
+                console.log("被点击1");
+            })
+            $(".btn1").on("click", function () {
+                console.log("被点击2");
+            })
+            $(".btn1").on("mouseenter", function () {
+                console.log("移入1");
+            })
+            $(".btn1").on("mouseenter", function () {
+                console.log("移入2");
+            })
+            $(".btn1").off("click", function () {
+                console.log("被点击2");
+            });*/
+            $(".btn1").on("click", function () {
+                console.log("被点击1");
+            })
+            let btn = $(".btn1").clone(true);
+            btn.insertBefore(".btn1");
+        }
+    </script>
+</head>
+<body>
+<div class="div1 dd bb ee"></div>
+<div class="div2 abed db be"></div>
+<input type="text" value="默认值1">
+<input type="text" value="默认值2">
+<button class="btn1">按钮1</button>
+<button class="btn2">按钮2</button>
+</body>
+</html>

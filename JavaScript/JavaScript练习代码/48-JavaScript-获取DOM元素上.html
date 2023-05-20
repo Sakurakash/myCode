@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>48-JavaScript-获取DOM元素上</title>
+</head>
+<body>
+<!--...-->
+<div class="father">
+    <form>
+        <input type="text" name = "test">
+        <input type="password" name = "test">
+    </form>
+</div>
+<div class="father" id="box">我是div</div>
+<!--...-->
+<script>
+    /*let odiv1 = document.getElementById("box");
+    console.log(odiv1);
+    console.log(typeof odiv1);*/
+    /*let odiv2 = document.getElementsByClassName("father");
+    console.log(odiv2);
+    console.log(typeof odiv2);*/
+    /*let odiv3 = document.getElementsByName("test");
+
+    console.log(odiv3);
+    console.log(typeof odiv3);*/
+    /*let odiv4 = document.getElementsByTagName("div");
+    console.log(odiv4);
+    console.log(typeof odiv4);*/
+    /*let odiv5 = document.querySelector("div input:nth-child(2)");
+    console.log(odiv5);*/
+    let odiv6 = document.querySelectorAll("input");
+    console.log(odiv6);
+</script>
+<!--...-->
+</body>
+</html>

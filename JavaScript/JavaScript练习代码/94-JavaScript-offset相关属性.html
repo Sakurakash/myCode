@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>94-JavaScript-offset相关属性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .grand{
+            width: 300px;
+            height: 300px;
+            margin-top: 100px;
+            margin-left: 100px;
+            background-color: yellow;
+            overflow: hidden;
+            /*position: absolute;*/
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            margin-top: 100px;
+            margin-left: 100px;
+            background-color: blue;
+            overflow: hidden;
+            position: absolute;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+            margin-left: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="grand">
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</div>
+<script>
+    let sDiv = document.querySelector(".son");
+    sDiv.onclick = function () {
+        console.log(sDiv.offsetWidth);//元素内容区域加上内边距和边框的宽度;
+        console.log(sDiv.offsetHeight);//元素内容区域加上内边距和边框的高度;
+        console.log(sDiv.offsetLeft);//元素与第一个定位元素的距离
+        console.log(sDiv.offsetTop);//元素与第一个定位元素的距离
+        console.log(sDiv.offsetParent);//元素第一个定位元素
+    }
+</script>
+</body>
+</html>

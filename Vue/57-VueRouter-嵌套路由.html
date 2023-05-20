@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>57-VueRouter-嵌套路由</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.orange, .red{
+			width: 500px;
+			height: 500px;
+		}
+		.skyblue, .yellow{
+			float: left;
+			width: 250px;
+			height: 250px;
+		}
+		.orange{
+			background-color: orange;
+		}
+		.red{
+			background-color: red;
+		}
+		.skyblue{
+			background-color: skyblue;
+		}
+		.yellow{
+			background-color: yellow;
+		}
+		.router-link-active{
+			background-color: #fff;
+		}
+		.test-active{
+			background-color: #12f;
+		}
+	</style>
+	<script src="vue.js"></script>
+	<script src="vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+	<!--    tag属性改变所渲染标签,to属性指定所渲染组件    -->
+	<router-link to="/one" tag="button">切换到第一个组件</router-link>
+	<router-link to="/two" tag="button">切换到第二个组件</router-link>
+	<router-view></router-view>
+</div>
+<template id="one">
+	<div class="orange">
+		<p>我是第一个组件</p>
+		<router-link to="/one/onesub1" tag="button">切换到第一个子界面</router-link>
+		<router-link to="/one/onesub2" tag="button">切换到第二个子界面</router-link>
+		<router-view></router-view>
+	</div>
+</template>
+<template id="two">
+	<div class="red">
+		<p>我是第二个组件</p>
+	</div>
+</template>
+<template id="onesub1">
+	<div class="skyblue">
+		<p>我是第一个子界面</p>
+	</div>
+</template>
+<template id="onesub2">
+	<div class="yellow">
+		<p>我是第二个子界面</p>
+	</div>
+</template>
+<script>
+	// 1.定义组件
+	const onesub1 = {
+		template: "#onesub1"
+	}
+	const onesub2 = {
+		template: "#onesub2"
+	}
+	const one = {
+		template: "#one"
+	}
+	const two = {
+		template: "#two",
+		components: {
+			onesub1: onesub1,
+			onesub2: onesub2
+		}
+	}
+	// 2.定义路由规则
+	const routes = [
+		// 数组中的一个对象就是一条规则
+		{path: '/', redirect: '/one'},// 将根路径重定向
+		{
+			path: '/one',
+			component: one,
+			children: [
+				{
+					// 在嵌套路由中,子路由路径不需要写父路由,也不需要加"/"
+					path: 'onesub1',
+					component: onesub1,
+				},
+				{
+					path: 'onesub2',
+					component: onesub2,
+				}
+			]
+		},
+		{path: '/two', component: two},
+	];
+	// 3.根据自定义的路由规则创建路由对象
+	const router = new VueRouter({
+		routes: routes,
+		linkActiveClass: "test-active" //自定义激活的router-link的类名
+	});
+    let vue = new Vue({
+        el: "#app",
+	    router: router,
+        // MVVM中的model;
+        data: {
+
+        },
+        // 用于存储监听事件的回调函数;
+        methods: {
+
+	    },
+	    // 用于定义计算属性;
+	    computed: {
+
+	    },
+	    // 用于定义局部指令
+	    directives: {
+
+		},
+	    // 用于定义局部过滤器
+	    filters: {
+
+	    },
+	    // 用于定义局部组件
+	    components: {
+			one: one,
+		    two: two
+	    }
+    });
+</script>
+</body>
+</html>

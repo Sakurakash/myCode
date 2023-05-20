@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>66-JavaScript-循环索引同步</title>
+</head>
+<body>
+<input type="button" value="我是按钮1">
+<input type="button" value="我是按钮2">
+<input type="button" value="我是按钮3">
+<script>
+    let btn = document.querySelectorAll("input");
+    /*for (var i = 0; i < btn.length; i++){
+        btn[i].onclick = function () {
+            console.log(i);
+        }
+    }*/
+    for (var i = 0; i < btn.length; i++){
+        (function test(index) {
+            btn[index].onclick = function () {
+                console.log(index);
+            }
+        })(i);
+    }
+
+</script>
+</body>
+</html>

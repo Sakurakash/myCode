@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>96-JavaScript-scroll相关属性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            border: 50px solid #000;
+            background-color: red;
+            background-clip: content-box;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="son">
+    我是内容;
+    我是内容;
+    我是内容;
+    我是内容;
+    我是内容;
+    我是内容;
+    我是内容;
+</div>
+</div>
+<script>
+    let sDiv = document.querySelector(".son");
+    sDiv.onclick = function () {
+        //元素内容未超出内容区时,scrollWidth == clientWidth == 内容区域加内边距;
+        //元素内容未超出内容区时,scrollHeight == clientHeight == 内容区域加内边距;
+        console.log(sDiv.scrollWidth);//元素内容区域加上内边距的宽度(计算超出部分);
+        console.log(sDiv.scrollHeight);//元素内容区域加上内边距的高度(计算超出部分);
+    }
+    sDiv.onscroll = function () {
+        console.log(sDiv.scrollTop);//滚动条垂直移动的距离(从内边距开始计算);
+        console.log(sDiv.scrollLeft);//滚动条水平移动的距离(从内边距开始计算);
+    }
+</script>
+</body>
+</html>

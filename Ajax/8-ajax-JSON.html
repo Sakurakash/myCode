@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-ajax-post</title>
+    <script src="myAjax.js"></script>
+    <script>
+        window.onload = function () {
+            let btn = document.querySelector("button");
+            btn.onclick = function () {
+                ajax({
+                        type: "POST",
+                        url: "8-ajax-JSON.php",
+                        timeout: 3000,
+                        success: function (xhr) {
+                            console.log("接收到数据");
+                            let res = JSON.parse(xhr.responseText);
+                            console.log(res);
+                            console.log(res[name]);
+                            console.log(res[age]);
+                        },
+                        error: function (xhr){
+                            console.log("接收失败");
+                        }
+                    })
+            }
+        }
+    </script>
+</head>
+<body>
+<button>按钮</button>
+</body>
+</html>

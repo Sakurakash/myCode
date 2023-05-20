@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>100-JavaScript-拖拽效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        .musk{
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.2);
+        }
+        p{
+            height: 30px;
+            background-color: skyblue;
+            text-align: center;
+        }
+        .login{
+            width: 400px;
+            height: 300px;
+            background-color: purple;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: move;
+        }
+        .login>div{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<p>我是按钮</p>
+<a href="https://bilibili.com">我是a标签</a>
+<div class="musk">
+    <div class="login">
+        <div></div>
+    </div>
+</div>
+<script>
+    //1.拿到需要操作的元素;
+    let oP = document.querySelector("p");
+    let oMusk = document.querySelector(".musk");
+    let oLogin = document.querySelector(".login");
+    let oClose = document.querySelector(".login>div");
+    //2.监听点击事件;
+    oP.onclick = function () {
+        oMusk.style.display = "block";
+    }
+    oClose.onclick = function () {
+        oMusk.style.display = "none";
+    }
+    //3.监听鼠标按下事件;
+    oLogin.onmousedown = function (event) {
+        //4.获取鼠标距离拖拽元素边界的距离;
+        let x = event.pageX;
+        let y = event.pageY;
+        let row = x - oLogin.offsetLeft;
+        let col = y - oLogin.offsetTop;
+        //5.监听鼠标移动事件;
+        oLogin.onmousemove = function (event) {
+            //6.将鼠标移动后的值赋给拖拽元素
+            oLogin.style.left = event.pageX - row + "px";
+            oLogin.style.top = event.pageY - col + "px";
+            //7.鼠标离开时取消移动事件;
+            oLogin.onmouseup = function () {
+                oLogin.onmousemove = null;
+            }
+        }
+    }
+</script>
+</body>
+</html>

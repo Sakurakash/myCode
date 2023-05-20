@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16-jsonp练习</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+<input type="text" placeholder="请输入要搜索的内容">
+<ul></ul>
+<script>
+    /*
+    https://www.baidu.com/sugrec?
+    prod=pc&from=pc_web&wd=1&cb=jQuery110208977394320956114_1677213663352
+    */
+    function createItems(msg) {
+        let res = [];
+        $.each(msg.g, function (key, value) {
+            res.push(value.q);
+        });
+        return res;
+    }
+    $("input").on("input", function () {
+        $.ajax({
+            url: "https://www.baidu.com/sugrec?prod=pc&from=pc_web&wd=" + this.value,
+            dataType: "jsonp",
+            jsonp: "cb",
+            success: function (msg) {
+                let oUl = $("ul");
+                oUl.empty();
+                let items = createItems(msg);
+                for (let i = 0; i < items.length; i++){
+                    $("<li>"+items[i]+"</li>").appendTo(oUl);
+                }
+            },
+            error: function () {
+                console.log("请求失败");
+            }
+        })
+    });
+    /*jQuery110208977394320956114_1677213663352({
+    "q":"1",
+    "p":false,
+    "g":[
+        {"type":"sug","sa":"s_1","q":"1升等于多少斤"},
+        {"type":"sug","sa":"s_2","q":"1g等于多少mg"},
+        {"type":"sug","sa":"s_3","q":"163邮箱登录"},
+        {"type":"sug","sa":"s_4","q":"1kg是多少斤"},
+        {"type":"sug","sa":"s_5","q":"192.1681.1"},
+        {"type":"sug","sa":"s_6","q":"1亩地等于多少平方米"},
+        {"type":"sug","sa":"s_7","q":"163"},
+        {"type":"sug","sa":"s_8","q":"192.168.0.1 登陆页面"},
+        {"type":"sug","sa":"s_9","q":"192.168.0.1"},
+        {"type":"sug","sa":"s_10","q":"1公顷等于多少平方米"}
+    ],
+    "slid":"82735484754923",
+    "queryid":"0x1654b3f5b2ddbeb"
+    })*/
+</script>
+
+</body>
+</html>

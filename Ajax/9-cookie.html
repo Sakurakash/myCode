@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9-cookie</title>
+    <script>
+        window.onload = function () {
+            let date = new Date();
+            // date.setDate(date.getDate() + 1);
+            // document.cookie = "name=zs;expires=" + date.toGMTString() + ";";
+            document.cookie = "name=zs;path=/;domain=127.0.0.1";//path指定保存的目录;domain指定保存的域名;
+            console.log(document.cookie);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
