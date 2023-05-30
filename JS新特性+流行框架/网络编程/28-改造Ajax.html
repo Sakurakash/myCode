@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>28-改造Ajax</title>
+	<script src="myAjax.js"></script>
+</head>
+<body>
+<script>
+	ajax({
+		type: "get",
+		url: "28-改造ajax.php"
+	}).then(function (xhr) {
+		let str = xhr.responseText;
+		console.log(str);
+	});
+</script>
+</body>
+</html>

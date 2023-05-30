@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>27-Promise-race方法</title>
+</head>
+<body>
+<script>
+	// race方法会监听传入的promise对象中状态改变最快的promise对象, 监听到状态改变之后会废弃剩余的promise对象,
+
+	/*let p1 = new Promise(function (resolve, reject) {
+		setTimeout(function () {
+			resolve("111");
+		}, 300)
+	});
+	let p2 = new Promise(function (resolve, reject) {
+		setTimeout(function () {
+			resolve("222");
+		}, 500)
+	});
+	let p3 = new Promise(function (resolve, reject) {
+		setTimeout(function () {
+			resolve("333");
+		}, 800)
+	});
+	Promise.race([p1, p2, p3]).then(function (result) {
+		console.log("成功", result);
+	},function (msg) {
+		console.log("失败");
+	});*/
+
+	let arr = [
+		"https://www.it666.com/files/system/block_picture_1620880173.png?version=23.1.5",
+		"https://www.it666.com/files/system/block_picture_1620880197.png?version=23.1.5",
+		"https://www.it666.com/files/system/block_picture_1583498610.png?version=23.1.5"
+	];
+	Promise.race([loadImg(arr[0]), timeout()]).then(function (result) {
+		console.log(result);
+	}, function (msg) {
+		console.log("失败", msg);
+	});
+	function timeout() {
+		return new Promise(function (resolve, reject) {
+			setTimeout(function () {
+				reject("时间到");
+			}, 1200);
+		})
+	}
+	function loadImg(url) {
+		return new Promise(function (resolve, reject) {
+			let oImg = new Image();
+			oImg.src = url;
+			oImg.onload = function () {
+				setTimeout(function () {
+					resolve(oImg);
+				}, 400);
+			}
+			oImg.onerror = function () {
+				reject("图片加载失败");
+			}
+		});
+	}
+</script>
+</body>
+</html>

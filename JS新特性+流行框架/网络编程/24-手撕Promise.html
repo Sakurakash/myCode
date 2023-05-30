@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>24-手撕Promise</title>
+	<script>
+		// 定义常量保存对象状态
+		const PENDING = "pending";
+		const FULFILLED = "fulfilled";
+		const REJECTED = "rejected";
+		class myPromise{
+			constructor(handle) {
+				this.status = PENDING;
+				this.value = undefined;
+				this.reason = undefined;
+				this.onResolvedCallbacks = [];
+				this.onRejectedCallbacks = [];
+				// 判断传入的形参是否是一个函数,不是的话抛出一个异常
+				if (!this.isFunction(handle)){
+					throw new Error("请输入一个函数");
+				}
+				// 给传递的函数传入两个回调函数
+				// handle是传递进来的回调函数,通过handle调用时handle函数内部的this指向window
+				// 传入形参时的this指向实例,但形参内部的this指向为undefined,要将形参回调函数的内部this指向更改;
+				handle(this.resolve.bind(this), this.reject.bind(this));
+			}
+			then(onResolved, onRejected){
+				return new myPromise((resolve, reject) => {
+					if (!this.isFunction(onResolved) && !this.isFunction(onRejected)){
+						if (this.status === FULFILLED){
+							resolve(this.value);
+						}
+						if (this.status === REJECTED){
+							reject(this.reason);
+						}
+						if (this.status === PENDING){
+							this.then(resolve, reject);
+						}
+					}
+					// 判断是否传入成功的回调函数
+					if (this.isFunction(onResolved)){
+						if (this.status === FULFILLED){
+							try {
+								let result = onResolved(this.value);// 状态匹配立即执行
+								if (result instanceof myPromise){
+									result.then(resolve, reject);// result状态发生改变时,将result的值传给resolve或reject方法(下一个promise对象的值与状态与该对象相同);
+								}else {
+									resolve(result);// 将该状态也传递给下一个Promise对象,且将上一个Promise对象返回的value值传递给下一个Promise对象的成功回调;
+								}
+							}catch (e){
+								reject(e);
+							}
+						}
+					}
+					// 判断是否传入失败的回调函数
+					try {
+						if (this.status === REJECTED){
+							if (onRejected !== undefined){
+								let result = onRejected(this.reason);// 状态匹配立即执行
+								if (result instanceof myPromise){
+									result.then(resolve, reject);
+								}else if (result !== undefined){
+									resolve(result);// 将该状态也传递给下一个Promise对象,且将上一个Promise对象返回的reason值传递给下一个Promise对象的成功回调;
+								}else {
+									reject();
+								}
+							}else {
+								reject(this.reason);
+							}
+						}
+					}catch (e) {
+						reject(e);
+					}
+					if (this.status === PENDING){
+							if (this.isFunction(onResolved)){
+								this.onResolvedCallbacks.push(function (value) {
+									try {
+										let result = onResolved(value);
+										if (result instanceof myPromise){
+											result.then(resolve, reject);
+										}else {
+											resolve(result);// 将该状态也传递给下一个Promise对象,且将上一个Promise对象返回的value值传递给下一个Promise对象的成功回调;
+										}
+									}catch (e) {
+										reject(e);
+									}
+								});
+							}
+							this.onRejectedCallbacks.push(function (reason) {
+								try {
+									if (onRejected !== undefined){
+										let result = onRejected(reason);
+										if (result instanceof myPromise){
+											result.then(resolve, reject);
+										}else if (result !== undefined){
+											resolve(result);// 将该状态也传递给下一个Promise对象,且将上一个Promise对象返回的reason值传递给下一个Promise对象的成功回调;
+										}else {
+											reject();
+										}
+									}else {
+										reject(reason);
+									}
+								}catch (e) {
+									reject(e);
+								}
+							});
+						}
+				});
+			}
+			catch(onRejected){
+				return this.then(undefined, onRejected);
+			}
+			resolve(value){
+				// 防止重复修改状态
+				if (this.status === PENDING){
+					this.status = FULFILLED;
+					this.value = value;
+					this.onResolvedCallbacks.forEach(fn => fn(this.value));// 箭头函数形式;
+				}
+			}
+			reject(reason){
+				// 防止重复修改状态
+				if (this.status === PENDING){
+					this.status = REJECTED;
+					this.reason = reason;
+					this.onRejectedCallbacks.forEach(fn => fn(this.reason));
+				}
+			}
+			isFunction(fn){
+				return typeof fn === "function";
+			}
+			static all(list){
+				return new myPromise(function (resolve, reject) {
+					let arr = [];
+					let count = 0;
+					list.forEach(function (ele) {
+						ele.then(function (data) {
+							arr.push(data);
+							count++;
+							if (count === list.length){
+								resolve(arr);
+							}
+						}, function (e) {
+							reject(e);
+						});
+					});
+				})
+			}
+			static race(list){
+				return new myPromise(function (resolve, reject) {
+					for (let p of list){
+						p.then(resolve, reject);
+					}
+				})
+			}
+		}
+
+		let p1 = new Promise(function (resolve, reject) {
+			setTimeout(function () {
+				resolve("111");
+			}, 300)
+		});
+		let p2 = new Promise(function (resolve, reject) {
+			setTimeout(function () {
+				resolve("222");
+			}, 500)
+		});
+		let p3 = new Promise(function (resolve, reject) {
+			setTimeout(function () {
+				resolve("333");
+			}, 800)
+		});
+		Promise.race([p1, p2, p3]).then(function (result) {
+			console.log("成功", result);
+		}, function (msg) {
+			console.log("失败", msg);
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>

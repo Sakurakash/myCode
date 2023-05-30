@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>26-Promise-all方法</title>
+</head>
+<body>
+<script>
+	let arr = [
+		"https://www.it666.com/files/system/block_picture_1620880173.png?version=23.1.5",
+		"https://www.it666.com/files/system/block_picture_1620880197.png?version=23.1.5",
+		"https://www.it666.com/files/system/block_picture_1583498610.png?version=23.1.5"
+	];
+	/*for (let i = 0; i < arr.length; i++){
+		loadImg(arr[i]).then(function (oImg) {
+			console.log(i);
+			document.body.appendChild(oImg);
+		},function (msg) {
+			console.log(msg);
+		});
+	}*/
+	Promise.all([loadImg(arr[0]), loadImg(arr[1]), loadImg(arr[2])])
+			.then(function (result) {
+				// console.log(result);
+				result.forEach(function (ele) {
+					document.body.appendChild(ele);
+				});
+			})
+			.catch(function (e) {
+				console.log(e);
+			});
+	function loadImg(url) {
+		return new Promise(function (resolve, reject) {
+			let oImg = new Image();
+			let time = Math.random() * 1000;
+			oImg.src = url;
+			oImg.onload = function () {
+				setTimeout(function () {
+					resolve(oImg);
+				}, time);
+			}
+			oImg.onerror = function () {
+				reject("图片加载失败");
+			}
+		});
+	}
+
+
+	// all方法会在所有的promise对象状态改变之后调用, all方法接收一个数组, 并且将所有获取的值包装成一个数组传递给then方法
+	// 只要有一个promise对象状态为失败就会转为失败, 常用于批量加载, 要么一起成功, 要么一起失败
+	/*let p1 = new Promise(function (resolve, reject) {
+		setTimeout(function () {
+			resolve("111");
+		}, 300)
+	});
+	let p2 = new Promise(function (resolve, reject) {
+		setTimeout(function () {
+			resolve("222");
+		}, 500)
+	});
+	let p3 = new Promise(function (resolve, reject) {
+		setTimeout(function () {
+			resolve("333");
+		}, 800)
+	});
+	Promise.all([p1, p2, p3]).then(function (result) {
+		console.log("成功", result);
+	},function (msg) {
+		console.log("失败");
+	});*/
+</script>
+</body>
+</html>

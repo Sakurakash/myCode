@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>25-Promise练习</title>
+</head>
+<body>
+<script>
+	let arr = [
+			"https://www.it666.com/files/system/block_picture_1620880173.png?version=23.1.5",
+			"https://www.it666.com/files/system/block_picture_1620880197.png?version=23.1.5",
+			"https://www.it666.com/files/system/block_picture_1583498610.png?version=23.1.5"
+	];
+	loadImg(arr[0]).then(function (oImg){
+		document.body.appendChild(oImg);
+		return loadImg(arr[1]);
+	}).then(function (oImg) {
+		document.body.appendChild(oImg);
+		return loadImg(arr[2]);
+	}).then(function (oImg) {
+		document.body.appendChild(oImg);
+	}).catch(function (msg) {
+		console.log(msg);
+	});
+	function loadImg(url) {
+		return new Promise(function (resolve, reject) {
+			let oImg = new Image();
+			oImg.src = url;
+			oImg.onload = function () {
+				resolve(oImg);
+			}
+			oImg.onerror = function () {
+				reject("图片加载失败");
+			}
+		});
+	}
+</script>
+</body>
+</html>
