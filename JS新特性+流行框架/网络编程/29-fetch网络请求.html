@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>29-fetch网络请求</title>
+</head>
+<body>
+<script>
+	/*fetch("29-fetch.php?teacher=zs&age=23", {
+		method: "get"
+	}).then(function (data) {
+		return data.json();
+	}).then(function (res) {
+		console.log(res);
+		console.log(typeof res);
+	}).catch(function (e) {
+		console.log(e);
+	});*/
+	fetch("29-fetch.php", {
+		method: "post",
+		body: JSON.stringify({
+			teacher: "ls",
+			age: 44
+		})
+	}).then(function (data) {
+		return data.json();
+	}).then(function (res) {
+		console.log(res);
+		console.log(typeof res);
+	}).catch(function (e) {
+		console.log(e);
+	});
+</script>
+</body>
+</html>

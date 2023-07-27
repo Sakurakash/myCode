@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>35-Generator函数应用场景</title>
+</head>
+<body>
+<script>
+	/*// Generator函数可以用于返回多个值;
+	function* calculator(a, b) {
+		yield a + b;
+		yield a - b;
+	}
+	let it = calculator(10, 5);
+	console.log(it.next().value);// 15
+	console.log(it.next().value);// 5*/
+
+	// Generator函数可用于快速添加可迭代对象;
+	/*let obj = {
+		name: "zs",
+		age: 33,
+		gender: "man",
+		[Symbol.iterator](){
+			let index = 0;
+			let that = this;
+			let keys = Object.keys(that);
+			return {
+				next(){
+					if (index < keys.length){
+						return {value: that[keys[index++]], done: false};
+					}else {
+						return {value: that[keys[index]], done: true};
+					}
+				}
+			}
+		}
+	}
+	let it = obj[Symbol.iterator]();
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	for (let value of obj){
+		console.log(value);
+	}*/
+	let obj = {
+		name: "zs",
+		age: 33,
+		gender: "man"
+	};
+	function* gen() {
+		let keys = Object.keys(obj);
+		for (let i = 0; i < keys.length; i++){
+			yield obj[keys[i]];
+		}
+	}
+	obj[Symbol.iterator] = gen;
+	let it = obj[Symbol.iterator]();
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	for (let value of obj){
+		console.log(value);
+	}
+</script>
+</body>
+</html>

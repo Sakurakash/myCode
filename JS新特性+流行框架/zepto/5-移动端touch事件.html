@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>5-移动端touch事件</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			background: red;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+<div></div>
+<script>
+	let oDiv = document.querySelector("div");
+	oDiv.ontouchstart = function () {
+		console.log("手指按下");
+	}
+	oDiv.ontouchmove = function () {
+		console.log("手指移动");
+	}
+	oDiv.ontouchend = function () {
+		console.log("手指抬起");
+	}
+</script>
+</body>
+</html>

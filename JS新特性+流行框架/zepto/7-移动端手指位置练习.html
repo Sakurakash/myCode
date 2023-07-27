@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>7-移动端手指位置练习</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+<div class="div"></div>
+<script>
+	let oDiv = document.querySelector("div");
+	let startX = 0;
+	let startY = 0;
+	let lastX = 0;
+	let lastY = 0;
+	let sign = false;
+	oDiv.ontouchstart = function (e) {
+		startX = e.targetTouches[0].clientX - lastX;
+		startY = e.targetTouches[0].clientY - lastY;
+	}
+	oDiv.ontouchmove = function (e) {
+		let clientX = e.targetTouches[0].clientX - startX;
+		let clientY = e.targetTouches[0].clientY - startY;
+		oDiv.style.transform = `translate(${clientX}px, ${clientY}px)`;
+		lastX = clientX;
+		lastY = clientY;
+	}
+</script>
+</body>
+</html>

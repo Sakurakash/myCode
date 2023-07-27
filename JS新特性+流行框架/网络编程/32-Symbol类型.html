@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>32-Symbol类型</title>
+</head>
+<body>
+<script>
+	let xxx = Symbol("name");
+	let say = Symbol("say");
+	let obj = {
+		name: "zs",
+		age: 33,
+		[xxx]: "test",
+		[say]: function () {
+			console.log("say words");
+		}
+	}
+	/*obj.age = 44;
+	obj[Symbol("name")] = 44;
+	console.log(obj);// {name: 'zs', age: 44, Symbol(name): 'test', Symbol(name): 44}*/
+
+	/*console.log(String(xxx)); // Symbol(name)
+	console.log(Boolean(xxx)); // true
+	// console.log(Number(xxx)); // 报错
+	console.log(xxx + 11); // 报错, 不可以做任何运算*/
+
+	for (let key in obj){
+		console.log(obj[key]);
+	}// zs 33, 无法取出键名为symbol的键值;
+	console.log(Object.getOwnPropertySymbols(obj));// 可通过该方法取出键名为symbol的键名;
+</script>
+</body>
+</html>

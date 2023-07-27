@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-Zepto选择器</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			background: blue;
+			margin-bottom: 20px;
+		}
+		.two{
+			background: red;
+		}
+		.three{
+			background: pink;
+		}
+	</style>
+	<script src="zepto.js"></script>
+	<script src="event.js"></script>
+	<script src="selector.js"></script>
+</head>
+<body>
+<button>按钮</button>
+<div class="one"></div>
+<div class="two"></div>
+<div class="three"></div>
+<script>
+	$("button").click(function () {
+		// 若要使用选择器相关的操作,还需单独引入selector.js模块
+		$("div:first").css({ background: "yellow" });
+	});
+</script>
+</body>
+</html>

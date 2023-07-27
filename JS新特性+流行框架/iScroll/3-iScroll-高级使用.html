@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-iScroll-高级使用</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			touch-action: none;
+		}
+		div{
+			width: 50%;
+			height: 300px;
+			border: 1px solid #000;
+			box-sizing: border-box;
+			overflow: hidden;
+			position: relative;
+		}
+		dl>dt{
+			line-height: 30px;
+			text-align: center;
+			border-bottom: 1px solid #000;
+		}
+		.iScrollVerticalScrollbar{
+			width: 30px;
+			height: 100%;
+			background: skyblue;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		.iScrollIndicator{
+			width: 100%;
+			background: pink;
+		}
+	</style>
+	<script src="iscroll-master/build/iscroll.js"></script>
+</head>
+<body>
+<div class="box">
+	<dl>
+		<dt>我是标题1</dt>
+		<dt>我是标题2</dt>
+		<dt>我是标题3</dt>
+		<dt>我是标题4</dt>
+		<dt>我是标题5</dt>
+		<dt>我是标题6</dt>
+		<dt>我是标题7</dt>
+		<dt>我是标题8</dt>
+		<dt>我是标题9</dt>
+		<dt>我是标题10</dt>
+		<dt>我是标题11</dt>
+		<dt>我是标题12</dt>
+		<dt>我是标题13</dt>
+		<dt>我是标题14</dt>
+		<dt>我是标题15</dt>
+		<dt>我是标题16</dt>
+		<dt>我是标题17</dt>
+		<dt>我是标题18</dt>
+		<dt>我是标题19</dt>
+		<dt>我是标题20</dt>
+		<dt>我是标题21</dt>
+		<dt>我是标题22</dt>
+		<dt>我是标题23</dt>
+		<dt>我是标题24</dt>
+		<dt>我是标题25</dt>
+		<dt>我是标题26</dt>
+		<dt>我是标题27</dt>
+		<dt>我是标题28</dt>
+		<dt>我是标题29</dt>
+		<dt>我是标题30</dt>
+	</dl>
+</div>
+<script>
+	/*使用下面的CSS类可以简单的改变滚动条样式。
+	.iScrollHorizontalScrollbar，这个样式应用到横向滚动条的容器。这个元素实际上承载了滚动条指示器。
+	.iScrollVerticalScrollbar，和上面的样式类似，只不过适用于纵向滚动条容器。
+	.iScrollIndicator，真正的滚动条指示器。
+	.iScrollBothScrollbars，这个样式将在双向滚动条显示的情况下被加载到容器元素上。通常情况下其中一个（横向或者纵向）是可见的*/
+	let myScroll = new IScroll('.box', {
+		mouseWheel: true,
+		scrollbars: 'custom'
+	});
+	/*可以挂靠的事件如下：
+	beforeScrollStart，在用户触摸屏幕但还没有开始滚动时触发。
+	scrollCancel，滚动初始化完成，但没有执行。
+	scrollStart，开始滚动
+	scroll，内容滚动时触发，只有在scroll-probe.js版本中有效，请参考onScroll event。
+	scrollEnd，停止滚动时触发。
+	flick，用户打开左/右。
+	zoomStart，开始缩放。
+	zoomEnd，缩放结束。*/
+	myScroll.on("beforeScrollStart", function () {
+		console.log("还没有开始滚动");
+	})
+	myScroll.on("scrollCancel", function () {
+		console.log("滚动初始化完成");
+	})
+	myScroll.on("scrollStart", function () {
+		console.log("开始滚动");
+	})
+	myScroll.on("scroll", function () {
+		console.log("滚动中");
+	})
+	myScroll.on("scrollEnd", function () {
+		console.log("停止滚动");
+	})
+</script>
+</body>
+</html>

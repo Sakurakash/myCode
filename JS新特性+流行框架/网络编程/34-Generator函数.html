@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>34-Generator函数</title>
+</head>
+<body>
+<script>
+	function* gen() {
+		console.log("123");
+		let res = yield "aaa";
+		console.log(res);// 123 给next方法传递参数, 会传递给上一个yield关键字的返回值;
+		console.log("456");
+		yield 111;
+		console.log("789");
+		yield true;
+	}
+	let it = gen();// Generator函数中的内容不会立即执行, 而是通过yield关键字分割, 返回一个可迭代对象, 再通过next方法来执行分割的内容;
+	console.log(it.next());// {value: 'aaa', done: false} value值即为yield后跟的值, done值代表迭代状态
+	console.log(it.next(123));// {value: 111, done: false}
+	console.log(it.next());// {value: true, done: false}
+	console.log(it.next());// {value: undefined, done: true}
+</script>
+</body>
+</html>

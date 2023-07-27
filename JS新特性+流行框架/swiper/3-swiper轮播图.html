@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-swiper轮播图</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/swiper-bundle.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper{
+			width: 100%;
+			touch-action: none;
+		}
+		.swiper-wrapper{
+			width: 500%;
+			list-style: none;
+		}
+		ul>li img{
+			width: 100%;
+			vertical-align: bottom;
+		}
+		.my-bullet{
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background: #fff;
+			margin-left: 5px;
+		}
+		.my-bullet-active{
+			background: #f60;
+		}
+		.swiper-button-prev:after{
+			display: none;
+		}
+		.swiper-button-next:after{
+			display: none;
+		}
+		.swiper-button-prev, .swiper-button-next{
+			width: 30px;
+			height: 50px;
+			background: rgba(0,0,0,0.3);
+		}
+		.swiper-button-prev::before{
+			content: "<";
+			display: inline-block;
+			width: 30px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 30px;
+			color: #fff;
+		}
+		.swiper-button-next::before{
+			content: ">";
+			display: inline-block;
+			width: 30px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 30px;
+			color: #fff;
+		}
+	</style>
+	<script src="js/swiper-bundle.js"></script>
+</head>
+<body>
+<div class="swiper">
+	<ul class="swiper-wrapper">
+		<li class="swiper-slide"><img src="images/img1.jpg"></li>
+		<li class="swiper-slide"><img src="images/img2.jpg"></li>
+		<li class="swiper-slide"><img src="images/img3.jpg"></li>
+		<li class="swiper-slide"><img src="images/img4.jpg"></li>
+	</ul>
+	<!-- 如果需要分页器 -->
+	<div class="swiper-pagination"></div>
+	<!-- 如果需要导航按钮 -->
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+</div>
+<script>
+	let swiper = new Swiper('.swiper', {
+		// 如果需要分页器
+		pagination: {
+			el: '.swiper-pagination',
+			bulletClass : 'my-bullet',// 需设置.my-bullet(分页器)样式
+			bulletActiveClass: 'my-bullet-active'// 需设置.my-bullet-active(激活状态)样式
+		},
+
+		// 如果需要前进后退按钮
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+
+		autoplay: {
+			delay: 1000,// 1秒切换一次
+		},
+
+		loop: true, // 循环模式选项
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6-移动端touch事件对象</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			display: inline-block;
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+<div class="div"></div>
+<script>
+	let oDiv = document.querySelector("div");
+	oDiv.ontouchstart = function (e) {
+		// console.log("touches", e.touches);// 保存当前屏幕上所有的手指;
+		console.log("targetTouches", e.targetTouches);// 保存当前元素上所有的手指;
+		// console.log("changedTouches", e.changedTouches);// 保存当前屏幕上新增或消失的手指;
+	}
+</script>
+</body>
+</html>

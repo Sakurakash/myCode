@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>11-滑动事件练习</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			/*禁用默认情况下移动端的一些事件*/
+			/*touch-action: none;*/
+		}
+		.box{
+			overflow: hidden;
+		}
+		.box-top{
+			width: 100%;
+			height: 50px;
+		}
+		.box-top>ul{
+			list-style: none;
+			width: 100%;
+			height: 100%;
+			display: flex;
+		}
+		.box-top>ul>li{
+			flex-grow: 1;
+			line-height: 50px;
+			text-align: center;
+			font-size: 20px;
+			background: #6c6c6c;
+		}
+		.box-top>.line{
+			width: 50%;
+			height: 3px;
+			background: #f40;
+			position: relative;
+			left: 0;
+		}
+		.box-top>ul>.active{
+			color: #f40;
+			background: #ccc;
+		}
+		.box-bottom{
+			width: 200%;
+			display: flex;
+			position: relative;
+			left: 0;
+		}
+		.box-bottom>ul{
+			list-style: none;
+			flex-grow: 1;
+		}
+	</style>
+	<script src="zepto.js"></script>
+	<script src="event.js"></script>
+	<script src="touch.js"></script>
+	<script src="fx.js"></script>
+	<script src="selector.js"></script>
+</head>
+<body>
+<div class="box">
+	<div class="box-top">
+		<ul>
+			<li class="active">新闻</li>
+			<li>军事</li>
+		</ul>
+		<p class="line"></p>
+	</div>
+	<div class="box-bottom">
+		<ul class="list1">
+			<li>我是新闻的内容1</li>
+			<li>我是新闻的内容2</li>
+			<li>我是新闻的内容3</li>
+			<li>我是新闻的内容4</li>
+			<li>我是新闻的内容5</li>
+			<li>我是新闻的内容6</li>
+			<li>我是新闻的内容7</li>
+			<li>我是新闻的内容8</li>
+			<li>我是新闻的内容9</li>
+			<li>我是新闻的内容10</li>
+		</ul>
+		<ul class="list2">
+			<li>我是军事的内容1</li>
+			<li>我是军事的内容2</li>
+			<li>我是军事的内容3</li>
+			<li>我是军事的内容4</li>
+			<li>我是军事的内容5</li>
+			<li>我是军事的内容6</li>
+			<li>我是军事的内容7</li>
+			<li>我是军事的内容8</li>
+			<li>我是军事的内容9</li>
+			<li>我是军事的内容10</li>
+		</ul>
+	</div>
+</div>
+<script>
+	$(".box-top li").on("myClick", function () {
+		let index = $(this).index();
+		let width = $(this).width();
+		$(".line").animate({left: index * width}, 200);
+		$(this).addClass("active").siblings().removeClass("active");
+		$(".box-bottom").animate({left: -index * width * 2}, 200);
+	});
+	$(".box-top li").on("click", function () {
+		$(this).trigger("myClick");
+	});
+	$(".box-bottom").swipeLeft(function () {
+		$(".box-top li:last").trigger("myClick");
+	});
+	$(".box-bottom").swipeRight(function () {
+		$(".box-top li:first").trigger("myClick");
+	});
+</script>
+</body>
+</html>

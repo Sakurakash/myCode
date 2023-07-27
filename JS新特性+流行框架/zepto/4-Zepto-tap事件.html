@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>4-Zepto-tap事件</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			background: red;
+			margin: 0 auto;
+		}
+	</style>
+<!--	<script src="jquery-1.12.4.js"></script>-->
+	<script src="zepto.js"></script>
+	<script src="event.js"></script>
+	<!--	在触摸设备上触发tap和swipe相关事件。这适用于所有的`touch`和`pointer`事件。需要导入touch模块-->
+	<script src="touch.js"></script>
+</head>
+<body>
+<div></div>
+<script>
+	/*$("div").click(function () {
+		$("div").css({ background: "blue" });
+	});*/
+	$("div").tap(function () {
+		$("div").css({ background: "blue" });
+	});
+</script>
+</body>
+</html>

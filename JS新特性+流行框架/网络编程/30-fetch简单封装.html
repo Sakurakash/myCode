@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>30-fetch简单封装</title>
+</head>
+<body>
+<script>
+	class EasyHttp{
+		static obj2str(obj){
+			let res = [];
+			for (let key in obj){
+				res.push(key + "=" + obj[key]);
+			}
+			return res.join("&");
+		}
+		static get(url, params){
+			return new Promise(function (resolve, reject) {
+				if (params !== undefined && params instanceof Object){
+					let str = EasyHttp.obj2str(params);
+					url += "?" + str;
+				}
+				fetch(url, {
+					method: "get"
+				}).then(function (res) {
+					resolve(res.json());
+				}).catch(function (e) {
+					reject(e);
+				})
+			});
+		}
+		static post(url, params){
+			return new Promise(function (resolve, reject) {
+				fetch(url, {
+					method: "post",
+					body: JSON.stringify(params)
+				}).then(function (res) {
+					resolve(res.json());
+				}).catch(function (e) {
+					reject(e);
+				})
+			});
+		}
+	}
+	/*EasyHttp.get("29-fetch.php", {
+		teacher: "zs",
+		age: 23
+	}).then(function (res) {
+		console.log(res);
+	}).catch(function (e) {
+		console.log(e);
+	});*/
+	EasyHttp.post("29-fetch.php", {
+		teacher: "ls",
+		age: 44
+	}).then(function (res) {
+		console.log(res);
+	}).catch(function (e) {
+		console.log(e);
+	});
+</script>
+</body>
+</html>

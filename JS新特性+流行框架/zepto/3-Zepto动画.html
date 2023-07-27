@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-Zepto动画</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			background: blue;
+			margin-bottom: 20px;
+		}
+	</style>
+	<script src="zepto.js"></script>
+	<script src="event.js"></script>
+	<!--	fx.js模块提供animate()方法-->
+	<script src="fx.js"></script>
+	<!--	fx_methods.js提供动画形式的show, hide, toggle, 和fade*()方法.-->
+	<script src="fx_methods.js"></script>
+</head>
+<body>
+<button>按钮</button>
+<div></div>
+<script>
+	$("button").click(function () {
+		// $("div").animate({marginLeft: "500px"}, 2000);
+		// $("div").hide(2000);
+		// $("div").show(2000);
+		$("div").toggle(2000);
+	});
+</script>
+</body>
+</html>

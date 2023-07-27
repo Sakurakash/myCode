@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-zepto基本使用</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			background: blue;
+		}
+	</style>
+<!--	<script src="jquery-1.12.4.js"></script>-->
+	<script src="zepto.js"></script>
+<!--	若要使用事件相关的方法,还需单独引入event.js模块-->
+	<script src="event.js"></script>
+</head>
+<body>
+<button>按钮</button>
+<div></div>
+<script>
+	$("button").click(function () {
+		$("div").css({ background: "red" });
+	});
+</script>
+</body>
+</html>
