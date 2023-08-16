@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-GSAP循环动画</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #ccc;
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
+    </style>
+	<script src="gsap.js"></script>
+</head>
+<body>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<script>
+    let oDivs = document.querySelectorAll(".box");
+	oDivs.forEach( function (target, index) {
+		gsap.to(target, {
+			duration: 1,
+			delay: index,
+			backgroundColor: gsap.utils.wrap(["red", "green", "yellow"], index),
+			height: gsap.utils.wrap([50, 100, 150], index)
+		});
+	})
+
+</script>
+</body>
+</html>

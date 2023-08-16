@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>10-Canvas绘制矩形</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			display: block;
+			background: #ffc;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+<canvas></canvas>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");
+	oCtx.canvas.width = 500;
+	oCtx.canvas.height = 500;
+	/*// 第一种方法
+	oCtx.moveTo(100, 100);
+	oCtx.lineTo(100, 300);
+	oCtx.lineTo(300, 300);
+	oCtx.lineTo(300, 100);
+	// oCtx.closePath();
+	oCtx.fill();
+	oCtx.stroke();*/
+	/*// 第二种方法
+	oCtx.moveTo(100, 100);
+	oCtx.lineTo(300, 100);
+	oCtx.lineWidth = 200;
+	oCtx.stroke();*/
+	// 第三种方法
+
+	/*第一个参数: x的坐标
+    第二个参数: y的坐标
+    第三个参数: 矩形的宽度
+    第四个参数: 矩形的高度*/
+
+	/*oCtx.rect(100, 100, 200, 200);
+	oCtx.stroke();
+	oCtx.beginPath();
+	oCtx.fillStyle = "blue";
+	oCtx.rect(150, 150, 100, 100);
+	oCtx.fill();
+	oCtx.stroke();*/
+
+
+	/*oCtx.strokeRect(100, 100, 200, 200);
+	oCtx.strokeStyle = "blue";
+	oCtx.strokeRect(150, 150, 100, 100);*/
+
+	// 第四种方法
+	oCtx.fillRect(100, 100, 200, 200);
+	oCtx.fillStyle = "blue";
+	oCtx.fillRect(150, 150, 100, 100)
+
+	// 清除矩形内容
+	// oCtx.clearRect(0, 0, 150, 150);
+	let width = oCtx.canvas.width;
+	let height = oCtx.canvas.height;
+	oCtx.clearRect(0, 0, width, height);// 清空canvas内容
+</script>
+</body>
+</html>

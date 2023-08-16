@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07-GSAP动画管理</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            border: 1px solid #000;
+        }
+    </style>
+	<script src="gsap.js"></script>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<script>
+	let tm = gsap.timeline({defaults: {duration: 2}});
+	tm.to(".box1", {
+		x: 500
+	}).to(".box2", {
+		x: 400
+	}).to(".box3", {
+		x: 300
+	})
+</script>
+</body>
+</html>

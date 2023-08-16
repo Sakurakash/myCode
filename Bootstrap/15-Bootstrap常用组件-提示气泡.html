@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>15-Bootstrap常用组件-提示气泡</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body style="padding: 100px;">
+
+<!--<button type="button" class="btn btn-secondary"
+		&lt;!&ndash;
+		1.data-toggle="tooltip": 告诉bootstrap需要切换的是提示气泡
+		2.data-placement="top": 告诉bootstrap提示气泡出现的位置
+		3.title="Tooltip on top": 告诉bootstrap提示气泡中提示的内容是什么
+		&ndash;&gt;
+		id="example"
+		data-bs-toggle="tooltip" data-bs-placement="top"
+		data-bs-custom-class="custom-tooltip"
+		data-bs-title="提示内容">
+	Custom tooltip
+</button>-->
+
+	<!--
+    1.data-container="body": 当你在一个父元素上有一些样式与提示框产生样式干扰，你可以指定一个自定义的container容器，这样提示框的HTML将出现在这个元素内部了。
+    2.data-bs-toggle="popover": 告诉bootstrap需要切换的是提示气泡
+    3.data-bs-placement="top": 告诉bootstrap提示气泡出现的位置
+    4.data-bs-content="": 告诉bootstrap提示气泡中提示的内容是什么
+    -->
+<button type="button" id="example" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="泡泡内容">
+	Popover
+</button>
+
+<script src="js/bootstrap.bundle.js"></script>
+<script>
+	const exampleEl = document.getElementById('example');
+	// const tooltip = new bootstrap.Tooltip(exampleEl, {});
+
+	const popover  = new bootstrap.Popover(exampleEl, {});
+</script>
+</body>
+</html>

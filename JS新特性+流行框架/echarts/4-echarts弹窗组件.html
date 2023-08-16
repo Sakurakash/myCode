@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4-echarts弹窗组件</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.chart{
+			width: 600px;
+			height: 400px;
+			margin: 200px auto;
+		}
+	</style>
+	<script src="js/echarts.js"></script>
+</head>
+<body>
+<div class="chart"></div>
+<script>
+	let oDiv = document.querySelector("div");
+	let myChart = echarts.init(oDiv);
+	let option = {
+		// 设置图表的标题
+		title: {
+			text: 'ECharts 入门示例'
+		},
+		/*
+		弹窗组件(tooltip):
+		show: 是否显示
+		trigger:显示方式, axis X轴显示
+
+		数据标记
+		markLine: 标记线
+			最大值/最小值/平均值等
+		markPoint: 标记点
+			最大值/最小值/平均值等
+		* */
+		tooltip: {
+			show: true,
+			trigger: 'axis'
+		},
+		// 设置图表的图例
+		legend: {
+			data: ['销量', "产量"]
+		},
+		// 设置X轴上显示的数据
+		xAxis: {
+			data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+		},
+		// 设置Y轴上显示的数据
+		yAxis: {},
+		// 设置图表的数据
+		series: [
+			{
+				name: '销量',
+				type: 'bar',
+				data: [5, 20, 36, 10, 10, 20],
+				markPoint: {
+					data: [
+						{type:"max", name:"最大值"},
+						{type:"min", name:"最小值"}
+					]
+				}
+			},
+			{
+				name: '产量',
+				type: 'bar',// 用以决定是柱状图还是折线图
+				data: [25, 40, 66, 51, 40, 70],
+				markLine: {
+					data: [
+						{type:"average", name:"平均值"}
+					]
+				}
+			}
+		]
+	};
+
+	// 使用刚指定的配置项和数据显示图表。
+	myChart.setOption(option);
+</script>
+</body>
+</html>

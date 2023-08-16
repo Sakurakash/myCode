@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>12-Canvas渐变色</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			display: block;
+			background: red;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+<canvas></canvas>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");
+	oCtx.canvas.width = 500;
+	oCtx.canvas.height = 500;
+
+	/*
+	createLinearGradient(x1, y1, x2, y2)
+	createLinearGradient 方法接受 4 个参数，表示渐变的起点 (x1,y1) 与终点 (x2,y2)。
+
+	createRadialGradient(x1, y1, r1, x2, y2, r2)
+	createRadialGradient 方法接受 6 个参数，前三个定义一个以 (x1,y1) 为原点，半径为 r1 的圆，
+	后三个参数则定义另一个以 (x2,y2) 为原点，半径为 r2 的圆。*/
+	// let linerGradient = oCtx.createLinearGradient(100, 100, 300, 300);
+	let linerGradient = oCtx.createRadialGradient(250, 250, 50, 250, 250, 300);
+	linerGradient.addColorStop(0, "blue");
+	linerGradient.addColorStop(0.5, "yellow");
+	linerGradient.addColorStop(1, "pink");
+	oCtx.fillStyle = linerGradient;
+	oCtx.fillRect(0, 0, 500, 500);
+</script>
+</body>
+</html>

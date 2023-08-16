@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-echarts基本使用</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.chart{
+			width: 600px;
+			height: 400px;
+			margin: 200px auto;
+			border: 1px solid #000;
+		}
+	</style>
+	<script src="js/echarts.js"></script>
+</head>
+<body>
+<div class="chart"></div>
+<script>
+	let oDiv = document.querySelector("div");
+	let myChart = echarts.init(oDiv);
+	let option = {
+		// 设置图表的标题
+		title: {
+			text: 'ECharts 入门示例'
+		},
+		tooltip: {},
+		// 设置图表的图例
+		legend: {
+			data: ['销量', '产量', '容量']
+		},
+		// 设置图表的数据
+		series: [{
+			// radius: '60%',
+			radius: '100px',
+			// center: ['320px', '180px'],
+			center: ['30%', '50%'],
+			type: 'pie',
+			data: [
+				{value: 333, name: '销量'},
+				{value: 333, name: '产量'},
+				{value: 333, name: '容量'},
+			]
+		}]
+	};
+
+	// 使用刚指定的配置项和数据显示图表。
+	myChart.setOption(option);
+</script>
+</body>
+</html>

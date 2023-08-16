@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>10-SVG文本绘制</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		svg{
+			display: block;
+			margin: 0 auto;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+<svg width="500" height="500">
+	<line x1="250" y1="0" x2="250" y2="500" stroke="#000"></line>
+	<line x1="0" y1="250" x2="500" y2="250" stroke="#000"></line>
+	<!--
+    和canvas一样, 是以左下角作为参考
+    和canvas一样, 默认是文字的基线和指定的位置对齐
+    -->
+	<!--
+	x/y: 指定绘制位置
+	style: 设置文字样式 (大小/字体等)
+	text-anchor: 指定文字水平方向对齐方式
+	dominant-baseline: 指定文字垂直方向对齐方式
+	dx/dy: 相对于前一个文字位置, 未设置位置的文字会继承前一个文字
+	-->
+	<!--<text x="250" y="250" style="font-size: 40px;" stroke="blue" fill="red">svg文本绘制</text>-->
+
+	<!--<text x="250" y="250" style="font-size: 40px;" text-anchor="start">svg文本绘制</text>-->
+	<!--<text x="250" y="250" style="font-size: 40px;" text-anchor="end">svg文本绘制</text>-->
+	<!--<text x="250" y="250" style="font-size: 40px;" text-anchor="middle">svg文本绘制</text>-->
+
+	<!--<text x="250" y="250" style="font-size: 40px;" dominant-baseline="text-after-edge">svg文本绘制</text>-->
+	<!--<text x="250" y="250" style="font-size: 40px;" dominant-baseline="text-before-edge">svg文本绘制</text>-->
+	<!--<text x="250" y="250" style="font-size: 40px;" dominant-baseline="middle">svg文本绘制</text>-->
+	<!--<text x="250" y="250" style="font-size: 40px;" text-anchor="middle" dominant-baseline="middle">svg文本绘制</text>-->
+
+	<!--<text x="250" y="250" style="font-size: 40px;" dx="0">svg文本绘制</text>-->
+	<!--<text x="250" y="250" style="font-size: 40px;" dx="10 20 30">svg文本绘制</text>-->
+
+	<!--<text x="250" y="250" style="font-size: 40px;" dy="10 20 30">svg文本绘制</text>-->
+
+	<text style="font-size: 40px;">
+		<tspan x="100" y="250">文</tspan>
+		<tspan x="150" y="250">本</tspan>
+		<tspan x="200" y="250">绘</tspan>
+		<tspan x="400" y="250">制</tspan>
+	</text>
+</svg>
+</body>
+</html>

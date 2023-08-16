@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>12-Bootstrap常用组件-折叠面板</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<p class="d-inline-flex gap-1">
+	<!--
+	1.data-bs-toggle="collapse" 告诉bootstrap需要切换的是折叠面板
+	2.href="#collapseExample" 告诉bootstrap需要切换的是哪一个折叠面板
+	-->
+	<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button">
+		Link with href
+	</a>
+	<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample">
+		Button with data-bs-target
+	</button>
+	<!--
+	通常，我们建议使用带有 data-bs-target 属性的 <button> 标签。
+	虽然从语义的角度来看不推荐，但您也可以使用带有 href 属性（和 role="button"）的 <a> 标签。
+	在这两种情况下，都需要 data-bs-toggle="collapse"。-->
+</p>
+<div class="collapse" id="collapseExample">
+	<div class="card card-body">
+		被折叠的内容
+	</div>
+</div>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

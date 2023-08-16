@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>2-Bootstrap栅格系统基本使用</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		.container{
+			height: 300px;
+			background: #666;
+			text-align: center;
+		}
+		.row{
+			height: 60px;
+			background: #ccc;
+		}
+		.row>div:nth-child(1){
+			background: yellow;
+		}
+		.row>div:nth-child(2){
+			background: green;
+		}
+		.row>div:nth-child(3){
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+<!--
+    1.Bootstrap栅格系统
+    Bootstrap的栅格系统使用一系列的"行"和"列"来实现复杂的响应式布局
+    默认情况下栅格系统会将一行的内容等分为12份,
+    然后我们可以通过绑定类名的方式指定这一行中的每一列占用多少分
+
+    2.Bootstrap栅格系统格式
+    <容器>
+        <行>
+            <列>我们的内容</列>
+            <列>我们的内容</列>
+            ... ...
+        </行>
+    </容器>
+
+   3.Bootstrap栅格系统特点
+   3.1默认情况下行的宽度和所在容器一样
+   3.2默认情况下所有列的宽度是等分所在行的宽度
+   3.3可以通过col-num方式指定当前列占用12分之几
+   3.4如果一行中内容的宽度超过了12分, 那么将自动换行
+-->
+<div class="container text-center">
+	<div class="row">
+		<div class="col-1">Column</div>
+		<div class="col-4">Column</div>
+		<div class="col-7">Column</div>
+	</div>
+</div>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

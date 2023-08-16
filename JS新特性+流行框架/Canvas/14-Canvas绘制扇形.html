@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>14-Canvas绘制扇形</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			display: block;
+			background: #ffc;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+<canvas></canvas>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");
+	oCtx.canvas.width = 500;
+	oCtx.canvas.height = 500;
+
+	oCtx.moveTo(250, 250);
+	oCtx.arc(250, 250, 100, Math.PI, 3*Math.PI/2);
+	// oCtx.closePath();
+	oCtx.fill();
+	oCtx.stroke();
+</script>
+</body>
+</html>

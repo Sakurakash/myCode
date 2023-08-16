@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5-GSAP动画常用事件</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+	<script src="gsap.js"></script>
+</head>
+<body>
+<div class="box"></div>
+<script>
+    let obj = {name: "wyh"};
+    gsap.to(".box", 3, {
+        x: 500,
+        delay: 3,
+        onStart:function(a, b, c){
+            console.log("动画开始了", a, b, c);
+            console.log(this);
+        },
+		// An Array of parameters to pass the onStart function.
+        onStartParams:["123", "456", "789"],
+		// The scope to be used for all of the callbacks (onStart, onUpdate, onComplete, etc.).
+		callbackScope: obj,
+    });
+</script>
+</body>
+</html>

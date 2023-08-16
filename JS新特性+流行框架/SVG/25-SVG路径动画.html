@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>25-SVG路径动画</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		svg{
+			display: block;
+			margin: 0 auto;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+<svg width="500" height="500" viewBox="-50 -50 500 500">
+	<path d="M0 0 C 100 300 300 300 400 0" fill="none" stroke="#000"></path>
+	<rect x="0" y="0" width="50" height="50" fill="pink">
+		<animateMotion
+				path="M0 0 C100 300 300 300 400 0"
+				dur="2"
+				begin="click"
+				fill="freeze"
+				rotate="auto"
+		></animateMotion>
+	</rect>
+</svg>
+</body>
+</html>

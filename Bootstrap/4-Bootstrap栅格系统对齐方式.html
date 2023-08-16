@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>4-Bootstrap栅格系统对齐方式</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		.container{
+			height: 300px;
+			background: #666;
+		}
+		.row{
+			height: 60px;
+			background: #ccc;
+		}
+		.row>div:nth-child(1){
+			background: yellow;
+		}
+		.row>div:nth-child(2){
+			background: green;
+		}
+		.row>div:nth-child(3){
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+<!--
+	1.栅格系统-沟槽
+	BootStrap默认的栅格和列间有间隙沟槽，一般是左右-15px的margin或padding处理，您可以使用.g-0类来消除它，这将影响到.row行、列平行间隙及所有子列
+
+	2.栅格系统列-对齐方式
+	Bootstrap4的格栅系统是使用伸缩布局实现的, 所以也可以通过类名快速地设置伸缩项的在主轴和侧轴对齐方式
+-->
+<div class="container px-0">
+	<div class="row g-0 justify-content-between align-items-center">
+		<div class="col-6">Column</div>
+		<div class="col-2">Column</div>
+		<div class="col-2">Column</div>
+	</div>
+</div>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

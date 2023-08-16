@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-交错动画</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		.box2{
+			background: blue;
+		}
+		.box3{
+			background: green;
+		}
+	</style>
+	<script src="gsap.js"></script>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<script>
+	/*属性			作用
+
+	duration		动画变化的时长（秒）默认是0.5
+
+	delay			动画变化开始前的延迟时长（秒），默认是0.5
+
+	repeat			动画的重复次数
+
+	yoyo			如果设置为ture，那么动画会在执行完之后再反向执行一次，就像悠悠球的效果，默认是false
+
+	stagger			是一个时间的设置（秒），如果有多个元素同时要被驱动，那么当这个属性设置了时间的值之后，元素们会被依次逐个驱动，间隔时长就是这个属性设置的时长
+
+	ease			动画过渡的运动曲线的设置，默认是"power1.out"
+
+	onComplete		动画结束时执行的回调函数*/
+
+	// gsap.to([".box1", ".box2", ".box3"], {x: 500, duration: 3, stagger: 1.5});
+	// gsap.from([".box1", ".box2", ".box3"], {x: 500, duration: 3, stagger: 1.5});
+	gsap.fromTo([".box1", ".box2", ".box3"], {x: 500}, {x: 200, duration: 3, stagger: 1.5});
+</script>
+</body>
+</html>

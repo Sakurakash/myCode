@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7-Canvas绘制虚线</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			display: block;
+			background: #666;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+<canvas width="500" height="500"></canvas>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");
+	oCtx.lineWidth = 5;
+	oCtx.strokeStyle = "pink";
+	oCtx.moveTo(100, 100);
+	oCtx.lineTo(400, 100);
+	/*
+    1.setLineDash
+    [5,20] 是用来描述你的排列方式的
+
+    2.getLineDash
+    获取虚线的排列方式 获取的是不重复的那一段的排列方式
+
+    3.lineDashOffset
+    设置虚线的偏移位
+    * */
+	// oCtx.setLineDash([5, 20]);
+	oCtx.setLineDash([5, 10, 20]);
+	oCtx.lineDashOffset = 5;
+	console.log(oCtx.getLineDash()); //(6)[5, 10, 20, 5, 10, 20]
+	oCtx.stroke();
+</script>
+</body>
+</html>

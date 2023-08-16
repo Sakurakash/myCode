@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>11-Canvas绘制柱状图</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			display: block;
+			background: #ffc;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+<canvas width="500" height="400"></canvas>
+</body>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");
+	// 定义变量保存小方格的尺寸
+	let gridSize = 50;
+	// 计算在垂直方向和水平方向可以绘制多少条横线
+	let canvasWidth = oCtx.canvas.width;
+	let canvasHeight = oCtx.canvas.height;
+	let row = Math.floor(canvasHeight / gridSize);
+	let col = Math.floor(canvasWidth / gridSize);
+	// 绘制水平方向的横线
+	for (let i = 0; i < row; i++){
+		oCtx.beginPath();
+		oCtx.moveTo(0, i * gridSize - 0.5);
+		oCtx.lineTo(canvasWidth, i * gridSize - 0.5);
+		oCtx.strokeStyle = "#ccc";
+		oCtx.stroke();
+	}
+	// 绘制垂直方向的横线
+	for(let i = 0; i < col; i++){
+		oCtx.beginPath();
+		oCtx.moveTo(i * gridSize - 0.5, 0);
+		oCtx.lineTo(i * gridSize - 0.5, canvasHeight);
+		oCtx.strokeStyle = "#ccc";
+		oCtx.stroke();
+	}
+
+	// 绘制坐标轴
+	// 1.确定原点坐标
+	let originX = gridSize;
+	let originY = canvasHeight - gridSize;
+	// 2.确定X轴终点坐标
+	let rowEndX = canvasWidth - gridSize;
+	let rowEndY = canvasHeight - gridSize;
+	// 3.确定Y轴终点坐标
+	let colEndX = gridSize;
+	let colEndY = gridSize;
+	// 4.连接坐标轴
+	oCtx.beginPath();
+	oCtx.moveTo(colEndX, colEndY);
+	oCtx.lineTo(originX, originY);
+	oCtx.lineTo(rowEndX, rowEndY);
+	oCtx.strokeStyle = "#000";
+	oCtx.stroke();
+	// 5.绘制X轴箭头
+	oCtx.beginPath();
+	oCtx.moveTo(rowEndX, rowEndY);
+	oCtx.lineTo(rowEndX - 10, rowEndY - 5);
+	oCtx.lineTo(rowEndX - 10, rowEndY + 5);
+	oCtx.fill();
+	// 5.绘制Y轴箭头
+	oCtx.beginPath();
+	oCtx.moveTo(colEndX, colEndY);
+	oCtx.lineTo(colEndX + 5, colEndY + 10);
+	oCtx.lineTo(colEndX - 5, colEndY + 10);
+	oCtx.fill();
+
+	// 绘制坐标点
+	// 1.获取坐标位置
+	let list = [
+		{
+			x: 100,
+			y: 300
+		},
+		{
+			x: 200,
+			y: 200
+		},
+		{
+			x: 300,
+			y: 250
+		},
+		{
+			x: 400,
+			y: 100
+		},
+	];
+	for (i = 0; i < list.length; i++){
+		oCtx.fillRect(list[i].x, list[i].y, gridSize, originY - list[i].y);
+	}
+</script>
+</html>

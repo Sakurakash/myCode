@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>13-Canvas绘制圆弧</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			display: block;
+			background: #ffc;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+<canvas></canvas>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");
+	oCtx.canvas.width = 500;
+	oCtx.canvas.height = 500;
+	/*
+	context.arc(x, y, radius, startAngle, endAngle [, anticlockwise]);
+	各个参数含义和作用如下：
+	xNumber: 圆弧对应的圆心横坐标。
+	yNumber: 圆弧对应的圆心纵坐标。
+	radiusNumber: 圆弧的半径大小。
+	startAngleNumber: 圆弧开始的角度，单位是弧度。
+	endAngleNumber: 圆弧结束的角度，单位是弧度。
+	anticlockwise（可选）Boolean: 弧度的开始到结束的绘制是按照顺时针来算，还是按时逆时针来算。
+	如设置为true，则表示按照逆时针方向从startAngle绘制到endAngle。*/
+	oCtx.arc(250, 250, 100, 3*Math.PI/2, Math.PI, true);
+	oCtx.stroke();
+</script>
+</body>
+</html>

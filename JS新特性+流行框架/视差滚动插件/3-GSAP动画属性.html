@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-GSAP动画属性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+	<script src="gsap.js"></script>
+</head>
+<body>
+<div class="box"></div>
+<script>
+    gsap.to(".box", 0.5, {
+        // 设置动画开始之前的延迟时间
+        // delay: 2,
+        // 设置动画初识值
+        startAt: {
+            x: 900
+        },
+        // 设置动画结束值
+        css: {
+            x: 500,
+        },
+        // 设置动画重复执行的次数
+        // 无限重复 -1
+        repeat: -1,
+        // 设置动画重复执行的往返动画
+        yoyo: true,
+        // 设置重复动画开始之前的延迟时间
+        repeatDelay: 0.2,
+        // 设置动画执行的节奏
+        ease: Bounce.easeOut,
+        yoyoEase: Bounce.easeOut
+    });
+</script>
+</body>
+</html>

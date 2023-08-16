@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7-SVG绘制路径</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		svg{
+			display: block;
+			width: 500px;
+			height: 500px;
+			margin: 0 auto;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+<svg>
+	<!--
+    1.什么是SVG路径
+    SVG路径是一个比较牛X的东西, 可以绘制任意图形, 只不过比较复杂而已
+    M = moveto  起点
+    L = lineto  其它点
+    H = horizontal lineto 和上一个点Y相等
+    V = vertical lineto   和上一个点X相等
+    Z = closepath  关闭当前路径
+    -->
+	<!--
+	2.路径指令注意点
+	大写字母是绝对定位, 小写字母是相对定位
+	绝对定位: 写什么位置就是什么位置
+	相对定位: 相对上一次的位置, 在上一次位置基础上做调整
+	-->
+	<!--<path d="M 100 100 L 300 100" stroke-width="10" stroke="red"></path>-->
+	<!--<path d="M 100 100 l 300 100" stroke-width="10" stroke="red"></path>-->
+
+	<path d="M 100 100 H 300 V 300 Z" stroke-width="10" stroke="red" fill="none"></path>
+</svg>
+</body>
+</html>

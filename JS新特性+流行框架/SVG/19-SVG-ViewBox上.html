@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>19-SVG-ViewBox上</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		svg{
+			display: block;
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+<!--
+    1.什么是ViewBox?
+    ViewBox就是可视区域, 用户能看到的区域
+    默认情况下，可视区域的大小和内容区域大小是一致的
+    但是我们也可以手动修改可视区域的大小
+
+    2.ViewBox属性格式
+    viewBox="x y width height"
+    x:修改可视区域x方向位置
+    y:修改可视区域y方向位置
+    width/height: 修改可视区域尺寸, 近大远小
+-->
+<svg>
+	<circle cx="100" cy="100" r="50" fill="red"></circle>
+</svg>
+<svg viewBox="50 0 200 200">
+	<circle cx="100" cy="100" r="50" fill="red"></circle>
+</svg>
+<svg viewBox="0 50 200 200">
+	<circle cx="100" cy="100" r="50" fill="red"></circle>
+</svg>
+<svg viewBox="0 0 400 400">
+	<circle cx="100" cy="100" r="50" fill="red"></circle>
+</svg>
+<svg viewBox="0 0 100 100">
+	<circle cx="100" cy="100" r="50" fill="red"></circle>
+</svg>
+</body>
+</html>

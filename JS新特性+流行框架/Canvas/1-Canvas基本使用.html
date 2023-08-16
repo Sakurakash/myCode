@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-Canvas基本使用</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+<!--canvas标签的默认宽度为300px, 高度为150px-->
+<canvas></canvas>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");// 拿到绘图工具
+	oCtx.moveTo(50, 50);// 设定路径起点
+	oCtx.lineTo(200, 50);// 设定路径终点
+	oCtx.stroke();// 连接路径
+</script>
+</body>
+</html>

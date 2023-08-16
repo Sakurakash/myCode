@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>13-Bootstrap常用组件-下拉菜单</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<!--
+1.class="dropdown" 创建一个下拉菜单的容器
+-->
+<div class="dropdown">
+	<!--
+    1.dropdown-toggle: 指定菜单按钮的小箭头
+    2.data-bs-toggle="dropdown": 告诉bootstrap需要切换的是下拉菜单
+    -->
+	<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+		Dropdown button
+	</button>
+	<!--
+    1.class="dropdown-menu": 创建一个弹出的下拉菜单
+    2.class="dropdown-item": 指定菜单项
+    -->
+	<ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="#">Action</a></li>
+		<li><a class="dropdown-item" href="#">Another action</a></li>
+		<li><a class="dropdown-item" href="#">Something else here</a></li>
+	</ul>
+</div>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

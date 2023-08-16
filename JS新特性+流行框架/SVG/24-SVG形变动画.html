@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>24-SVG形变动画</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		svg{
+			display: block;
+			margin: 0 auto;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+<svg width="500" height="500">
+	<rect x="100" y="100" width="300" height="200" fill="red">
+		<!--<animateTransform
+				attributeName="transform"
+				type="translate"
+				from="0 0"
+				to="300 0"
+				dur="0.5"
+				fill="freeze"
+				begin="click"
+		></animateTransform>-->
+		<!--<animateTransform
+				attributeName="transform"
+				type="rotate"
+				from="0 100 100"
+				to="30 100 100"
+				dur="0.5"
+				fill="freeze"
+				begin="click"
+		></animateTransform>-->
+		<animateTransform
+				attributeName="transform"
+				type="scale"
+				from="1 1"
+				to="0.5 1"
+				dur="0.5"
+				fill="freeze"
+				begin="click"
+		></animateTransform>
+	</rect>
+</svg>
+</body>
+</html>

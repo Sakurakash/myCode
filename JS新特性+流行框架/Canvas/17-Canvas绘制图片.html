@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>17-Canvas绘制图片</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			display: block;
+			background: #ffc;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+<canvas></canvas>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");
+	oCtx.canvas.width = 800;
+	oCtx.canvas.height = 800;
+	let width = oCtx.canvas.width;
+	let height = oCtx.canvas.height;
+	let oImg = new Image();
+	oImg.onload = function () {
+		// 如果只有三个参数, 那么第一个参数就是需要绘制的图片
+		// 后面的两个参数是指定图片从什么位置开始绘制
+		// oCtx.drawImage(oImg, 100, 100);
+
+		// 如果只有五个参数, 那么第一个参数就是需要绘制的图片
+		// 后面的两个参数是指定图片从什么位置开始绘制
+		// 最后的两个参数是指定图片需要拉伸到多大
+		// oCtx.drawImage(oImg, 100, 100, 100, 100);
+
+		// 如果有九个参数, 那么第一个参数就是需要绘制的图片
+		// 最后的两个参数是指定图片需要拉伸到多大
+		// 第6~7个参数指定图片从什么位置开始绘制
+		// 第2~3个参数指定图片上定位的位置
+		// 第4~5个参数指定从定位的位置开始截取多大的图片
+		oCtx.drawImage(oImg, 0, 200, 1000, 1000, 200, 200, 400, 400);
+	}
+	oImg.src = "./images/封面.jpg";
+</script>
+</body>
+</html>

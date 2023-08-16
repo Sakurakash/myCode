@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>21-Canvas图形交互</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			display: block;
+			background: #ffc;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+<canvas></canvas>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");
+	oCtx.canvas.width = 700;
+	oCtx.canvas.height = 700;
+
+	let originX = 100;
+	let originY = 100;
+	let originWidth = 200;
+	let originHeight = 200;
+	oCtx.rect(originX, originY, originWidth, originHeight);
+	oCtx.fill();
+
+	oCtx.beginPath();
+	oCtx.rect(200, 200, originWidth, originHeight);
+	oCtx.fill();
+	oCanvas.onclick = function (ev) {
+		let x = ev.offsetX;
+		let y = ev.offsetY;
+		/*if (x < originX + originWidth && x > originX && y < originY + originHeight && y > originY){
+			console.log("矩形被点击了");
+		}else {
+			console.log("矩形没有被点击");
+		}*/
+		/*注意点:
+		isPointInPath方法如果开启了一个新的路径, 那么判断的就是点是否在新的路径的图形中*/
+		if (oCtx.isPointInPath(x, y)){
+			console.log("矩形被点击了");
+		}else {
+			console.log("矩形没有被点击");
+		}
+	}
+</script>
+</body>
+</html>

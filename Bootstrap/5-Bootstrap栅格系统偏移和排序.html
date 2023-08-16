@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>5-Bootstrap栅格系统偏移和排序</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		.container{
+			height: 300px;
+			background: #666;
+		}
+		.row{
+			height: 60px;
+			background: #ccc;
+		}
+		.row>div:nth-child(1){
+			background: yellow;
+		}
+		.row>div:nth-child(2){
+			background: green;
+		}
+		.row>div:nth-child(3){
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+<!--
+	1.栅格系统-列偏移
+	offset-*: 但前列偏移多少份位置
+	注意点: 写在哪一列就是哪一列偏移
+
+	2.栅格系统列-列排序
+	order-*: 从小到大顺序排序, 小的在前面, 大的在后面
+	注意点: 没有排序的列位置不会发生变化, 只有排序的列才参与位置变化
+-->
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-2">Column1</div>
+		<div class="col-2">Column2</div>
+		<div class="col-2">Column3</div>
+	</div>
+	<div class="row">
+		<div class="col-2 offset-3">Column1</div>
+		<div class="col-2">Column2</div>
+		<div class="col-2">Column3</div>
+	</div>
+	<div class="row justify-content-between">
+		<div class="col-2">Column1</div>
+		<div class="col-2">Column2</div>
+		<div class="col-2">Column3</div>
+	</div>
+	<div class="row justify-content-between">
+		<div class="col-2">Column1</div>
+		<div class="col-2 offset-3">Column2</div>
+		<div class="col-2 offset-3">Column3</div>
+	</div>
+	<div class="row">
+		<div class="col-2 order-3">Column1</div>
+		<div class="col-2 order-2">Column2</div>
+		<div class="col-2 order-1">Column3</div>
+	</div>
+</div>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

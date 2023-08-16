@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-Animate使用</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			margin: 200px auto;
+			background: skyblue;
+			/*通过以下两个属性分别设置动画次数和动画延迟*/
+			animation-iteration-count: 3;
+			/*animation-delay: 1.5s;*/
+		}
+		@keyframes myFadeInUp {
+			0% {
+				opacity: 0;
+				transform: scale(1);
+			}
+			100% {
+				opacity: 1;
+				transform: scale(2);
+				background: pink;
+			}
+		}
+		.animate__myFadeInUp {
+			-webkit-animation-name: myFadeInUp;
+			animation-name: myFadeInUp;
+			-webkit-transform-origin: center bottom;
+			transform-origin: center bottom;
+		}
+	</style>
+</head>
+<body>
+<div class="animate__animated animate__myFadeInUp"></div>
+</body>
+</html>

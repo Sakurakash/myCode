@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3-Bootstrap栅格系统尺寸设置</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		.container{
+			height: 300px;
+			background: #666;
+			text-align: center;
+		}
+		.row{
+			height: 60px;
+			background: #ccc;
+		}
+		.row>div:nth-child(1){
+			background: yellow;
+		}
+		.row>div:nth-child(2){
+			background: green;
+		}
+		.row>div:nth-child(3){
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+<!--
+	Breakpoint			Class infix		Dimensions
+
+	Extra small			None			<576px
+	Small				sm				≥576px
+	Medium				md				≥768px
+	Large				lg				≥992px
+	Extra large			xl				≥1200px
+	Extra extra large	xxl				≥1400px
+-->
+<!--
+    1.栅格系统列的尺寸设置
+    1.1Bootstrap的固定宽度容器提供了5种响应的尺寸,
+       同样Bootstrap也给列提供了5种响应的尺寸
+    col-*:   设置超小屏幕
+    col-sm-*:设置小屏幕
+    col-md-*:设置中等屏幕
+    col-lg-*:设置大屏幕
+    col-xl-*:设置超大屏幕
+
+    2.栅格系统列的尺寸特点
+    1.如果只设置了小屏幕的大小, 那么大屏幕也会采用小屏幕设置的大小
+    2.如果值设置了大屏幕的大小, 那么小屏幕默认100%
+    3.如果大小屏幕都设置了大小, 那么在什么屏幕就显示什么尺寸
+-->
+<div class="container text-center">
+	<div class="row">
+		<div class="col-xl-1 col-lg-7">Column</div>
+		<div class="col-xl-4 col-lg-4">Column</div>
+		<div class="col-xl-7 col-lg-1">Column</div>
+	</div>
+</div>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

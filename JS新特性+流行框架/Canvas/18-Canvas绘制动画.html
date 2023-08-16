@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>18-Canvas绘制动画</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			display: block;
+			background: #ffc;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+<canvas></canvas>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");
+	oCtx.canvas.width = 800;
+	oCtx.canvas.height = 800;
+	let canvasWidth = oCtx.canvas.width;
+	let canvasHeight = oCtx.canvas.height;
+	
+	// 加载图片
+	let oImg = new Image();
+	oImg.onload = function () {
+		// 计算帧图片大小
+		let personWidth = oImg.width / 4;
+		let personHeight = oImg.height / 4;
+		// 计算图片位置
+		let originX = canvasWidth / 2 - personWidth / 2;
+		let originY = canvasHeight / 2 - personHeight / 2;
+		let index = 0;
+		setInterval(function () {
+			oCtx.clearRect(0, 0, canvasWidth, canvasHeight);
+			oCtx.drawImage(oImg, index * personWidth, personHeight * 2, personWidth, personHeight, originX, originY, personWidth, personHeight);
+			index++;
+			if (index > 3){
+				index = 0;
+			}
+		}, 200);
+	}
+	oImg.src = "./images/person.png";
+</script>
+</body>
+</html>

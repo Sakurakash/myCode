@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12-ScrollMagic场景配置</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            background: #000;
+        }
+        div{
+            width: 100%;
+            height: 200px;
+			font-size: 30px;
+			color: #fff;
+			text-align: center;
+			line-height: 200px;
+        }
+        .section1{
+            background: red;
+        }
+        .section2{
+            background: green;
+        }
+        .section3{
+            background: blue;
+        }
+        .section4{
+            background: deeppink;
+        }
+        footer{
+            width: 100%;
+            height: 2000px;
+            background: #000;
+        }
+    </style>
+	<script src="ScrollMagic.min.js"></script>
+</head>
+<body>
+<header></header>
+<div class="section1">1</div>
+<div class="section2">2</div>
+<div class="section3">3</div>
+<div class="section4">4</div>
+<footer></footer>
+<script>
+    // 官方文档: http://scrollmagic.io/docs/index.html
+    // 1.创建一个控制器对象controller
+	let controller = new ScrollMagic.Controller();
+    // 2.创建一个场景对象scene
+	let scene = new ScrollMagic.Scene({
+		offset: 0,
+		// triggerElement: 告诉ScrollMagic当前的场景从哪一个元素开始
+		triggerElement: 'footer',
+		// triggerHook: 告诉ScrollMagic当前的场景从指定元素相对于视口的什么位置开始
+		// triggerHook: "onCenter",// 元素在视口中央时
+		triggerHook: "onEnter",// 元素开始进入视口时
+		// triggerHook: "onLeave",// 元素完全离开视口时
+		duration: 200,
+		reverse: false// 场景是否逆向执行
+	});
+    // 告诉ScrollMagic哪一个元素需要固定
+    scene.setPin(".section1");
+    // 3.将场景对象添加到控制器对象
+	controller.addScene(scene);
+</script>
+</body>
+</html>

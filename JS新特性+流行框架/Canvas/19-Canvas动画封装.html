@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>19-Canvas动画封装</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			display: block;
+			background: #ffc;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+<canvas></canvas>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");
+	oCtx.canvas.width = 800;
+	oCtx.canvas.height = 800;
+	let canvasWidth = oCtx.canvas.width;
+	let canvasHeight = oCtx.canvas.height;
+
+	class People {
+		constructor(ctx, x, y) {
+			this.oCtx = ctx;
+			this.originX = x;
+			this.originY = y;
+			this.canvasWidth = ctx.canvas.width;
+			this.canvasHeight = ctx.canvas.height;
+			this.index = 0;
+			this.timerId = null;
+			this.direction = 0;// 0下, 1左, 2右, 3上
+		}
+		render(){
+			let oImg = new Image();
+			oImg.onload = () => {
+				this.personWidth = oImg.width / 4;
+				this.personHeight = oImg.height / 4;
+				oCtx.drawImage(
+						oImg,
+						0, this.direction * this.personHeight,
+						this.personWidth, this.personHeight,
+						this.originX, this.originY,
+						this.personWidth, this.personHeight
+				);
+			}
+			oImg.src = "./images/person.png";
+			this.oImg = oImg;
+		}
+		run(stepX, stepY){
+			clearInterval(this.timerId);
+			this.timerId = setInterval(() => {
+				if (stepX && stepX !== 0){
+					switch (stepX > 0){
+						case true:
+							this.direction = 2;
+							break;
+						case false:
+							this.direction = 1;
+							break;
+					}
+					this.originX += stepX;
+				}
+				if (stepY && stepY !== 0){
+					switch (stepY > 0){
+						case true:
+							this.direction = 0;
+							break;
+						case false:
+							this.direction = 3;
+							break;
+					}
+					this.originY += stepY;
+				}
+				oCtx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+				oCtx.drawImage(
+						this.oImg,
+						this.index * this.personWidth, this.direction * this.personHeight,
+						this.personWidth, this.personHeight,
+						this.originX, this.originY,
+						this.personWidth, this.personHeight
+				);
+				this.index++;
+				if (this.index > 3){
+					this.index = 0;
+				}
+			}, 120);
+		}
+		stop(){
+			clearInterval(this.timerId);
+		}
+		moveUp(){
+			this.run(0, -10);
+		}
+		moveDown(){
+			this.run(0, 10);
+		}
+		moveLeft(){
+			this.run(-10, 0);
+		}
+		moveRight(){
+			this.run(10, 0);
+		}
+	}
+	let people = new People(oCtx, 200, 200);
+	people.render();
+	/*// people.run(10, 0);
+	// people.stop();
+	// people.moveUp();
+	// people.moveDown();
+	// people.moveLeft();
+	// people.moveRight();*/
+	window.onkeydown = function (ev) {
+		let key = ev.key;
+		switch (key.toLowerCase()){
+			case "w":
+				people.moveUp();
+				break;
+			case "a":
+				people.moveLeft();
+				break;
+			case "s":
+				people.moveDown();
+				break;
+			case "d":
+				people.moveRight();
+				break;
+		}
+	}
+</script>
+</body>
+</html>

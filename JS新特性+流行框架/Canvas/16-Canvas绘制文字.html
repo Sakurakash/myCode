@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>16-Canvas绘制文字</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			display: block;
+			background: #ffc;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+<canvas></canvas>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");
+	oCtx.canvas.width = 800;
+	oCtx.canvas.height = 500;
+	let width = oCtx.canvas.width;
+	let height = oCtx.canvas.height;
+	oCtx.moveTo(0, height/2);
+	oCtx.lineTo(width, height/2);
+	oCtx.moveTo(width/2, 0);
+	oCtx.lineTo(width/2, height);
+	oCtx.stroke();
+
+	// 通过font属性可以设置文字的大小和样式
+	oCtx.font = "50px 黑体"
+
+	// 通过textAlign属性可以设置文字水平方向的对齐方式
+	// 注意点: 在对齐的时候是以绘制文字的x作为参考点进行对齐的
+	// oCtx.textAlign = "start";
+	// oCtx.textAlign = "end";
+	oCtx.textAlign = "center";
+
+	// CanvasRenderingContext2D.textBaseline是Canvas 2D API描述绘制文本时，当前文本基线的属性。
+	// oCtx.textBaseline = "top";
+	oCtx.textBaseline = "bottom";
+	// oCtx.textBaseline = "middle";
+	// oCtx.textBaseline = "hanging";
+	/*
+	参考值如下:
+
+	top: 文本基线在文本块的顶部。
+	hanging: 文本基线是悬挂基线。
+	middle: 文本基线在文本块的中间。
+	alphabetic: 文本基线是标准的字母基线。
+	ideographic: 文字基线是表意字基线；如果字符本身超出了alphabetic基线，那么ideographic基线位置在字符本身的底部。
+	bottom: 文本基线在文本块的底部。与ideographic基线的区别在于ideographic基线不需要考虑下行字母。
+	默认值是 alphabetic。
+	*/
+
+	// oCtx.strokeText("canvas绘制文字", width/2, height/2);
+	oCtx.fillText("canvas绘制文字", width/2, height/2);
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>17-SVG画笔</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		svg{
+			display: block;
+			width: 500px;
+			height: 500px;
+			margin: 0 auto;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+<svg>
+	<!--
+        1.Pattern(画笔)
+        在SVG中除了可以使用纯色和渐变色作为填充色以外, 还可以使用自定义图形作为填充
+
+        2.Pattern属性
+        width/height默认情况下也是百分比
+        可以通过gradientUnits修改
+        patternUnits="objectBoundingBox"
+        patternUnits="userSpaceOnUse"
+        -->
+	<pattern id="myPattern" width="0.2" height="0.2">
+	<!--<pattern id="myPattern" width="50" height="40" patternUnits="userSpaceOnUse">-->
+		<circle cx="10" cy="10" r="10" fill="red"></circle>
+	</pattern>
+	<rect x="100" y="100" width="300" height="200" fill="url(#myPattern)" stroke="#000"></rect>
+</svg>
+</body>
+</html>

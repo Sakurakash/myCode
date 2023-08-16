@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>16-Bootstrap常用组件-导航栏</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<!--
+1.class="navbar": 告诉Bootstrap需要创建一个响应式的导航栏
+2.class="navbar-expand-lg": 告诉Bootstrap在哪一种屏幕尺寸上需要展示完整的导航栏
+3.class="bg-body-tertiary": 设置导航栏的主题样式
+-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+	<div class="container-fluid">
+		<!--
+		1.class="navbar-brand": 指定导航栏中公司的品牌信息(公司名称/LOGO)
+		-->
+		<a class="navbar-brand" href="#">Navbar</a>
+		<!--
+		1.class="navbar-toggler": 创建一个移动端的菜单按钮
+		2.data-bs-toggle="collapse": 告诉bootstrap需要切换的是折叠面板
+		3.data-bs-target="#navbarSupportedContent": 告诉bootstrap需要切换的是哪一个折叠面板
+		4.class="navbar-toggler-icon": 设置按钮的字体图标
+		-->
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!--
+		1.class="collapse": 创建一个折叠面板
+		注意点: 折叠面板默认情况下是不会显示的
+		2.class="navbar-collapse":用于通过父断点进行分组和隐藏导航列内容
+		-->
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<!--
+			1. class="navbar-nav": 创建导航栏的菜单
+			2. class="nav-item": 创建导航来的菜单项
+			-->
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+						Dropdown
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Action</a></li>
+						<li><a class="dropdown-item" href="#">Another action</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#">Something else here</a></li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" aria-disabled="true">Disabled</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

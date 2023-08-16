@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>15-Canvas绘制饼状图</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	canvas{
+		display: block;
+		background: #ffc;
+		margin: 100px auto;
+	}
+	</style>
+</head>
+<body>
+<canvas></canvas>
+<script>
+	let oCanvas = document.querySelector("canvas");
+	let oCtx = oCanvas.getContext("2d");
+	oCtx.canvas.width = 500;
+	oCtx.canvas.height = 500;
+	createPie(oCtx, 12);
+	function createPie(ctx, amount) {
+		let startAngle = 0;
+		let rx = ctx.canvas.width / 2;
+		let ry = ctx.canvas.height / 2;
+		for (let i = 0; i < amount; i++){
+			ctx.beginPath();
+			ctx.moveTo(rx, ry);
+			ctx.arc(rx, ry, 100, startAngle, startAngle + 2 * Math.PI / amount);
+			ctx.fillStyle = randomColor();
+			ctx.fill();
+			ctx.stroke();
+			startAngle += 2 * Math.PI / amount;
+		}
+	}
+	function randomColor(){
+		let r = Math.floor(Math.random()*256);
+		let g = Math.floor(Math.random()*256);
+		let b = Math.floor(Math.random()*256);
+		return `rgb(${r}, ${g}, ${b})`
+	}
+</script>
+</body>
+</html>

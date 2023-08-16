@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>12-SVG绘制超链接</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		svg{
+			display: block;
+			margin: 0 auto;
+			width: 500px;
+			height: 500px;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+<svg>
+	<!--
+    可以给任意内容添加超链接, 只需要用超链接包裹起来即可
+    xlink:href: 指定链接地址
+    xlink:title: 指定链接提示
+    target: 指定打开方式
+    -->
+	<a xlink:href="https://bilibili.com" xlink:title="哔哩哔哩官方网站" target="_blank">
+		<!--<text x="250" y="250" style="font-size: 30px;" text-anchor="middle">哔哩哔哩官方网站</text>-->
+		<circle cx="250" cy="250" r="100" fill="pink"></circle>
+	</a>
+</svg>
+</body>
+</html>

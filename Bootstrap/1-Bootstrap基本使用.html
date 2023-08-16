@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>1-Bootstrap基本使用</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		.container{
+			height: 200px;
+			background: red;
+			text-align: center;
+		}
+		.container-fluid{
+			height: 200px;
+			background: red;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<!--
+1.Bootstrap容器
+1.1在Bootstrap中容器是响应式布局的基础, Bootstrap推荐将所有内容都定义在容器之中
+1.2并且容器是启用Bootstrap栅格系统必不可少的前置条件
+
+2. Bootstrap中提供了两个容器: container/container-fluid
+2.1container容器(固定容器):
+只要给标签添加了container类名, 这个标签就变成了Bootstrap的container容器
+只要这个标签变成了Bootstrap的container容器, 在不同视口大小下就会有不同的固定宽度
+
+2.2container-fluid(自适应宽度容器)
+只要给标签添加了container-fluid类名, 这个标签就变成了Bootstrap的container-fluid容器
+只要这个标签变成了Bootstrap的container-fluid容器, 那么容器的宽度永远都是100%自适应
+-->
+
+<!--Bootstrap comes with three different containers:-->
+
+<!--.container, which sets a max-width at each responsive breakpoint-->
+<!--.container-{breakpoint}, which is width: 100% until the specified breakpoint-->
+<!--.container-fluid, which is width: 100% at all breakpoints-->
+
+<!--<div class="container-fluid">-->
+<div class="container">
+	<div class="container-sm">100% wide until small breakpoint</div>
+	<div class="container-md">100% wide until medium breakpoint</div>
+	<div class="container-lg">100% wide until large breakpoint</div>
+	<div class="container-xl">100% wide until extra large breakpoint</div>
+	<div class="container-xxl">100% wide until extra extra large breakpoint</div>
+</div>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

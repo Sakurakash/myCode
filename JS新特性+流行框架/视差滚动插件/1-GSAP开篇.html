@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-GSAP开篇</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+	<script src="gsap.js"></script>
+</head>
+<body>
+<!--
+1.什么是GSAP?
+GSAP(GreenSock Animation Platform)是一个从flash时代一直发展到今天的专业动画库
+
+2.GSAP优点
+1、速度快。GSAP专门优化了动画性能，使之实现和CSS一样的高性能动画效果。
+2、轻量与模块化。模块化与插件式的结构保持了核心引擎的轻量，TweenLite包非常小（基本上低于7kb）。GSAP提供了TweenLite, TimelineLite, TimelineMax 和 TweenMax不同功能的动画模块，你可以按需使用。
+3、没有依赖。
+4、灵活控制。不用受限于线性序列，可以重叠动画序列，你可以通过精确时间控制，灵活地使用最少的代码实现动画。
+
+3.GSAP版本
+GSAP提供4个库文件供用户使用
+1.TweenLite：这是GSAP动画平台的核心部分，使用它可以用来实现大部分的动画效果，适合来实现一些元素的简单动画效果。
+2.TimelineLite：一个强大的，轻量级的序列工具，它就如一个存放补间动画的容器，可以很容易的整体控制补间动画，且精确管理补间动画彼此之间的时间关系。比如动画的各种状态，Pause，reverse，restart，speed up，slow down，seek time，add labels等。它适合来实现一些复杂的动画效果。
+3.TimelineMax：扩展TimelineLite，提供完全相同的功能再加上有用的（但非必需）功能，如repeat，repeatDelay，yoyo，currentLabel()等。TimelineMax的目标是成为最终的全功能工具，而不是轻量级的。
+4.TweenMax：可以完成TimelineLite做的每一件事，并附加非必要的功能，如repeat，yoyo，repeatDelay(重复延迟)等。它也包括许多常见的插件，如CSSPlugin，这样您就不需自行载入多个文件。侧重于全功能的，而不是轻量级的。-->
+<div class="box"></div>
+<script>
+	/*
+	有四种Tween的动画方式
+
+	gsap.to()— 这是一种最常用的tween动画，就是让元素从初始状态变化到目标状态。
+	gsap.from()— 有点像to方法的逆向变化，就是让元素从目标状态变化到初始状态。
+	gsap.fromTo()— 需要自己定义两个状态的数据，然后从前一个变化到后一个。
+	gsap.set()— 直接设置成想要的状态，没有任何过渡与动画效果。本质上就是duration为0的 to() 方法
+
+	*/
+
+	// gsap.to(".box", {x: 500, duration: 3});
+	// gsap.from(".box", {x: 500, duration: 3});
+	gsap.fromTo(".box", {x: 500}, {x: 200, duration: 3});
+</script>
+</body>
+</html>

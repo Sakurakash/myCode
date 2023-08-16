@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-wow.js基本使用</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 400px;
+			height: 200px;
+			margin: 200px auto;
+		}
+		.box1,.box2{
+			width: 200px;
+			height: 200px;
+		}
+		.box1{
+			float: left;
+			background-color: skyblue;
+		}
+		.box2{
+			float: right;
+			background-color: pink;
+		}
+	</style>
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="js/wow.js"></script>
+</head>
+<body>
+<div class="box">
+	<div class="box1 wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="2s"></div>
+	<div class="box2 wow animate__fadeInRight" data-wow-duration="1s" data-wow-iteration="3"></div>
+</div>
+<script>
+	let wow = new WOW().init();
+</script>
+</body>
+</html>
