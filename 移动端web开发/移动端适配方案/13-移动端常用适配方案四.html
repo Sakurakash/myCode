@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-移动端常用适配方案四</title>
+    <script>
+        /*
+        1.如何解决设备像素和CSS像素不一样的问题?
+        如果设备像素和CSS像素一样, 那么无需处理不会带来任何负面影响
+        如果设备像素是CSS像素的2倍, 那么我们只需将CSS像素缩小一半即可
+        但是有时候设备像素可能是CSS像素的3倍/4倍...
+
+        2.获取设备像素比DPR(Device Pixel Ratio)
+        DPR = 设备像素 / CSS像素
+        iPhone3GS :  320 / 320 = 1
+        iPhone4S:    640 / 320 = 2
+        iPhone678:   750 / 375 = 2
+        iPhoneX:     1125 / 375 = 3
+        在JS中我们可以通过 window.devicePixelRatio 获取当前的设备像素
+
+        3.如何缩小?
+        通过 <meta name="viewport">的initial-scale属性来缩小
+        注意点: 缩放视口后视口大小会发生变化
+        * */
+        // console.log(1.0 / window.devicePixelRatio); // 1 / 1 = 1;  1 / 2 = 0.5;
+        let scale = 1.0 / window.devicePixelRatio;
+        let text = `<meta name="viewport" content="width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no">`;
+        document.write(text);
+
+        document.documentElement.style.fontSize = window.innerWidth / 7.5 + "px";
+    </script>
+	<link rel="stylesheet" href="练习.css">
+</head>
+<body>
+<div class="top">
+    <img src="images/bg.png" alt="">
+    <p>实名认证</p>
+</div>
+
+<div class="middle">
+    <div class="main">
+        <img src="images/back.png" alt="">
+        <img src="images/add.png" alt="">
+    </div>
+</div>
+
+<div class="bottom">
+    <div class="main">
+        <img src="images/back.png" alt="">
+        <img src="images/add.png" alt="">
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-移动端常用适配方案三</title>
+    <script>
+        /*
+        注意点: 通过JS动态计算当前屏幕每一份大小的好处: 不用写很多的媒体查询
+                坏处: 切换了屏幕尺寸之后需要刷新界面才有效
+                      而媒体查询如果切换了屏幕的尺寸不需要重新刷新界面
+        * */
+        document.documentElement.style.fontSize = window.innerWidth / 7.5 + "px";
+    </script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.top {
+			position: relative;
+		}
+		.top > img {
+			width: 100%;
+			height: auto;
+		}
+		.top > p {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 0.8rem;
+			font-size: 0.36rem;
+			color: #fff;
+		}
+		.middle,
+		.bottom {
+			position: relative;
+			height: 2.9rem;
+		}
+		.main {
+			border: 1px dashed #0d7efb;
+			border-radius: 0.05rem;
+			padding: 0.1rem;
+			display: inline-block;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.main > img:nth-of-type(1) {
+			width: 4.1rem;
+			height: 2.7rem;
+			vertical-align: bottom;
+		}
+		.main > img:nth-of-type(2) {
+			width: 0.84rem;
+			height: 0.84rem;
+			vertical-align: bottom;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 0.6rem;
+		}
+		.bottom {
+			margin-top: 0.35rem;
+		}
+	</style>
+</head>
+<body>
+<div class="top">
+    <img src="images/bg.png" alt="">
+    <p>实名认证</p>
+</div>
+
+<div class="middle">
+    <div class="main">
+        <img src="images/back.png" alt="">
+        <img src="images/add.png" alt="">
+    </div>
+</div>
+
+<div class="bottom">
+    <div class="main">
+        <img src="images/back.png" alt="">
+        <img src="images/add.png" alt="">
+    </div>
+</div>
+
+</body>
+</html>
