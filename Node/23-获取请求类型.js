@@ -1,5 +1,8 @@
 let http = require("http");
-
+/*
+1.在服务端如何区分用户发送的是GET请求和POST请求?
+通过HTTP模块http.IncomingMessage 类的.method属性
+*/
 http.createServer(function (req, res) {
     res.writeHead(200, {
         "Content-Type": "text/plain; charset=utf-8"

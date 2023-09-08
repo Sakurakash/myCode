@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>26-NodeJS-面试题</title>
+</head>
+<body>
+<!--
+1.NodeJS中的this为什么是一个空对象?
+-->
+<!--
+因为所有的NodeJS文件在执行的时候都会被包裹到一个函数中, this都被修改为了空的module.exports
+(function (exports, require, module, __filename, __dirname) {
+    // 我们编写的代码
+    // 所以说在这里面拿到的this就是 空的module.exports
+});
+compiledWrapper.call(module.exports, args);
+-->
+<!--
+2.NodeJS中为什么可以直接使用exports, require, module, __filename, __dirname
+-->
+<!--
+因为所有的NodeJS文件在执行的时候都会被包裹到一个函数中, 这些属性都被通过参数的形式传递过来了
+var args = [module.exports, require, module, filename, dirname];
+compiledWrapper.call(this.exports, args);
+-->
+<!--
+3.NodeJS中为什么不能直接exports赋值, 而可以给module.exports赋值
+-->
+<!--
+(function (exports, require, module, __filename, __dirname) {
+    exports = "lnj";
+});
+jsScript.call(module.exports, module.exports);
+return module.exports;
+
+相当于
+let exports = module.exports;
+exports = "lnj";
+return module.exports;
+-->
+<!--
+4.通过require导入包时候应该使用var/let还是const?
+导入包的目的是使用包而不是修改包, 所以导入包时使用const接收
+-->
+</body>
+</html>

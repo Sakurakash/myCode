@@ -1,3 +1,8 @@
+/*
+1.追加写入
+fs.appendFile(path, data[, options], callback)
+fs.appendFileSync(path, data[, options])
+*/
 let path = require("path");
 let fs = require("fs");
 let str = path.join(__dirname, "data.txt");
@@ -10,5 +15,4 @@ let buf = Buffer.from(" -- 被追加的数据(由buffer传入) -- ");
         console.log("追加数据成功");
     }
 });*/
-let res = fs.appendFileSync(str, " -- 被追加的数据(同步) -- ");
-console.log(res);
+fs.appendFileSync(str, " -- 被追加的数据(同步) -- ");

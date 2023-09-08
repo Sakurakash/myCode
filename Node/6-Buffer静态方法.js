@@ -1,3 +1,18 @@
+/*
+1.检查是否支持某种编码格式
+Buffer.isEncoding(encoding)
+
+2.检查是否是Buffer类型对象
+Buffer.isBuffer(obj)
+
+3.获取Buffer实际字节长度
+Buffer.byteLength(string[, encoding])
+注意点: 一个汉字占用三个字节
+
+4.合并Buffer中的数据
+Buffer.concat(list[, totalLength])
+*/
+
 // let res = Buffer.isEncoding("utf-8");
 // let res = Buffer.isEncoding("gbk");
 

@@ -1,14 +1,32 @@
+/*
+1.路径的格式化处理
+// path.parse()  string->obj
+// path.format() obj->string
+
+2.拼接路径
+path.join([...paths])
+
+3.规范化路径
+path.normalize(path)
+
+4.计算相对路径
+path.relative(from, to)
+
+5.解析路径
+path.resolve([...paths])
+*/
+
 let path = require("path");
 let obj = path.parse("a/b/c/d/index.html");
 // console.log(obj);
 //运行结果:
-// {
-//     root: '',
-//         dir: 'a/b/c/d',
-//     base: 'index.html',
-//     ext: '.html',
-//     name: 'index'
-// }
+/*{
+    root: '',
+        dir: 'a/b/c/d',
+    base: 'index.html',
+    ext: '.html',
+    name: 'index'
+}*/
 
 let obj1 =  {
     root: '',

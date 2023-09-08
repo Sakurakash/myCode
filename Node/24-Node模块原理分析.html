@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>24-Node模块原理分析</title>
+</head>
+<body>
+<!--
+1.Node模块
+1.1在CommonJS规范中一个文件就是一个模块
+1.2在CommonJS规范中通过exports暴露数据
+1.3在CommonJS规范中通过require()导入模块
+
+2.Node模块原理分析
+既然一个文件就是一个模块,
+既然想要使用模块必须先通过require()导入模块
+所以可以推断出require()的作用其实就是读取文件
+所以要想了解Node是如何实现模块的, 必须先了解如何执行读取到的代码
+
+3.执行从文件中读取代码
+我们都知道通过fs模块可以读取文件,
+但是读取到的数据要么是二进制, 要么是字符串
+无论是二进制还是字符串都无法直接执行
+
+但是我们知道如果是字符串, 在JS中是有办法让它执行的
+eval  或者 new Function;
+
+4.通过eval执行代码
+缺点: 存在依赖关系, 字符串可以访问外界数据,不安全
+
+5.通过new Function执行代码
+缺点: 存在依赖关系, 依然可以访问全局数据,不安全
+-->
+<!--
+6.通过NodeJS的vm虚拟机执行代码
+runInThisContext: 无权访问外部变量, 但是可以访问global
+runInNewContext:  无权访问外部变量, 也不能访问global
+-->
+
+<script>
+    // let str = "console.log('www.it666.com');";
+    // eval(str);
+
+    // 存在依赖关系, 字符串可以访问外界数据,不安全
+    // let name = "lnj";
+    // let str = "console.log(name);";
+    // eval(str);
+
+    // let str = "console.log('www.it666.com');";
+    // let fn = new Function(str);
+    // console.log(fn);
+    // fn();
+
+    // 存在依赖关系, 字符串可以访问外界数据,不安全
+    let name = "lnj";
+    let str = "console.log(name);";
+    let fn = new Function(str);
+    fn();
+</script>
+</body>
+</html>

@@ -3,6 +3,7 @@ http.createServer(function (req, res) {
    res.writeHead(200, {
       "Content-Type": "text/plain; charset=utf-8"
    });
+   console.log(req.url);
    // req是http.IncomingMessage类的实例
    // res是http.ServerResponse类的实例
    if (req.url.startsWith("/index")){

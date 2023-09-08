@@ -1,3 +1,11 @@
+/*
+1.文件模块(fs)
+封装了各种文件相关的操作
+
+2.查看文件状态
+fs.stat(path[, options], callback)
+fs.statSync(path[, options])
+*/
 let fs = require("fs");
 console.log(__dirname);
 console.log(__filename);

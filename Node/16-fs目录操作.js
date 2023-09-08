@@ -1,7 +1,19 @@
 let fs = require("fs");
 let path = require("path");
 let str = path.join(__dirname, "创建的目录");
+/*
+1、创建目录
+fs.mkdir(path[, mode], callback)
+fs.mkdirSync(path[, mode])
 
+2、读取目录
+fs.readdir(path[, options], callback)
+fs.readdirSync(path[, options])
+
+3、删除目录
+fs.rmdir(path, callback)
+fs.rmdirSync(path)
+*/
 //创建目录
 /*fs.mkdir(str, function (err) {
     if (err){
