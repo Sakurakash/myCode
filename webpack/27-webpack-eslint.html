@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>27-webpack-eslint</title>
+</head>
+<body>
+<!--
+1.什么是eslint?
+ESLint 是一个插件化的 javascript 代码检测工具，
+它可以用于检查常见的 JavaScript 代码错误，也可以进行"代码规范"检查，
+在企业开发中项目负责人会定制一套 ESLint 规则，然后应用到所编写的项目上，
+从而实现辅助编码规范的执行，有效控制项目代码的质量。
+在编译打包时如果语法有错或者有不符合规范的语法就会报错, 并且会提示相关错误信息
+
+2.如何使用eslint
+https://zh-hans.eslint.org/
+使用EslintWebpackPlugin
+2.1.安装EslintWebpackPlugin
+npm install eslint-webpack-plugin --save-dev
+npm install eslint --save-dev
+npm install eslint-config-standard --save-dev
+2.2.配置EslintWebpackPlugin
+new ESLintPlugin({
+	fix: true,
+	exclude: 'node_modules'
+})
+
+3.如何提升开发效率
+通过阅读打包错误信息来修复不符合规范语法非常低效
+所以我们可以通过WebStorm插件来帮我们完成提示
+WebStorm--setting--eslint--autoxxx
+-->
+</body>
+</html>

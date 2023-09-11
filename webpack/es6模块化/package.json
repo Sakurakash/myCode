@@ -1,9 +1,0 @@
-{
-  "devDependencies": {
-    "webpack": "^5.82.1",
-    "webpack-cli": "^5.1.1"
-  },
-  "scripts": {
-    "test": "npx webpack"
-  }
-}

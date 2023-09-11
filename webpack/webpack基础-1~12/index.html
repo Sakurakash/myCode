@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>webpack-demo</title>
+	<script>
+		let scale = 1.0 / window.devicePixelRatio;
+		let text = `<meta name="viewport" content="width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no">`;
+		document.write(text);
+		document.documentElement.style.fontSize = window.innerWidth / 7.5 + "px";
+	</script>
+</head>
+<body>
+<!--<script src="dist/main.js"></script>-->
+<script src="bundle/bundle.js"></script>
+</body>
+</html>

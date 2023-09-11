@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>30-webpack-CSS-Tree-Shaking</title>
+</head>
+<body>
+<!--
+1.CSS模块Tree-Shaking
+不光JS模块可以进行Tree-Shaking, CSS模块也可以进行Tree-Shaking
+
+2.如何开启CSS模块Tree-Shaking
+https://www.npmjs.com/package/purgecss-webpack-plugin
+2.1安装相关插件
+npm i purgecss-webpack-plugin -D
+2.2配置插件
+const PurgeCSSPlugin = require('purgecss-webpack-plugin')
+const glob = require("glob-all");
+
+new PurgeCSSPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
+    }),
+-->
+</body>
+</html>
