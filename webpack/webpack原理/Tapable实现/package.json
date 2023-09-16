@@ -1,0 +1,6 @@
+{
+  "type": "commonjs",
+  "dependencies": {
+    "tapable": "^2.2.1"
+  }
+}

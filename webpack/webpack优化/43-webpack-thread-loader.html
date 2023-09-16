@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>43-webpack-thread-loader</title>
+</head>
+<body>
+<!--
+1.什么是thread-loader?
+默认情况下webpack打包项目是单线程的, 为了提升打包速度, 充分发挥多核 CPU 电脑的威力
+我们可以通过thread-loader让webpack实现多线程打包
+
+使用thread-load可以实现将不同编译工作放入不同的工作池中运行。
+将thread-load放在其他loader的前面即可，那么在它其后的loader就会单独运行在一个工作池中。
+在工作池中运行的loader是有限制的：
+		Loaders 不能产生新的文件
+		Loaders 不能使用自定义的loader API（也就是说，通过插件）
+		Loaders 无法获取 webpack 的选项设置。
+
+每个worker都是一个单独的node.js进程，其开销约为600ms。同时跨进程的数据交换也会被限制。
+[thread-loader]中建议：请仅在耗时的 loader 上使用
+
+2.使用方法
+webpack.config.js:
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        include: path.resolve('src'),
+        use: [
+          'thread-loader',
+          // your expensive loader (e.g babel-loader)
+        ],
+      },
+    ],
+  },
+};
+
+选项options配置：
+use: [
+  {
+    loader: 'thread-loader',
+    // 具有相同options的loader将共享工作池
+    options: {
+      // worker的数量，默认为(cpus的数量- 1)或
+      // 当require('os').cpus()未定义时，返回1
+      workers: 2,
+
+      // 一个worker并发处理的工作数，默认为20
+      workerParallelJobs: 50,
+
+      // 额外的node . js参数
+      workerNodeArgs: ['--max-old-space-size=1024'],
+
+      // 允许复活一个死亡的工作池\
+      // 重生减慢整个编译\
+      // 和应该设置为false的开发
+      poolRespawn: false,
+
+      // 闲置时定时删除 worker 进程
+      // 默认为500(毫秒)
+      // 以设置为无穷大， 这样在监视模式(--watch)下可以保持 worker 持续存在
+      poolTimeout: 2000,
+
+      // 工作池分配给worker的工作数量。默认为200.
+      // 降低这个数值会降低总体的效率，但是会提升工作分布更均一
+      poolParallelJobs: 50,
+
+      // 工作池名称。可以修改名称来创建其余选项都一样的池(pool)
+      name: 'my-pool',
+    },
+  },
+  // 其他你需要的loader，例如 babel-loader
+];
+-->
+</body>
+</html>
