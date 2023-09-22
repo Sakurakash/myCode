@@ -6,6 +6,21 @@
 	<script src="vue.js"></script>
 </head>
 <body>
+<!--
+1.自定义全局过滤器的特点
+在任何一个Vue实例控制的区域中都可以使用
+
+2.自定义局部过滤器的特点
+只能在自定义的那个Vue实例中使用
+
+3.如何自定义一个局部指令
+给创建Vue实例时传递的对象添加
+filters: {
+    // key: 过滤器名称
+    // value: 过滤器处理函数
+    'formatStr': function (value) {}
+}
+-->
 <div id="app">
 	<p>{{ name | format }}</p>
 </div>

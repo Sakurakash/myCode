@@ -29,6 +29,21 @@
 	<script src="vue-router.js"></script>
 </head>
 <body>
+<!--
+1.什么是router-link?
+通过a标签确实能设置URL的hash,但是这种方式并不专业
+在Vue Router中提供了一个专门用于设置hash的标签 router-link
+
+2.router-link特点
+默认情况下Vue会将router-link渲染成a标签, 但是我们可以通过tag来指定到底渲染成什么
+
+3.给router-link设置选中样式
+默认情况下我们可以通过重写router-link-active类名来实现设置选中样式
+但是我们也可以通过linkActiveClass来指定选中样式
+
+4.重定向路由
+{ path: '被重定向值', redirect: '重定向之后的值' }
+-->
 <div id="app">
 	<!--    tag属性改变所渲染标签,to属性指定所渲染组件    -->
 	<router-link to="/one" tag="button">切换到第一个组件</router-link>

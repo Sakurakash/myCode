@@ -29,6 +29,14 @@
 	<script src="vue-router.js"></script>
 </head>
 <body>
+<!--
+1.什么是Watch属性?
+Watch属性是专门用于监听数据变化的, 只要数据发生了变化, 就会自动调用对应数据的回调方法
+
+2.Watch监听路由变化
+Watch属性不仅仅能够监听数据的变化, 还能够监听路由地址的变化
+在企业开发中我们可以通过Watch来判断当前界面是从哪个界面跳转过来的
+-->
 <div id="app">
 	<router-link to="/one" tag="button">切换到第一个组件</router-link>
 	<router-link to="/two" tag="button">切换到第二个组件</router-link>

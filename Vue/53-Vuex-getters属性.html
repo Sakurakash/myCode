@@ -7,6 +7,10 @@
 	<script src="vuex.js"></script>
 </head>
 <body>
+<!--
+1.什么是Vuex的getters?
+Vuex的getters属性就和组件的计算属性一样, 会将数据缓存起来, 只有数据发生变化才会重新计算
+-->
 <div id="app">
     <father></father>
 </div>
@@ -34,23 +38,23 @@
 	Vue.component("father", {
 		template: "#father",
 		store: store,
-		// data: function () {
-		// 	return {
-		// 		msg: "data中的数据"
-		// 	};
-		// },
-		// methods: {
-		// 	test(){
-		// 		console.log("方法被调用");
-		// 		return this.msg + "被使用了";
-		// 	}
-		// },
-		// computed: {
-		// 	test(){
-		// 		console.log("方法被调用");
-		// 		return this.msg + "被使用了";
-		// 	}
-		// }
+		/* data: function () {
+			return {
+				msg: "data中的数据"
+			};
+		},
+		methods: {
+			test(){
+				console.log("方法被调用");
+				return this.msg + "被使用了";
+			}
+		},
+		computed: {
+			test(){
+				console.log("方法被调用");
+				return this.msg + "被使用了";
+			}
+		} */
 	});
     let vue = new Vue({
         el: "#app",

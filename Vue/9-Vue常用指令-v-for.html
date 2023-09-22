@@ -6,11 +6,18 @@
     <script src="vue.js"></script>
 </head>
 <body>
+<!--
+1.什么是v-for指令
+相当于JS中的for in循环, 可以根据数据多次渲染元素
+
+2.v-for特点
+可以遍历 数组, 字符, 数字, 对象
+-->
 <div id="app">
     <ul>
-<!--        <li v-for="(value, index) in list">{{ index }} &#45;&#45; {{ value }}</li>-->
+        <!--<li v-for="(value, index) in list">{{ index }} &#45;&#45; {{ value }}</li>-->
         <li v-for="(value, key) in obj">{{ key }} -- {{ value }}</li>
-<!--        <li v-for="(value, key) in 6">{{ key }} &#45;&#45; {{ value }}</li>-->
+        <!--<li v-for="(value, key) in 6">{{ key }} &#45;&#45; {{ value }}</li>-->
         <li v-for="(value, key) in `abcdefg`">{{ key }} -- {{ value }}</li>
     </ul>
 </div>

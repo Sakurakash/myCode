@@ -6,11 +6,33 @@
 	<script src="vue.js"></script>
 </head>
 <body>
+<!--
+1.什么是v-on指令?
+v-on指令专门用于给元素绑定监听事件
+
+2.v-on指令格式
+v-on:事件名称="回调函数名称"
+@事件名称="回调函数名称"
+
+3.v-on注意点:
+v-on绑定的事件被触发之后, 会去Vue实例对象的methods中查找对应的回调函数
+-->
 <div id="app">
 <!--    <button onclick="alert(`弹出内容on`)">我是按钮</button>-->
 <!--    <button v-on:click="myFn">我是按钮</button>-->
     <button @click="myFn('name', 'age', $event)">我是按钮</button>
 </div>
+<!--
+1.v-on注意点
+1.1绑定回调函数名称的时候, 后面可以写()也可以不写
+v-on:click="myFn"
+v-on:click="myFn()"
+
+1.2可以给绑定的回调函数传递参数
+v-on:click="myFn('lnj', 33)"
+
+1.3如果在绑定的函数中需要用到data中的数据必须加上this
+-->
 <script>
     let vue = new Vue({
         el: "#app",

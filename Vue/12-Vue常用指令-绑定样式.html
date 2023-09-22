@@ -12,6 +12,20 @@
 	<script src="vue.js"></script>
 </head>
 <body>
+<!--
+1.如何通过v-bind给style属性绑定数据
+1.1将数据放到对象中
+:style="{color:'red','font-size':'50px'}"
+1.2将数据放到Model对象中
+obj: {
+    color: 'red',
+    'font-size': '80px',
+}
+
+2.注意点
+2.1如果属性名称包含-, 那么必须用引号括起来
+2.2如果需要绑定Model中的多个对象, 可以放到一个数组中赋值
+-->
 <div id="app">
 <!--    <p :style="{color: `red`, 'font-size': '100px'}">{{ name }}</p>-->
     <p :style="[obj1, obj2]">{{ name }}</p>

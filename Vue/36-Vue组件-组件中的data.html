@@ -6,6 +6,10 @@
 	<script src="vue.js"></script>
 </head>
 <body>
+<!--
+1.自定义组件中的data为什么是一个函数
+因为自定义组件可以复用, 为了保证复用时每个组件的数据都是独立的, 所以必须是一个函数
+-->
 <div id="app">
 	<test></test>
 	<test></test>

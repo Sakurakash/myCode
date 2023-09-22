@@ -40,6 +40,11 @@
 	<script src="vue-router.js"></script>
 </head>
 <body>
+<!--
+1.什么是嵌套路由?
+嵌套路由也称之为子路由, 就是在被切换的组件中又切换其它子组件
+例如: 在one界面中又有两个按钮, 通过这两个按钮进一步切换one中的内容
+-->
 <div id="app">
 	<!--    tag属性改变所渲染标签,to属性指定所渲染组件    -->
 	<router-link to="/one" tag="button">切换到第一个组件</router-link>

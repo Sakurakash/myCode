@@ -12,6 +12,25 @@
 	<script src="vue.js"></script>
 </head>
 <body>
+<!--
+1.自定义全局指令的特点
+在任何一个Vue实例控制的区域中都可以使用
+
+2.自定义局部指令的特点
+只能在自定义的那个Vue实例中使用
+
+3.如何自定义一个局部指令
+给创建Vue实例时传递的对象添加
+directives: {
+    // key: 指令名称
+    // value: 对象
+    'color': {
+        bind: function (el, obj) {
+            el.style.color = obj.value;
+        }
+    }
+}
+-->
 <div id="app1">
 	<p v-color="`red`">我是段落</p>
 </div>

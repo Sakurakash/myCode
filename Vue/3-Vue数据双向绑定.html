@@ -6,17 +6,27 @@
     <script src="vue.js"></script>
 </head>
 <body>
+<!--
+数据双向绑定
+默认情况下Vue只支持数据单向传递 M -> VM -> V
+但是由于Vue是基于MVVM设计模式的, 所以也提供了双向传递的能力
+在<input>、<textarea> 及 <select> 元素上可以用 v-model 指令创建双向数据绑定
+
+注意点: v-model 会忽略所有表单元素的 value、checked、selected 特性的初始值
+而总是将 Vue 实例的数据作为数据来源
+-->
 <div id="app">
     <p>{{ name }}</p>
 <!--    可以通过v-model指令来进行数据双向绑定-->
-    <input type="text" v-model="msg">
+    <input type="text" v-model="custom">
 </div>
 <script>
     let vue = new Vue({
         el: "#app",
         data: {
             name: "sakuraKen",
-            msg: "大华娱乐"
+            msg: "大华娱乐",
+            custom: "大华"
         }
     });
 </script>

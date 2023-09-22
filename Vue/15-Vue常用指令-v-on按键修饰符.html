@@ -12,11 +12,20 @@
 	<script src="vue.js"></script>
 </head>
 <body>
+<!--
+1.什么是按键修饰符
+我们可以通过按键修饰符监听特定按键触发的事件
+例如: 可以监听当前事件是否是回车触发的, 可以监听当前事件是否是ESC触发的等
+
+2.按键修饰符分类
+2.1系统预定义修饰符
+2.2自定义修饰符
+-->
 <div id="app">
 	<!--按下回车键时触发事件	-->
-<!--	<input @keyup.enter="myFn">-->
+	<!--<input @keyup.enter="myFn">-->
 	<!--按下对应keycode键时触发事件	-->
-<!--	<input @keyup.113="myFn">-->
+	<!--<input @keyup.113="myFn">-->
 	<!--按下自定义keycode键时触发事件	-->
 	<input @keyup.myf2="myFn">
 </div>

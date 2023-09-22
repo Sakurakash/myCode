@@ -29,6 +29,14 @@
 	<script src="vue-router.js"></script>
 </head>
 <body>
+<!--
+1.Vue Router传递参数
+只要将Vue Router挂载到了Vue实例对象上, 我们就可以通过vue.$route拿到路由对象
+只要能拿到路由对象, 就可以通过路由对象拿到传递的参数
+
+方式一: 通过URL参数参数(?key=value&key=value), 通过this.$route.query获取
+方式二: 通过占位符传递(路由规则中/:key/:key, 路径中/value/value), 通过this.$route.params获取
+-->
 <div id="app">
 	<router-link to="/one?name=zs&age=33" tag="button">切换到第一个组件</router-link>
 	<router-link to="/two/ls/22" tag="button">切换到第二个组件</router-link>

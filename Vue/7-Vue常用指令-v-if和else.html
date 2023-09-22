@@ -6,6 +6,32 @@
     <script src="vue.js"></script>
 </head>
 <body>
+<!--
+1.什么是v-if指令
+条件渲染: 如果v-if取值是true就渲染元素, 如果不是就不渲染元素
+
+2.v-if特点:
+如果条件不满足根本就不会创建这个元素(重点)
+
+3.v-if注意点
+v-if可以从模型中获取数据
+v-if也可以直接赋值一个表达式
+-->
+<!--
+4.v-else指令
+v-else指令可以和v-if指令配合使用, 当v-if不满足条件时就执行v-else就显示v-else中的内容
+
+5.v-else注意点
+v-else不能单独出现
+v-if和v-else中间不能出现其它内容
+-->
+<!--
+6.v-else-if指令
+v-else-if可以和v-if指令配合使用, 当v-if不满足条件时就依次执行后续v-else-if, 哪个满足就显示哪个
+
+7.v-else-if注意点
+和v-else一样
+-->
 <div id="app">
     <!--从model中获取值-->
     <p v-if="show">我是true</p>

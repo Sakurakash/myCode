@@ -19,6 +19,21 @@
 	<script src="vue-router.js"></script>
 </head>
 <body>
+<!--
+1.什么是Vue Router?
+Vue Router和v-if/v-show一样, 是用来切换组件的显示的
+v-if/v-show是标记来切换(true/false)
+Vue Router用哈希来切换(#/xxx)
+比v-if/v-show强大的是Vue Router不仅仅能够切换组件的显示, 还能够在切换的时候传递参数
+
+2.Vue Router使用
+2.1导入Vue Router
+2.2定义路由规则
+2.3根据路由规则创建路由对象
+2.4将路径对象挂载到Vue实例中
+2.5修改URL哈希值
+2.6通过<router-view>渲染匹配的组件
+-->
 <div id="app">
 	<a href="#/one">切换到第一个组件</a>
 	<router-view></router-view>

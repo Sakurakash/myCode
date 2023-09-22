@@ -17,6 +17,8 @@
 		    console.log(document.querySelector("p").innerHTML);
 		    console.log(document.querySelector("p").innerText);
 	    },
+		// 在调用updated的时候, 表示Vue实例中保存的数据被修改了, 并且界面也同步了修改的数据了
+		// 也就是说: 数据和界面都同步更新之后就会调用updated
 	    updated: function () {
 		    // console.log(this.msg);
 		    // console.log(document.querySelector("p").innerHTML);

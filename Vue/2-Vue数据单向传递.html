@@ -6,6 +6,27 @@
     <script src="vue.js"></script>
 </head>
 <body>
+<!--
+1.MVVM设计模式
+在MVVM设计模式中由3个部分组成
+M : Model      数据模型(保存数据, 处理数据业务逻辑)
+V : View       视图(展示数据, 与用户交互)
+VM: View Model 数据模型和视图的桥梁
+
+MVVM设计模式最大的特点就是支持数据的双向传递
+数据可以从 M -> VM -> V
+也可以从   V -> VM -> M
+
+2.Vue中MVVM的划分
+Vue其实是基于MVVM设计模式的
+被控制的区域: View
+Vue实例对象 : View Model
+实例对象中的data: Model
+
+3.Vue中数据的单向传递
+我们把"数据"交给"Vue实例对象", "Vue实例对象"将数据交给"界面"
+      Model  ->  View Model                       ->   View
+-->
 <!--我们把"数据"交给"vue实例对象",vue实例对象将数据交给"界面"-->
 <!--     model ==> view model         ==>      view-->
 <div id="app">

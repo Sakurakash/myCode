@@ -6,6 +6,20 @@
 	<script src="vue.js"></script>
 </head>
 <body>
+<!--
+1.自定义全局组件特点
+在任何一个Vue实例控制的区域中都可以使用
+
+2.自定义局部组件特点
+只能在自定义的那个Vue实例控制的区域中可以使用
+
+3.如何自定义一个局部组件
+在vue实例中新增components: {}
+在{}中通过key/vue形式注册组件
+components:{
+   abc: {}
+}
+-->
 <div id="app1">
 	<baidu></baidu>
 </div>

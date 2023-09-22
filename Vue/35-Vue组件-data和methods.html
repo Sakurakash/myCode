@@ -6,6 +6,15 @@
 	<script src="vue.js"></script>
 </head>
 <body>
+<!--
+1.自定义组件中的data和methods
+Vue实例控制的区域相当于一个大的组件, 在大组件中我们可以使用data和methods
+而我们自定义的组件也是一个组件, 所以在自定义的组件中也能使用data和methods
+
+2.自定义组件中data注意点
+在自定义组件中不能像在vue实例中一样直接使用data
+而是必须通过返回函数的方式来使用data
+-->
 <div id="app">
 	<button @click.prevent="VueMsg">vue按钮</button>
 	<p>{{ temp }}</p>

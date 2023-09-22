@@ -30,6 +30,14 @@
 	</style>
 </head>
 <body>
+<!--
+1.如何同时给多个元素添加过渡动画
+通过transition可以给单个元素添加过渡动画
+如果想给多个元素添加过渡动画, 那么就必须通过transition-group来添加
+
+transition-group和transition的用法一致, 只是一个是给单个元素添加动画, 一个是给多个元素添加动画而已
+-->
+<!--这里就是MVVM中的View-->
 <div id="app">
 	<form>
 		<input type="text" v-model="person.name">
@@ -57,14 +65,16 @@
             ],
 	        person: {
 				name: ""
-	        }
+	        },
+			id: 4
         },
         // 用于存储监听事件的回调函数;
         methods: {
 			add(){
-				this.person.id = this.persons.length + 1;//给新创建的对象绑定一个独一无二的id;
+				this.person.id = this.id;//给新创建的对象绑定一个独一无二的id;
 				this.persons.unshift(this.person);
 				this.person = {};
+				this.id++;
 			},
 	        del(index){
 		        this.persons.splice(index, 1);

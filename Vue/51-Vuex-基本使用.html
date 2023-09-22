@@ -7,18 +7,32 @@
 	<script src="vuex.js"></script>
 </head>
 <body>
+<!--
+1.当前在企业开发中我们遇到了两个问题:
+1.如果想要在子组件中使用祖先组件中的数据, 那么就必须一层一层的传递(非常麻烦)
+2.兄弟组件之间不能直接传递数据, 如果兄弟组件之间想要传递数据, 那么就必须借助父组件(非常麻烦)
+解决方案: 使用Vuex
+
+2.什么是Vuex?
+vuex 是 Vue 配套的 公共数据管理工具，我们可以将共享的数据保存到 vuex 中，
+方便整个程序中的任何组件都可以获取和修改vuex中保存的公共数据
+
+注意点:
+必须在引入Vue之后再引入Vuex
+只有需要共享的才放到vuex上, 不需要共享的数据依然放到组件自身的data上
+-->
 <div id="app">
 	<grandfather></grandfather>
 </div>
 <template id="grandfather">
 	<div>
-		<p>爷爷中的{{ this.$store.state.msg }}</p>
+		<p>爷爷中的{{ msg }}</p>
 		<father></father>
 	</div>
 </template>
 <template id="father">
 	<div>
-		<p>父亲中的{{ this.$store.state.msg }}</p>
+		<p>父亲中的{{ msg }}</p>
 		<son></son>
 	</div>
 </template>
@@ -37,12 +51,22 @@
 	// 爷爷组件
 	Vue.component("grandfather",{
 		template: "#grandfather",
+		data: function() {
+			return {
+				msg: store.state.msg
+			}
+		},
 		// 祖先元素添加键名store,保存键值Vuex对象,其所有的后代即可使用Vuex对象中的数据;
 		store: store,
 		// 父亲组件
 		components: {
 			"father": {
 				template: "#father",
+				data: function() {
+					return {
+						msg: store.state.msg
+					}
+				},
 				// 儿子组件
 				components: {
 					"son": {

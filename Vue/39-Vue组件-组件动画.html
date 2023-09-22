@@ -32,6 +32,15 @@
 	</style>
 </head>
 <body>
+<!--
+1.如何给组件添加动画?
+给组件添加动画和过去给元素添加动画一样
+如果是单个组件就使用transition
+如果是多个组件就使用transition-group
+
+2.过渡动画注意点
+默认情况下进入动画和离开动画是同时执行的, 如果想一个做完之后再做另一个, 需要指定动画模式
+-->
 <div id="app">
 	<button @click.prevent="toggle">切换</button>
 <!--	mode可以指定过渡动画执行顺序-->

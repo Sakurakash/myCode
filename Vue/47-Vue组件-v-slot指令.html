@@ -6,6 +6,15 @@
 	<script src="vue.js"></script>
 </head>
 <body>
+<!--
+1.什么是v-slot指令?
+v-slot指令是Vue2.6中用于替代slot属性的一个指令
+在Vue2.6之前, 我们通过slot属性告诉Vue当前内容填充到哪一个具名插槽
+从Vue2.6开始, 我们通过v-slot指令告诉Vue当前内容填充到哪一个具名插槽
+
+注意点: v-slot指令只能用在template标签上
+       可以使用#号替代v-slot:
+-->
 <div id="app">
 	<father>
 		<!--<template v-slot:one>

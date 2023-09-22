@@ -34,6 +34,11 @@
 	<script src="vue-router.js"></script>
 </head>
 <body>
+<!--
+1.什么是命名视图?
+命名视图和前面讲解的具名插槽很像, 都是让不同的出口显示不同的内容
+命名视图就是当路由地址被匹配的时候同时指定多个出口, 并且每个出口中显示的内容不同
+-->
 <div id="app">
 	<router-view name="name1"></router-view>
 	<router-view name="name2"></router-view>
