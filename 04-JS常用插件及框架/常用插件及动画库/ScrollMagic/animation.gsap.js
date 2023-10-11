@@ -28,11 +28,11 @@
 (function (root, factory) {
 	if (typeof define === 'function' && define.amd) {
 		// AMD. Register as an anonymous module.
-		define(['ScrollMagic', 'JS常用插件及框架/常用插件及动画库/ScrollMagic/gsap', 'TweenMax', 'TimelineMax'], factory);
+		define(['ScrollMagic', '04-JS常用插件及框架/常用插件及动画库/ScrollMagic/gsap', 'TweenMax', 'TimelineMax'], factory);
 	} else if (typeof exports === 'object') {
 		// CommonJS
 		// Loads whole gsap package onto global scope.
-		var gsap = require("gsap/dist/gsap") || require("JS常用插件及框架/常用插件及动画库/ScrollMagic/gsap");
+		var gsap = require("gsap/dist/gsap") || require("04-JS常用插件及框架/常用插件及动画库/ScrollMagic/gsap");
 
 		// TweenMax/TimelineMax will be global in v2. In v3, they will be on the gsap object
 		factory(require('scrollmagic'), gsap, TweenMax || gsap, TimelineMax || gsap);
