@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>80-JavaScript-联动动画</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+        .top{
+            width: 320px;
+            height: 302px;
+        }
+        .bottom{
+            width: 320px;
+            height: 102px;
+        }
+        .button{
+            display: block;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            right: 8px;
+            top: 8px;
+        }
+    </style>
+    <script src="tools.js"></script>
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <img src="images/top.jpg">
+    </div>
+    <div class="bottom">
+        <img src="images/bottom.jpg">
+    </div>
+    <span class="button"></span>
+</div>
+<script>
+    let btn = document.querySelector(".button");
+    let oBox = document.querySelector(".box");
+    let oTop = document.querySelector(".top");
+    let topHeight = parseInt(getComputedStyle(oTop).height);
+    console.log(topHeight);
+    btn.onclick = function () {
+        easeAnimation(oTop, {"height" : 0}, function () {
+            easeAnimation(oBox, {"width" : 0}, function () {
+                oBox.parentElement.removeChild(oBox);
+            });
+        });
+    }
+</script>
+</body>
+</html>

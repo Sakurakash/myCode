@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>88-JavaScript-事件位置练习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<img src="images/pig.gif">
+<script>
+    let oImg = document.querySelector("img");
+    document.body.onmousemove = function (event) {
+        let marginX = event.clientX;
+        let marginY = event.clientY;
+        oImg.style.marginTop = marginY - parseInt(getComputedStyle(oImg).height)/2 + "px";
+        oImg.style.marginLeft = marginX - parseInt(getComputedStyle(oImg).width)/2 + "px";
+    }
+</script>
+</body>
+</html>

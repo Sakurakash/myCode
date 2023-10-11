@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>58-JavaScript-简易轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            position: relative;
+            width: 670px;
+            border: 1px solid #000;
+            margin: 100px auto;
+        }
+        div>img{
+            vertical-align: bottom;
+        }
+        p{
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            line-height: 60px;
+        }
+        p>span{
+            display: inline-block;
+            width: 30px;
+            height: 60px;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            background-color: rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="images/ad1.jpg">
+    <p>
+        <span>&lt;</span>
+        <span>&gt;</span>
+    </p>
+</div>
+<script>
+    let oImg = document.querySelector("div>img");
+    let i = 1;
+    let leftBtn = document.querySelector("p>span:first-child");
+    let rightBtn = document.querySelector("p>span:last-child");
+    leftBtn.onclick = function () {
+        i--;
+        if (i < 1){
+            i = 5;
+        }
+        oImg.src = `../images/ad${i}.jpg`;
+    }
+    rightBtn.onclick = function () {
+        i++;
+        if (i > 5){
+            i = 1;
+        }
+        oImg.src = `../images/ad${i}.jpg`;
+    }
+</script>
+</body>
+</html>

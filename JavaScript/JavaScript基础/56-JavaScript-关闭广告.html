@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>56-JavaScript-关闭广告</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+        }
+        div>img:first-child{
+            position: absolute;
+            right: 0;
+            top: -17px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="images/close.jpg">
+    <img src="images/sina-ad.png">
+</div>
+<script>
+    let oImgBtn = document.querySelector("div>img:first-child");
+    let oDiv = document.querySelector("div");
+    oImgBtn.onclick = function (){
+        oDiv.parentNode.removeChild(oDiv);
+    }
+</script>
+</body>
+</html>

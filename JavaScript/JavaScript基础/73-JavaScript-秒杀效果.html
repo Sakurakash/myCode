@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>73-JavaScript-秒杀效果</title>
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 190px;
+            height: 270px;
+            margin: 100px auto;
+            background-color: #d00;
+            color: white;
+            text-align: center;
+            padding-top: 40px;
+            box-sizing: border-box;
+        }
+        .box>h3{
+            font-size: 26px;
+        }
+        .box>p:nth-of-type(1){
+            margin-top: 5px;
+            color: rgba(255,255,255,0.5);
+        }
+        .box>i{
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 40px;
+        }
+        .box>p:nth-of-type(2){
+
+        }
+        .box>.time{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .time>div{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #333;
+            position: relative;
+        }
+        .time>.minute{
+            margin: 0 10px;
+        }
+        .time>div::after{
+            content: "";
+            width: 100%;
+            height: 2px;
+            display: block;
+            background-color: #d00;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h1>京东秒杀</h1>
+    <p>FLASH DEALS</p>
+    <i class="iconfont icon-lightningbshandian"></i>
+    <p>本场距离结束还剩</p>
+    <div class="time">
+        <div class="hour">00</div>
+        <div class="minute">00</div>
+        <div class="second">00</div>
+    </div>
+</div>
+<script>
+    let oHour = document.querySelector(".hour");
+    let oMinute = document.querySelector(".minute");
+    let oSecond = document.querySelector(".second");
+    let remDate = new Date("2022-12-3 18:30:00");
+    //先给计时器赋值一次;
+    setTime(remDate);
+    //开启计时器不断赋值;
+    setInterval(function () {
+        setTime(remDate);
+    }, 1000);
+    //获取时间差值;
+    function getDifferTime(remDate, curDate = new Date()) {
+        let differTime = remDate - curDate;
+        let differSecond = differTime/1000;
+        //计算天
+        let date = Math.floor(differSecond/60/60/24);
+        date = (date >= 10 ? date : "0"　+ date);
+        //计算小时
+        let hour = Math.floor(differSecond/60/60%24);
+        hour = hour >= 10 ? hour : "0"　+ hour;
+        //计算分钟
+        let minute = Math.floor(differSecond/60%60);
+        minute = minute >= 10 ? minute : "0"　+ minute;
+        //计算秒
+        let second = Math.floor(differSecond%60);
+        second = second >= 10 ? second : "0"　+ second;
+        return{
+            date : date,
+            hour : hour,
+            minute : minute,
+            second : second
+        }
+    }
+    //重新获取时间差值,给计时器赋值;
+    function setTime(remDate){
+        let {hour, minute, second} = getDifferTime(remDate);
+        oHour.innerText = hour;
+        oMinute.innerText = minute;
+        oSecond.innerText = second;
+    }
+</script>
+</body>
+</html>
