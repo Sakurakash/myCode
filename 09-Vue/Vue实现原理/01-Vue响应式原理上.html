@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>01-Vue响应式原理上</title>
+</head>
+<body>
+<script>
+/*
+1.Vue响应式的原理(数据改变界面就会改变)是什么?
+	实时监听数据变化, 一旦数据发生变化就更新界面
+
+2.Vue是如何实现时时监听数据变化的?
+	通过原生JS的defineProperty方法
+
+3.defineProperty方法的特点
+	可以直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象
+
+4.defineProperty用法
+	obj: 需要操作的对象
+	prop: 需要操作的属性
+	descriptor: 属性描述符
+	Object.defineProperty(obj, prop, descriptor)
+*/
+let obj = {}
+Object.defineProperty(obj, 'name', {
+	// 可以通过value来告诉defineProperty方法新增的属性的取值是什么
+	value: 'lnj',
+	// 默认情况下通过defineProperty新增的属性的取值是不能修改的
+	// 如果想修改, 那么就必须显示的告诉defineProperty方法
+	// writable: true
+	writable: true,
+	// 默认情况下通过defineProperty新增的属性是不能删除的
+	// 如果想上传, 那么就必须显示的告诉defineProperty方法
+	configurable: true,
+	// 默认情况下通过defineProperty新增的属性是不能迭代的
+	// 如果想迭代, 那么就必须显示的告诉defineProperty方法
+	enumerable: true
+})
+
+// 注意点: 默认情况下通过defineProperty新增的属性的取值是不能修改的
+obj.name = 'it666';
+console.log(obj);
+
+// 注意点: 默认情况下通过defineProperty新增的属性是不能删除的
+// delete obj.name
+// console.log(obj);
+
+// 注意点: 默认情况下通过defineProperty新增的属性是不能遍历(迭代的)
+/* for(let key in obj){
+    console.log(key, obj[key]);
+} */
+</script>
+</body>
+</html>

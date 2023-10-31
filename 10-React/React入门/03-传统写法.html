@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>03-传统写法</title>
+</head>
+<body>
+<!--
+需求: 监听按钮点击, 修改div中内容
+-->
+<div class="box"></div>
+<button>按钮</button>
+<script>
+	let message = '知播渔';
+	const oDiv = document.querySelector('.box');
+	oDiv.innerText = message;
+
+	const oBtn = document.querySelector('button');
+	oBtn.onclick = function () {
+		message = 'www.it666.com';
+		// console.log(message);
+		oDiv.innerText = message;
+	}
+</script>
+</body>
+</html>

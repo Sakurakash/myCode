@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>05-React基本使用</title>
+	<script src="react.js"></script>
+	<script src="react-dom.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script>
+	// 1.创建虚拟dom
+	let message = '原文本'
+	let ele = React.createElement('div', null, message)
+
+	// // 2.将虚拟DOM转换成真实DOM
+	const root = ReactDOM.createRoot(document.querySelector('#app'))
+	root.render(ele)
+</script>
+<!--
+1.使用React的几种方式?
+- 自行配置
+    + https://zh-hans.reactjs.org/docs/add-react-to-a-website.html
+- 通过脚手架自动配置
+    + https://zh-hans.reactjs.org/docs/create-a-new-react-app.html
+-->
+<!--
+2.react.js和react-dom.js
+- react.js包含了React和React-Native所共同拥有的核心代码, 主要用于'生成虚拟DOM'
+- react-dom.js包含了针对不同平台渲染不同内容的核心代码, 主要用于'将虚拟DOM转换为真实DOM'
+- 简而言之:
+    + 利用react.js编写界面(创建虚拟DOM)
+    + 利用react-dom.js渲染界面(创建真实DOM)
+-->
+<!--
+3.React如何创建DOM元素?
+- 在React中, 我们不能通过 HTML标签 直接创建DOM元素
+- 在React中, 我们必须先通过react.js创建虚拟DOM, 在通过react-dom.js渲染元素(创建真实DOM)
+
+4.如何通过react.js创建虚拟DOM?
+- 通过React.createElement()方法
+- 该方法接收3个参数
+    + 第一个参数: 需要创建的元素类型或组件
+    + 第二个参数: 被创建出来的元素拥有的属性
+    + 第三个参数: 被创建出来的元素拥有的内容(可以是多个)
+
+https://zh-hans.reactjs.org/docs/react-api.html#createelement
+-->
+<!--
+5.如何通过react-dom.js渲染虚拟DOM?
+- 通过 root.render()方法
+- 该方法接收1个参数
+    + 第一个参数: 被渲染的虚拟DOM
+
+https://zh-hans.reactjs.org/docs/react-dom.html#render
+-->
+<!--
+6.如何给元素添加监听?
+- 给元素添加监听的本质就是给元素添加属性
+  所以可以在createElement()的第二个参数中添加
+- <button onclick="btnClick">按钮</button>
+- React.createElement('button', {onClick: btnClick}, '按钮');
+
+注意事项:
+如果想给元素绑定事件, 那么事件名称必须是驼峰命名
+-->
+</body>
+</html>

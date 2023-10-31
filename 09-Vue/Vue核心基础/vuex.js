@@ -1,3 +1,5 @@
+// noinspection JSAnnotator
+
 /**
  * vuex v3.1.2
  * (c) 2019 Evan You
@@ -334,7 +336,7 @@
     var ref = this;
     var dispatch = ref.dispatch;
     var commit = ref.commit;
-    this.dispatch = function boundDispatch (type, payload) {
+    this.dispatch.bind(this) = function boundDispatch (type, payload) {
       return dispatch.call(store, type, payload)
     };
     this.commit = function boundCommit (type, payload, options) {
@@ -663,7 +665,7 @@
     var noNamespace = namespace === '';
 
     var local = {
-      dispatch: noNamespace ? store.dispatch : function (_type, _payload, _options) {
+      dispatch: noNamespace ? store.dispatch.bind(store) : function (_type, _payload, _options) {
         var args = unifyObjectStyle(_type, _payload, _options);
         var payload = args.payload;
         var options = args.options;
@@ -750,7 +752,7 @@
     var entry = store._actions[type] || (store._actions[type] = []);
     entry.push(function wrappedActionHandler (payload) {
       var res = handler.call(store, {
-        dispatch: local.dispatch,
+        dispatch: local.dispatch.bind(local),
         commit: local.commit,
         getters: local.getters,
         state: local.state,
@@ -954,13 +956,13 @@
         while ( len-- ) args[ len ] = arguments[ len ];
 
         // get dispatch function from store
-        var dispatch = this.$store.dispatch;
+        var dispatch = this.$store.dispatch.bind(this.$store);
         if (namespace) {
           var module = getModuleByNamespace(this.$store, 'mapActions', namespace);
           if (!module) {
             return
           }
-          dispatch = module.context.dispatch;
+          dispatch = module.context.dispatch.bind(module.context);
         }
         return typeof val === 'function'
           ? val.apply(this, [dispatch].concat(args))
