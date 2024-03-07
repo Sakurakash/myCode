@@ -1,0 +1,8 @@
+2020-06-16 12:41:04,818 INFO 17812 [egg-schedule]: register schedule C:\Users\Jonathan_Lee\Desktop\Node_Common\05-EggJS+项目实战\16-EggJS-使用Sequelize\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2020-06-16 12:41:04,818 INFO 17812 [egg-schedule]: register schedule C:\Users\Jonathan_Lee\Desktop\Node_Common\05-EggJS+项目实战\16-EggJS-使用Sequelize\node_modules\egg-logrotator\app\schedule\clean_log.js
+2020-06-16 12:41:04,818 INFO 17812 [egg-schedule]: register schedule C:\Users\Jonathan_Lee\Desktop\Node_Common\05-EggJS+项目实战\16-EggJS-使用Sequelize\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2020-06-16 12:41:04,818 INFO 17812 [egg-schedule]: register schedule C:\Users\Jonathan_Lee\Desktop\Node_Common\05-EggJS+项目实战\16-EggJS-使用Sequelize\app\schedule\updateMessage.js
+2020-06-16 12:41:05,804 INFO 10136 [Timer] C:\Users\Jonathan_Lee\Desktop\Node_Common\05-EggJS+项目实战\16-EggJS-使用Sequelize\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 56934200ms at 2020-06-17 04:30:00.004
+2020-06-16 12:41:05,805 INFO 10136 [Timer] C:\Users\Jonathan_Lee\Desktop\Node_Common\05-EggJS+项目实战\16-EggJS-使用Sequelize\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 40734196ms at 2020-06-17 00:00:00.001
+2020-06-16 12:41:05,805 INFO 10136 [Timer] C:\Users\Jonathan_Lee\Desktop\Node_Common\05-EggJS+项目实战\16-EggJS-使用Sequelize\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 40735195ms at 2020-06-17 00:00:01.000
+2020-06-16 12:41:05,805 INFO 10136 [Timer] C:\Users\Jonathan_Lee\Desktop\Node_Common\05-EggJS+项目实战\16-EggJS-使用Sequelize\app\schedule\updateMessage.js next time will execute after 10000ms at 2020-06-16 12:41:15.805

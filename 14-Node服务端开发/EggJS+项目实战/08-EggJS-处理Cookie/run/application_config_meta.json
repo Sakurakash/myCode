@@ -1,0 +1,293 @@
+{
+  "keys": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\08-EggJS-处理Cookie\\config\\config.default.js",
+  "security": {
+    "csrf": {
+      "ignoreJSON": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\08-EggJS-处理Cookie\\config\\config.default.js",
+      "enable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "type": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "useSession": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieName": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "sessionName": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "headerName": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "bodyName": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "queryName": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "supportedRequests": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "refererWhiteList": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieOptions": {
+        "signed": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js"
+      }
+    },
+    "domainWhiteList": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+    "xframe": {
+      "enable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "ipExceptionList": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js"
+    }
+  },
+  "view": {
+    "mapping": {
+      ".html": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\08-EggJS-处理Cookie\\config\\config.default.js"
+    },
+    "root": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-view\\config\\config.default.js"
+  },
+  "session": {
+    "maxAge": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-session\\config\\config.default.js",
+    "logValue": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-session\\config\\config.default.js"
+  },
+  "helper": {
+    "shtml": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-onerror\\config\\config.default.js",
+    "templatePath": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieDomain": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-watcher\\config\\config.local.js",
+    "eventSources": {
+      "default": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-watcher\\config\\config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-schedule\\config\\config.default.js",
+      "file": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-schedule\\config\\config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-schedule\\config\\config.default.js"
+  },
+  "multipart": {
+    "mode": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "autoFields": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultParamCharset": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileSize": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "allowArrayField": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "tmpdir": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+    "cleanSchedule": {
+      "cron": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js",
+      "disable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-multipart\\config\\config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideIgnore": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-development\\config\\config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-static\\config\\config.default.js"
+  },
+  "ejs": {
+    "root": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-view-ejs\\config\\config.default.js",
+    "cache": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-view-ejs\\config\\config.local.js",
+    "debug": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-view-ejs\\config\\config.default.js",
+    "compileDebug": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-view-ejs\\config\\config.default.js",
+    "delimiter": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-view-ejs\\config\\config.default.js",
+    "strict": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg-view-ejs\\config\\config.default.js"
+  },
+  "env": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "name": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "cookies": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "maxIpsCount": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "maxProxyCount": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "pkg": {
+    "name": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "version": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "description": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "main": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "scripts": {
+      "test": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+      "dev": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+    },
+    "keywords": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "author": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "license": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "dependencies": {
+      "egg": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+      "egg-view-ejs": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "egg-bin": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "baseDir": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "timing": {
+      "slowBootActionMinDuration": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "confusedConfigurations": {
+    "bodyparser": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "cacheControl": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "textLimit": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "strict": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+      "depth": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+    },
+    "onerror": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+  },
+  "logger": {
+    "dir": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "env": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "level": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "enablePerformanceTimer": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "enableFastContextLogger": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "request": {
+      "timeout": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+    },
+    "useHttpClientNext": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+  },
+  "meta": {
+    "enable": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "logging": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "serverTimeout": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+      "port": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+  },
+  "onClientError": "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\node_modules\\egg\\config\\config.default.js"
+}

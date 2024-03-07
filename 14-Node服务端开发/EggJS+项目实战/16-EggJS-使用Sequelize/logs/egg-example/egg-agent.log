@@ -1,0 +1,11 @@
+2020-06-16 12:41:02,576 INFO 10136 [egg-sequelize](3ms) Executed (default): SELECT 1+1 AS result
+2020-06-16 12:41:01,745 INFO 10136 [egg:logger] init all loggers with options: {"dir":"C:\\Users\\Jonathan_Lee\\Desktop\\Node_Common\\05-EggJS+项目实战\\16-EggJS-使用Sequelize\\logs\\egg-example","encoding":"utf8","env":"local","level":"DEBUG","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-06-16 12:41:02,394 INFO 10136 [egg:core] dump config after load, 9ms
+2020-06-16 12:41:02,487 INFO 10136 [egg-watcher] Start watching: ["C:\\Users\\Jonathan_Lee\\Desktop\\Node_Common\\05-EggJS+项目实战\\16-EggJS-使用Sequelize\\app","C:\\Users\\Jonathan_Lee\\Desktop\\Node_Common\\05-EggJS+项目实战\\16-EggJS-使用Sequelize\\config","C:\\Users\\Jonathan_Lee\\Desktop\\Node_Common\\05-EggJS+项目实战\\16-EggJS-使用Sequelize\\mocks","C:\\Users\\Jonathan_Lee\\Desktop\\Node_Common\\05-EggJS+项目实战\\16-EggJS-使用Sequelize\\mocks_proxy","C:\\Users\\Jonathan_Lee\\Desktop\\Node_Common\\05-EggJS+项目实战\\16-EggJS-使用Sequelize\\app.js"]
+2020-06-16 12:41:02,487 INFO 10136 [egg-watcher] Start watching: "C:\\Users\\Jonathan_Lee\\Desktop\\Node_Common\\05-EggJS+项目实战\\16-EggJS-使用Sequelize\\app"
+2020-06-16 12:41:02,488 INFO 10136 [egg-watcher] Start watching: "C:\\Users\\Jonathan_Lee\\Desktop\\Node_Common\\05-EggJS+项目实战\\16-EggJS-使用Sequelize\\config"
+2020-06-16 12:41:02,488 INFO 10136 [egg-watcher] Start watching: "C:\\Users\\Jonathan_Lee\\Desktop\\Node_Common\\05-EggJS+项目实战\\16-EggJS-使用Sequelize\\mocks"
+2020-06-16 12:41:02,488 INFO 10136 [egg-watcher] Start watching: "C:\\Users\\Jonathan_Lee\\Desktop\\Node_Common\\05-EggJS+项目实战\\16-EggJS-使用Sequelize\\mocks_proxy"
+2020-06-16 12:41:02,489 INFO 10136 [egg-watcher] Start watching: "C:\\Users\\Jonathan_Lee\\Desktop\\Node_Common\\05-EggJS+项目实战\\16-EggJS-使用Sequelize\\app.js"
+2020-06-16 12:41:02,492 INFO 10136 [egg-watcher:agent] watcher start success
+2020-06-16 12:41:02,595 INFO 10136 [egg:core] dump config after ready, 12ms

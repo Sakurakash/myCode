@@ -1,0 +1,18 @@
+2024-02-17 22:53:20,264 INFO 43712 [egg-schedule]: register schedule F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2024-02-17 22:53:20,264 INFO 43712 [egg-schedule]: register schedule F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\clean_log.js
+2024-02-17 22:53:20,264 INFO 43712 [egg-schedule]: register schedule F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2024-02-17 22:53:22,460 INFO 12916 [Timer] F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 20197541ms at 2024-02-18 04:30:00.001
+2024-02-17 22:53:22,461 INFO 12916 [Timer] F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 3997539ms at 2024-02-18 00:00:00.000
+2024-02-17 22:53:22,461 INFO 12916 [Timer] F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 3998539ms at 2024-02-18 00:00:01.000
+2024-02-17 22:53:21,326 INFO 45288 [egg-schedule]: register schedule F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2024-02-17 22:53:21,326 INFO 45288 [egg-schedule]: register schedule F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\clean_log.js
+2024-02-17 22:53:21,326 INFO 45288 [egg-schedule]: register schedule F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2024-02-17 22:56:38,883 INFO 47516 [egg-schedule]: register schedule F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2024-02-17 22:56:38,884 INFO 47516 [egg-schedule]: register schedule F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\clean_log.js
+2024-02-17 22:56:38,884 INFO 47516 [egg-schedule]: register schedule F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2024-02-18 00:00:00,020 INFO 47516 [Job#17081856000117044329091047001] F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\clean_log.js executing by app
+2024-02-18 00:00:00,029 INFO 47516 [-/127.0.0.1/-/8ms SCHEDULE /__schedule?path=F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\clean_log.js&type=worker&cron=0%200%20*%20*%20*] [Job#17081856000117044329091047001] F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\clean_log.js execute succeed, used 8ms. 
+2024-02-18 00:00:00,015 INFO 12916 [Timer] F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 86399988ms at 2024-02-19 00:00:00.003
+2024-02-18 00:00:01,012 INFO 47516 [Job#17081856010127044339103390001] F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\rotate_by_file.js executing by app
+2024-02-18 00:00:01,022 INFO 47516 [-/127.0.0.1/-/10ms SCHEDULE /__schedule?path=F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\rotate_by_file.js&type=worker&cron=1%200%200%20*%20*%20*] [Job#17081856010127044339103390001] F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\rotate_by_file.js execute succeed, used 10ms. 
+2024-02-18 00:00:01,013 INFO 12916 [Timer] F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 86399988ms at 2024-02-19 00:00:01.001

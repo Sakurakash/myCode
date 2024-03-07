@@ -1,0 +1,522 @@
+[
+  {
+    "name": "Process Start",
+    "start": 1708181562176,
+    "end": 1708181562491,
+    "duration": 315,
+    "pid": 51612,
+    "index": 0
+  },
+  {
+    "name": "Application Start",
+    "start": 1708181562491,
+    "end": 1708181564228,
+    "duration": 1737,
+    "pid": 51612,
+    "index": 1
+  },
+  {
+    "name": "Load Plugin",
+    "start": 1708181562498,
+    "end": 1708181562504,
+    "duration": 6,
+    "pid": 51612,
+    "index": 2
+  },
+  {
+    "name": "Load Config",
+    "start": 1708181562504,
+    "end": 1708181562513,
+    "duration": 9,
+    "pid": 51612,
+    "index": 3
+  },
+  {
+    "name": "Require(0) config/config.default.js",
+    "start": 1708181562504,
+    "end": 1708181562505,
+    "duration": 1,
+    "pid": 51612,
+    "index": 4
+  },
+  {
+    "name": "Require(1) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/config/config.default.js",
+    "start": 1708181562505,
+    "end": 1708181562505,
+    "duration": 0,
+    "pid": 51612,
+    "index": 5
+  },
+  {
+    "name": "Require(2) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.default.js",
+    "start": 1708181562506,
+    "end": 1708181562506,
+    "duration": 0,
+    "pid": 51612,
+    "index": 6
+  },
+  {
+    "name": "Require(3) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/config/config.default.js",
+    "start": 1708181562506,
+    "end": 1708181562507,
+    "duration": 1,
+    "pid": 51612,
+    "index": 7
+  },
+  {
+    "name": "Require(4) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/config/config.default.js",
+    "start": 1708181562507,
+    "end": 1708181562507,
+    "duration": 0,
+    "pid": 51612,
+    "index": 8
+  },
+  {
+    "name": "Require(5) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/config/config.default.js",
+    "start": 1708181562507,
+    "end": 1708181562507,
+    "duration": 0,
+    "pid": 51612,
+    "index": 9
+  },
+  {
+    "name": "Require(6) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.default.js",
+    "start": 1708181562508,
+    "end": 1708181562508,
+    "duration": 0,
+    "pid": 51612,
+    "index": 10
+  },
+  {
+    "name": "Require(7) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/config/config.default.js",
+    "start": 1708181562508,
+    "end": 1708181562508,
+    "duration": 0,
+    "pid": 51612,
+    "index": 11
+  },
+  {
+    "name": "Require(8) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/config/config.default.js",
+    "start": 1708181562508,
+    "end": 1708181562509,
+    "duration": 1,
+    "pid": 51612,
+    "index": 12
+  },
+  {
+    "name": "Require(9) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/config/config.default.js",
+    "start": 1708181562509,
+    "end": 1708181562509,
+    "duration": 0,
+    "pid": 51612,
+    "index": 13
+  },
+  {
+    "name": "Require(10) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/config/config.default.js",
+    "start": 1708181562509,
+    "end": 1708181562509,
+    "duration": 0,
+    "pid": 51612,
+    "index": 14
+  },
+  {
+    "name": "Require(11) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-static/config/config.default.js",
+    "start": 1708181562510,
+    "end": 1708181562510,
+    "duration": 0,
+    "pid": 51612,
+    "index": 15
+  },
+  {
+    "name": "Require(12) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.default.js",
+    "start": 1708181562510,
+    "end": 1708181562510,
+    "duration": 0,
+    "pid": 51612,
+    "index": 16
+  },
+  {
+    "name": "Require(13) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.default.js",
+    "start": 1708181562510,
+    "end": 1708181562511,
+    "duration": 1,
+    "pid": 51612,
+    "index": 17
+  },
+  {
+    "name": "Require(14) config/config.default.js",
+    "start": 1708181562511,
+    "end": 1708181562511,
+    "duration": 0,
+    "pid": 51612,
+    "index": 18
+  },
+  {
+    "name": "Require(15) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.local.js",
+    "start": 1708181562511,
+    "end": 1708181562512,
+    "duration": 1,
+    "pid": 51612,
+    "index": 19
+  },
+  {
+    "name": "Require(16) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.local.js",
+    "start": 1708181562512,
+    "end": 1708181562512,
+    "duration": 0,
+    "pid": 51612,
+    "index": 20
+  },
+  {
+    "name": "Require(17) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.local.js",
+    "start": 1708181562512,
+    "end": 1708181562512,
+    "duration": 0,
+    "pid": 51612,
+    "index": 21
+  },
+  {
+    "name": "Require(18) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.local.js",
+    "start": 1708181562513,
+    "end": 1708181562513,
+    "duration": 0,
+    "pid": 51612,
+    "index": 22
+  },
+  {
+    "name": "Load extend/application.js",
+    "start": 1708181562514,
+    "end": 1708181562519,
+    "duration": 5,
+    "pid": 51612,
+    "index": 23
+  },
+  {
+    "name": "Require(19) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/app/extend/application.js",
+    "start": 1708181562514,
+    "end": 1708181562514,
+    "duration": 0,
+    "pid": 51612,
+    "index": 24
+  },
+  {
+    "name": "Require(20) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/application.js",
+    "start": 1708181562514,
+    "end": 1708181562515,
+    "duration": 1,
+    "pid": 51612,
+    "index": 25
+  },
+  {
+    "name": "Require(21) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/app/extend/application.js",
+    "start": 1708181562515,
+    "end": 1708181562515,
+    "duration": 0,
+    "pid": 51612,
+    "index": 26
+  },
+  {
+    "name": "Require(22) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/app/extend/application.js",
+    "start": 1708181562516,
+    "end": 1708181562516,
+    "duration": 0,
+    "pid": 51612,
+    "index": 27
+  },
+  {
+    "name": "Require(23) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/app/extend/application.js",
+    "start": 1708181562517,
+    "end": 1708181562517,
+    "duration": 0,
+    "pid": 51612,
+    "index": 28
+  },
+  {
+    "name": "Require(24) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/app/extend/application.js",
+    "start": 1708181562518,
+    "end": 1708181562518,
+    "duration": 0,
+    "pid": 51612,
+    "index": 29
+  },
+  {
+    "name": "Load extend/request.js",
+    "start": 1708181562519,
+    "end": 1708181562521,
+    "duration": 2,
+    "pid": 51612,
+    "index": 30
+  },
+  {
+    "name": "Require(25) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/request.js",
+    "start": 1708181562520,
+    "end": 1708181562521,
+    "duration": 1,
+    "pid": 51612,
+    "index": 31
+  },
+  {
+    "name": "Load extend/response.js",
+    "start": 1708181562522,
+    "end": 1708181562524,
+    "duration": 2,
+    "pid": 51612,
+    "index": 32
+  },
+  {
+    "name": "Require(26) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/response.js",
+    "start": 1708181562522,
+    "end": 1708181562523,
+    "duration": 1,
+    "pid": 51612,
+    "index": 33
+  },
+  {
+    "name": "Load extend/context.js",
+    "start": 1708181562524,
+    "end": 1708181562538,
+    "duration": 14,
+    "pid": 51612,
+    "index": 34
+  },
+  {
+    "name": "Require(27) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/context.js",
+    "start": 1708181562524,
+    "end": 1708181562528,
+    "duration": 4,
+    "pid": 51612,
+    "index": 35
+  },
+  {
+    "name": "Require(28) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/app/extend/context.js",
+    "start": 1708181562528,
+    "end": 1708181562529,
+    "duration": 1,
+    "pid": 51612,
+    "index": 36
+  },
+  {
+    "name": "Require(29) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/app/extend/context.js",
+    "start": 1708181562529,
+    "end": 1708181562529,
+    "duration": 0,
+    "pid": 51612,
+    "index": 37
+  },
+  {
+    "name": "Require(30) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/app/extend/context.js",
+    "start": 1708181562530,
+    "end": 1708181562536,
+    "duration": 6,
+    "pid": 51612,
+    "index": 38
+  },
+  {
+    "name": "Require(31) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/app/extend/context.js",
+    "start": 1708181562536,
+    "end": 1708181562537,
+    "duration": 1,
+    "pid": 51612,
+    "index": 39
+  },
+  {
+    "name": "Require(32) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/context.js",
+    "start": 1708181562537,
+    "end": 1708181562538,
+    "duration": 1,
+    "pid": 51612,
+    "index": 40
+  },
+  {
+    "name": "Load extend/helper.js",
+    "start": 1708181562538,
+    "end": 1708181562547,
+    "duration": 9,
+    "pid": 51612,
+    "index": 41
+  },
+  {
+    "name": "Require(33) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/helper.js",
+    "start": 1708181562539,
+    "end": 1708181562545,
+    "duration": 6,
+    "pid": 51612,
+    "index": 42
+  },
+  {
+    "name": "Require(34) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/helper.js",
+    "start": 1708181562546,
+    "end": 1708181562546,
+    "duration": 0,
+    "pid": 51612,
+    "index": 43
+  },
+  {
+    "name": "Load app.js",
+    "start": 1708181562547,
+    "end": 1708181562560,
+    "duration": 13,
+    "pid": 51612,
+    "index": 44
+  },
+  {
+    "name": "Require(35) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/app.js",
+    "start": 1708181562547,
+    "end": 1708181562547,
+    "duration": 0,
+    "pid": 51612,
+    "index": 45
+  },
+  {
+    "name": "Require(36) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app.js",
+    "start": 1708181562547,
+    "end": 1708181562548,
+    "duration": 1,
+    "pid": 51612,
+    "index": 46
+  },
+  {
+    "name": "Require(37) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/app.js",
+    "start": 1708181562548,
+    "end": 1708181562551,
+    "duration": 3,
+    "pid": 51612,
+    "index": 47
+  },
+  {
+    "name": "Require(38) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/app.js",
+    "start": 1708181562552,
+    "end": 1708181562557,
+    "duration": 5,
+    "pid": 51612,
+    "index": 48
+  },
+  {
+    "name": "Require(39) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/app.js",
+    "start": 1708181562557,
+    "end": 1708181562558,
+    "duration": 1,
+    "pid": 51612,
+    "index": 49
+  },
+  {
+    "name": "Require(40) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/app.js",
+    "start": 1708181562558,
+    "end": 1708181562559,
+    "duration": 1,
+    "pid": 51612,
+    "index": 50
+  },
+  {
+    "name": "Require(41) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/app.js",
+    "start": 1708181562559,
+    "end": 1708181562559,
+    "duration": 0,
+    "pid": 51612,
+    "index": 51
+  },
+  {
+    "name": "Require(42) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/app.js",
+    "start": 1708181562559,
+    "end": 1708181562559,
+    "duration": 0,
+    "pid": 51612,
+    "index": 52
+  },
+  {
+    "name": "Require(43) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/app.js",
+    "start": 1708181562560,
+    "end": 1708181562560,
+    "duration": 0,
+    "pid": 51612,
+    "index": 53
+  },
+  {
+    "name": "Require(44) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-static/app.js",
+    "start": 1708181562560,
+    "end": 1708181562560,
+    "duration": 0,
+    "pid": 51612,
+    "index": 54
+  },
+  {
+    "name": "Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/lib/init.js:15:14",
+    "start": 1708181562565,
+    "end": 1708181564228,
+    "duration": 1663,
+    "pid": 51612,
+    "index": 55
+  },
+  {
+    "name": "Load Service",
+    "start": 1708181562582,
+    "end": 1708181562585,
+    "duration": 3,
+    "pid": 51612,
+    "index": 56
+  },
+  {
+    "name": "Load \"service\" to Context",
+    "start": 1708181562583,
+    "end": 1708181562585,
+    "duration": 2,
+    "pid": 51612,
+    "index": 57
+  },
+  {
+    "name": "Load Middleware",
+    "start": 1708181562585,
+    "end": 1708181562620,
+    "duration": 35,
+    "pid": 51612,
+    "index": 58
+  },
+  {
+    "name": "Load \"middlewares\" to Application",
+    "start": 1708181562585,
+    "end": 1708181562616,
+    "duration": 31,
+    "pid": 51612,
+    "index": 59
+  },
+  {
+    "name": "Load Controller",
+    "start": 1708181562620,
+    "end": 1708181562620,
+    "duration": 0,
+    "pid": 51612,
+    "index": 60
+  },
+  {
+    "name": "Load \"controller\" to Application",
+    "start": 1708181562620,
+    "end": 1708181562620,
+    "duration": 0,
+    "pid": 51612,
+    "index": 61
+  },
+  {
+    "name": "Load Router",
+    "start": 1708181562620,
+    "end": 1708181562622,
+    "duration": 2,
+    "pid": 51612,
+    "index": 62
+  },
+  {
+    "name": "Require(45) app/router.js",
+    "start": 1708181562621,
+    "end": 1708181562621,
+    "duration": 0,
+    "pid": 51612,
+    "index": 63
+  },
+  {
+    "name": "Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-core/lib/egg.js:306:10",
+    "start": 1708181562621,
+    "end": 1708181564221,
+    "duration": 1600,
+    "pid": 51612,
+    "index": 64
+  }
+]

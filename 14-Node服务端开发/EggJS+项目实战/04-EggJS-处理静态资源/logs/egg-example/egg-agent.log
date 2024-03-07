@@ -1,0 +1,59 @@
+2024-02-18 08:27:39,951 INFO 53564 [egg:logger] init all loggers with options: {"dir":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\logs\\egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"agent","localStorage":{"enabled":false}}
+2024-02-18 08:27:40,489 INFO 53564 [egg:core] dump config after load, 535ms
+2024-02-18 08:27:40,516 INFO 53564 [egg-watcher] Start watching: ["F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\app","F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\config","F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\mocks","F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\mocks_proxy","F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\app.js"]
+2024-02-18 08:27:40,516 INFO 53564 [egg-watcher] Start watching: "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\app"
+2024-02-18 08:27:40,516 INFO 53564 [egg-watcher] Start watching: "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\config"
+2024-02-18 08:27:40,516 INFO 53564 [egg-watcher] Start watching: "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\mocks"
+2024-02-18 08:27:40,516 INFO 53564 [egg-watcher] Start watching: "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\mocks_proxy"
+2024-02-18 08:27:40,516 INFO 53564 [egg-watcher] Start watching: "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\app.js"
+2024-02-18 08:27:40,516 INFO 53564 [egg-watcher:agent] watcher start success
+2024-02-18 08:27:42,114 INFO 53564 egg start timeline:
+▇▇▇▇▇ [319ms] - #0 Process Start
+     ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [1178ms] - #1 Application Start
+     ▇ [6ms] - #2 Load Plugin
+     ▇ [9ms] - #3 Load Config
+     ▇ [0ms] - #4 Require(0) config/config.default.js
+     ▇ [1ms] - #5 Require(1) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/config/config.default.js
+     ▇ [0ms] - #6 Require(2) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.default.js
+     ▇ [0ms] - #7 Require(3) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/config/config.default.js
+     ▇ [0ms] - #8 Require(4) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/config/config.default.js
+     ▇ [1ms] - #9 Require(5) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/config/config.default.js
+     ▇ [0ms] - #10 Require(6) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.default.js
+     ▇ [1ms] - #11 Require(7) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/config/config.default.js
+     ▇ [0ms] - #12 Require(8) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/config/config.default.js
+     ▇ [0ms] - #13 Require(9) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/config/config.default.js
+     ▇ [0ms] - #14 Require(10) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/config/config.default.js
+     ▇ [0ms] - #15 Require(11) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-static/config/config.default.js
+     ▇ [1ms] - #16 Require(12) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.default.js
+     ▇ [0ms] - #17 Require(13) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.default.js
+     ▇ [0ms] - #18 Require(14) config/config.default.js
+     ▇ [0ms] - #19 Require(15) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.local.js
+     ▇ [0ms] - #20 Require(16) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.local.js
+     ▇ [0ms] - #21 Require(17) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.local.js
+     ▇ [0ms] - #22 Require(18) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.local.js
+     ▇ [25ms] - #23 Load extend/agent.js
+     ▇ [1ms] - #24 Require(19) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/agent.js
+     ▇ [22ms] - #25 Require(20) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/app/extend/agent.js
+     ▇ [1ms] - #26 Require(21) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/app/extend/agent.js
+     ▇ [16ms] - #27 Load extend/context.js
+     ▇ [4ms] - #28 Require(22) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/context.js
+     ▇ [1ms] - #29 Require(23) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/app/extend/context.js
+      ▇ [0ms] - #30 Require(24) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/app/extend/context.js
+      ▇ [8ms] - #31 Require(25) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/app/extend/context.js
+      ▇ [1ms] - #32 Require(26) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/app/extend/context.js
+      ▇ [0ms] - #33 Require(27) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/context.js
+      ▇ [21ms] - #34 Load agent.js
+      ▇ [1ms] - #35 Require(28) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/agent.js
+      ▇ [0ms] - #36 Require(29) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/agent.js
+      ▇ [2ms] - #37 Require(30) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/agent.js
+      ▇ [1ms] - #38 Require(31) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/agent.js
+      ▇ [16ms] - #39 Require(32) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/agent.js
+      ▇ [0ms] - #40 Require(33) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/agent.js
+      ▇ [0ms] - #41 Require(34) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/agent.js
+               ▇▇▇▇▇▇▇▇▇ [563ms] - #42 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/lib/init.js:15:14
+               ▇▇▇▇▇▇▇▇ [554ms] - #43 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/agent.js:12:9
+               ▇▇▇▇▇▇▇▇▇ [563ms] - #44 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/agent.js:12:9
+2024-02-18 08:27:42,114 INFO 53564 [egg:core] dump config after ready, 2s
+2024-02-18 08:28:21,573 INFO 53564 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\app\\public\\login.html","stat":{"dev":4172145369,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":1688849860328414,"size":713,"blocks":1,"atimeMs":1708216101572.1921,"mtimeMs":1590567619509,"ctimeMs":1706211248197.2803,"birthtimeMs":1706211248193.2795,"atime":"2024-02-18T00:28:21.572Z","mtime":"2020-05-27T08:20:19.509Z","ctime":"2024-01-25T19:34:08.197Z","birthtime":"2024-01-25T19:34:08.193Z"},"remove":false,"isDirectory":false,"isFile":true}
+2024-02-18 08:28:21,584 INFO 53564 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\app\\public\\css\\register.css","stat":{"dev":4172145369,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":1688849860328413,"size":502,"blocks":0,"atimeMs":1708216101584.838,"mtimeMs":1590492739225,"ctimeMs":1706211248184.7512,"birthtimeMs":1706211248181.699,"atime":"2024-02-18T00:28:21.585Z","mtime":"2020-05-26T11:32:19.225Z","ctime":"2024-01-25T19:34:08.185Z","birthtime":"2024-01-25T19:34:08.182Z"},"remove":false,"isDirectory":false,"isFile":true}
+2024-02-18 11:24:12,290 INFO 53564 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\04-EggJS-处理静态资源\\app\\public","stat":{"dev":4172145369,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":1688849860328407,"size":0,"blocks":0,"atimeMs":1708226652289.7312,"mtimeMs":1706211248204.8196,"ctimeMs":1706211248204.8196,"birthtimeMs":1706211248111.804,"atime":"2024-02-18T03:24:12.290Z","mtime":"2024-01-25T19:34:08.205Z","ctime":"2024-01-25T19:34:08.205Z","birthtime":"2024-01-25T19:34:08.112Z"},"remove":false,"isDirectory":true,"isFile":false}

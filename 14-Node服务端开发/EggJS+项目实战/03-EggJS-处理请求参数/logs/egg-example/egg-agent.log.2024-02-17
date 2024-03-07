@@ -1,0 +1,69 @@
+2024-02-17 22:53:19,511 INFO 12916 [egg:logger] init all loggers with options: {"dir":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\logs\\egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"agent","localStorage":{"enabled":false}}
+2024-02-17 22:53:19,822 INFO 12916 [egg:core] dump config after load, 309ms
+2024-02-17 22:53:19,848 INFO 12916 [egg-watcher] Start watching: ["F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app","F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\config","F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\mocks","F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\mocks_proxy","F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app.js"]
+2024-02-17 22:53:19,848 INFO 12916 [egg-watcher] Start watching: "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app"
+2024-02-17 22:53:19,848 INFO 12916 [egg-watcher] Start watching: "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\config"
+2024-02-17 22:53:19,848 INFO 12916 [egg-watcher] Start watching: "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\mocks"
+2024-02-17 22:53:19,848 INFO 12916 [egg-watcher] Start watching: "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\mocks_proxy"
+2024-02-17 22:53:19,848 INFO 12916 [egg-watcher] Start watching: "F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app.js"
+2024-02-17 22:53:19,848 INFO 12916 [egg-watcher:agent] watcher start success
+2024-02-17 22:53:20,626 INFO 12916 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇ [309ms] - #0 Process Start
+          ▇▇▇▇▇▇▇▇▇▇▇▇▇ [421ms] - #1 Application Start
+          ▇ [5ms] - #2 Load Plugin
+          ▇ [7ms] - #3 Load Config
+          ▇ [0ms] - #4 Require(0) config/config.default.js
+          ▇ [1ms] - #5 Require(1) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/config/config.default.js
+          ▇ [0ms] - #6 Require(2) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.default.js
+          ▇ [0ms] - #7 Require(3) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/config/config.default.js
+          ▇ [0ms] - #8 Require(4) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/config/config.default.js
+          ▇ [0ms] - #9 Require(5) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/config/config.default.js
+          ▇ [0ms] - #10 Require(6) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.default.js
+          ▇ [0ms] - #11 Require(7) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/config/config.default.js
+          ▇ [1ms] - #12 Require(8) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/config/config.default.js
+          ▇ [0ms] - #13 Require(9) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/config/config.default.js
+          ▇ [0ms] - #14 Require(10) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/config/config.default.js
+          ▇ [0ms] - #15 Require(11) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-static/config/config.default.js
+          ▇ [0ms] - #16 Require(12) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.default.js
+          ▇ [0ms] - #17 Require(13) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.default.js
+          ▇ [0ms] - #18 Require(14) config/config.default.js
+          ▇ [0ms] - #19 Require(15) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.local.js
+          ▇ [1ms] - #20 Require(16) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.local.js
+          ▇ [0ms] - #21 Require(17) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.local.js
+          ▇ [0ms] - #22 Require(18) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.local.js
+          ▇ [19ms] - #23 Load extend/agent.js
+          ▇ [1ms] - #24 Require(19) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/agent.js
+          ▇ [16ms] - #25 Require(20) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/app/extend/agent.js
+           ▇ [0ms] - #26 Require(21) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/app/extend/agent.js
+           ▇ [14ms] - #27 Load extend/context.js
+           ▇ [4ms] - #28 Require(22) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/context.js
+           ▇ [0ms] - #29 Require(23) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/app/extend/context.js
+           ▇ [0ms] - #30 Require(24) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/app/extend/context.js
+           ▇ [6ms] - #31 Require(25) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/app/extend/context.js
+           ▇ [0ms] - #32 Require(26) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/app/extend/context.js
+           ▇ [1ms] - #33 Require(27) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/context.js
+            ▇ [13ms] - #34 Load agent.js
+            ▇ [0ms] - #35 Require(28) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/agent.js
+            ▇ [0ms] - #36 Require(29) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/agent.js
+            ▇ [1ms] - #37 Require(30) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/agent.js
+            ▇ [1ms] - #38 Require(31) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/agent.js
+            ▇ [9ms] - #39 Require(32) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/agent.js
+            ▇ [0ms] - #40 Require(33) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/agent.js
+            ▇ [0ms] - #41 Require(34) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/agent.js
+            ▇▇▇▇▇▇▇▇▇▇▇ [336ms] - #42 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/lib/init.js:15:14
+            ▇▇▇▇▇▇▇▇▇▇ [330ms] - #43 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/agent.js:12:9
+            ▇▇▇▇▇▇▇▇▇▇▇ [338ms] - #44 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/agent.js:12:9
+2024-02-17 22:53:20,627 INFO 12916 [egg:core] dump config after ready, 775ms
+2024-02-17 22:53:20,836 WARN 12916 [agent:development] reload worker because F:\myCode\14-Node服务端开发\EggJS+项目实战\03-EggJS-处理请求参数\app\router.js change
+2024-02-17 22:53:20,628 INFO 12916 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app\\router.js","stat":{"dev":4172145369,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":1688849860328398,"size":972,"blocks":8,"atimeMs":1708181600571.8867,"mtimeMs":1591780236251,"ctimeMs":1706211248034.0847,"birthtimeMs":1706211248032.0718,"atime":"2024-02-17T14:53:20.572Z","mtime":"2020-06-10T09:10:36.251Z","ctime":"2024-01-25T19:34:08.034Z","birthtime":"2024-01-25T19:34:08.032Z"},"remove":false,"isDirectory":false,"isFile":true}
+2024-02-17 22:53:23,867 WARN 12916 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2024-02-17 22:56:38,360 WARN 12916 [agent:development] reload worker because F:\myCode\14-Node服务端开发\EggJS+项目实战\03-EggJS-处理请求参数\app\controller\home.js change
+2024-02-17 22:56:38,102 INFO 12916 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app\\controller\\home.js~","stat":{"dev":4172145369,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":1407374883628207,"size":667,"blocks":1,"atimeMs":1708181797931.7688,"mtimeMs":1591780236235,"ctimeMs":1706211248047.5369,"birthtimeMs":1708181797931.7688,"atime":"2024-02-17T14:56:37.932Z","mtime":"2020-06-10T09:10:36.235Z","ctime":"2024-01-25T19:34:08.048Z","birthtime":"2024-02-17T14:56:37.932Z"},"remove":false,"isDirectory":false,"isFile":true}
+2024-02-17 22:56:38,102 INFO 12916 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app\\controller","stat":{"dev":4172145369,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":1688849860328399,"size":0,"blocks":0,"atimeMs":1708181798101.6162,"mtimeMs":1708181797931.7688,"ctimeMs":1708181797931.7688,"birthtimeMs":1706211248037.0808,"atime":"2024-02-17T14:56:38.102Z","mtime":"2024-02-17T14:56:37.932Z","ctime":"2024-02-17T14:56:37.932Z","birthtime":"2024-01-25T19:34:08.037Z"},"remove":false,"isDirectory":true,"isFile":false}
+2024-02-17 22:56:38,102 INFO 12916 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app\\controller\\home.js~","stat":{"dev":4172145369,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":1407374883628207,"size":667,"blocks":1,"atimeMs":1708181797931.7688,"mtimeMs":1591780236235,"ctimeMs":1706211248047.5369,"birthtimeMs":1708181797931.7688,"atime":"2024-02-17T14:56:37.932Z","mtime":"2020-06-10T09:10:36.235Z","ctime":"2024-01-25T19:34:08.048Z","birthtime":"2024-02-17T14:56:37.932Z"},"remove":false,"isDirectory":false,"isFile":true}
+2024-02-17 22:56:38,103 INFO 12916 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app\\controller\\home.js~","stat":{"dev":4172145369,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":1407374883628207,"size":667,"blocks":1,"atimeMs":1708181797931.7688,"mtimeMs":1591780236235,"ctimeMs":1706211248047.5369,"birthtimeMs":1708181797931.7688,"atime":"2024-02-17T14:56:37.932Z","mtime":"2020-06-10T09:10:36.235Z","ctime":"2024-01-25T19:34:08.048Z","birthtime":"2024-02-17T14:56:37.932Z"},"remove":false,"isDirectory":false,"isFile":true}
+2024-02-17 22:56:38,155 INFO 12916 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app\\controller\\home.js","stat":{"dev":4172145369,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":1688849860328400,"size":585,"blocks":1,"atimeMs":1708181798150.8013,"mtimeMs":1708181798150.8013,"ctimeMs":1708181798150.8013,"birthtimeMs":1706211248044.5361,"atime":"2024-02-17T14:56:38.151Z","mtime":"2024-02-17T14:56:38.151Z","ctime":"2024-02-17T14:56:38.151Z","birthtime":"2024-01-25T19:34:08.045Z"},"remove":false,"isDirectory":false,"isFile":true}
+2024-02-17 22:56:38,156 INFO 12916 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app\\controller","stat":{"dev":4172145369,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":1688849860328399,"size":0,"blocks":0,"atimeMs":1708181798154.9902,"mtimeMs":1708181798154.9902,"ctimeMs":1708181798154.9902,"birthtimeMs":1706211248037.0808,"atime":"2024-02-17T14:56:38.155Z","mtime":"2024-02-17T14:56:38.155Z","ctime":"2024-02-17T14:56:38.155Z","birthtime":"2024-01-25T19:34:08.037Z"},"remove":false,"isDirectory":true,"isFile":false}
+2024-02-17 22:56:38,156 INFO 12916 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app\\controller\\home.js~","remove":true,"isDirectory":false,"isFile":false}
+2024-02-17 22:56:38,157 INFO 12916 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\03-EggJS-处理请求参数\\app\\controller\\home.js","stat":{"dev":4172145369,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":1688849860328400,"size":585,"blocks":1,"atimeMs":1708181798150.8013,"mtimeMs":1708181798150.8013,"ctimeMs":1708181798150.8013,"birthtimeMs":1706211248044.5361,"atime":"2024-02-17T14:56:38.151Z","mtime":"2024-02-17T14:56:38.151Z","ctime":"2024-02-17T14:56:38.151Z","birthtime":"2024-01-25T19:34:08.045Z"},"remove":false,"isDirectory":false,"isFile":true}
+2024-02-17 22:56:40,166 WARN 12916 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer

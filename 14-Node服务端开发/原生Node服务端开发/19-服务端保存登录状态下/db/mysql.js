@@ -1,5 +1,5 @@
 // 1.导入mysql驱动
-const mysql      = require('19-服务端保存登录状态下/db/mysql');
+const mysql      = require('mysql2');
 const MYSQL_CONFIG = require('../config/db');
 // 2.创建连接对象
 const connection = mysql.createConnection(MYSQL_CONFIG);

@@ -1,0 +1,48 @@
+2024-02-18 08:22:15,411 WARN 12500 [-/127.0.0.1/-/16ms POST /login] missing csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2024-02-18 08:22:15,412 WARN 12500 [-/127.0.0.1/-/17ms POST /login] nodejs.ForbiddenError: missing csrf token
+    at Object.throw (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa\lib\context.js:97:11)
+    at Object.assertCsrf (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-security\app\extend\context.js:165:32)
+    at csrf (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-security\lib\middlewares\csrf.js:37:9)
+    at dispatch (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:42:32)
+    at F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:34:12
+    at dispatch (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:42:32)
+    at session (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-session\index.js:41:13)
+    at dispatch (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:42:32)
+    at overrideMethod (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-override\index.js:38:12)
+    at dispatch (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:42:32)
+message: "missing csrf token"
+pid: 12500
+hostname: Sakuraken-laptop
+
+2024-02-18 08:22:41,724 WARN 12500 [-/127.0.0.1/-/1ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2024-02-18 08:22:41,724 WARN 12500 [-/127.0.0.1/-/1ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa\lib\context.js:97:11)
+    at Object.assertCsrf (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-security\app\extend\context.js:165:32)
+    at csrf (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-security\lib\middlewares\csrf.js:37:9)
+    at dispatch (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:42:32)
+    at F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:34:12
+    at dispatch (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:42:32)
+    at session (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-session\index.js:41:13)
+    at dispatch (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:42:32)
+    at overrideMethod (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-override\index.js:38:12)
+    at dispatch (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:42:32)
+message: "invalid csrf token"
+pid: 12500
+hostname: Sakuraken-laptop
+
+2024-02-18 08:24:18,214 WARN 12500 [-/127.0.0.1/-/1ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2024-02-18 08:24:18,215 WARN 12500 [-/127.0.0.1/-/1ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa\lib\context.js:97:11)
+    at Object.assertCsrf (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-security\app\extend\context.js:165:32)
+    at csrf (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\egg-security\lib\middlewares\csrf.js:37:9)
+    at dispatch (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:42:32)
+    at F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:34:12
+    at dispatch (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:42:32)
+    at session (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-session\index.js:41:13)
+    at dispatch (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:42:32)
+    at overrideMethod (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-override\index.js:38:12)
+    at dispatch (F:\myCode\14-Node服务端开发\EggJS+项目实战\node_modules\koa-compose\index.js:42:32)
+message: "invalid csrf token"
+pid: 12500
+hostname: Sakuraken-laptop
+

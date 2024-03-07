@@ -36,7 +36,6 @@ const initParams = (req, res) =>{
                 params += chunk;
             });
             req.on('end', ()=>{
-                console.log(params);
                 req.body = queryString.parse(params);
                 resolve();
             });
@@ -65,7 +64,7 @@ const initCookieSession = (req, res) =>{
         SESSION_CONTAINER[req.userId] = {};
     }
     req.session = SESSION_CONTAINER[req.userId];
-    console.log(req.session);
+    console.log('before', req.session);
 }
 /**
  * 封装返回数据方法
@@ -99,13 +98,16 @@ const serverHandle = async (req, res)=>{
         let userData = await userRouterHandle(req, res);
         if(userData){
             res.setEnd(res, userData);
+            console.log('after', req.session);
             return
         }
         // 2.3没有匹配到任何路由
-        res.writeHead(404, {
-            'Content-Type':'text/plain; charset=utf-8;'
-        });
-        res.end('404 Not Found');
+        if (!res.headersSent){
+            res.writeHead(404, {
+                'Content-Type':'text/plain; charset=utf-8;'
+            });
+            res.end('404 Not Found');
+        }
     });
 };
 module.exports = serverHandle;

@@ -1,0 +1,36 @@
+2024-02-18 12:12:01,489 ERROR 54908 [-/127.0.0.1/-/6ms GET /news] nodejs.RequestError: connect ECONNREFUSED 127.0.0.1:3000, POST http://127.0.0.1:3000/getNews2 -1 (connected: false, keepalive socket: false, agent status: {"createSocketCount":1,"createSocketErrorCount":0,"closeSocketCount":0,"errorSocketCount":1,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{"127.0.0.1:3000:":1},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+errno: -4078
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 3000
+name: "RequestError"
+data: undefined
+path: "/getNews2"
+status: -1
+headers: {}
+res: {"status":-1,"statusCode":-1,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":4,"keepAliveSocket":false,"requestUrls":["http://127.0.0.1:3000/getNews2"],"timing":null,"remoteAddress":"","remotePort":"","socketHandledRequests":1,"socketHandledResponses":0}
+pid: 54908
+hostname: Sakuraken-laptop
+
+2024-02-18 12:15:18,803 ERROR 54912 [-/127.0.0.1/-/18ms GET /news] nodejs.RequestError: connect ECONNREFUSED 127.0.0.1:3000, POST http://127.0.0.1:3000/getNews -1 (connected: false, keepalive socket: false, agent status: {"createSocketCount":1,"createSocketErrorCount":0,"closeSocketCount":0,"errorSocketCount":1,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{"127.0.0.1:3000:":1},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+errno: -4078
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 3000
+name: "RequestError"
+data: undefined
+path: "/getNews"
+status: -1
+headers: {}
+res: {"status":-1,"statusCode":-1,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":7,"keepAliveSocket":false,"requestUrls":["http://127.0.0.1:3000/getNews"],"timing":null,"remoteAddress":"","remotePort":"","socketHandledRequests":1,"socketHandledResponses":0}
+pid: 54912
+hostname: Sakuraken-laptop
+

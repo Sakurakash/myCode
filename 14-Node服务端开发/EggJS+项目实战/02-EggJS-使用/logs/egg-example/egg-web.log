@@ -1,0 +1,320 @@
+2024-02-17 22:51:12,721 INFO 15736 [egg:logger] init all loggers with options: {"dir":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\02-EggJS-使用\\logs\\egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"application","localStorage":{"enabled":false}}
+2024-02-17 22:51:12,722 INFO 15736 [egg-multipart] stream mode enable
+2024-02-17 22:51:12,792 INFO 15736 [egg-static] starting static serve /public/ -> F:\myCode\14-Node服务端开发\EggJS+项目实战\02-EggJS-使用\app\public
+2024-02-17 22:51:12,794 INFO 15736 [egg-security] use csrf middleware
+2024-02-17 22:51:12,794 INFO 15736 [egg-security] use methodnoallow middleware
+2024-02-17 22:51:12,795 INFO 15736 [egg-security] use noopen middleware
+2024-02-17 22:51:12,795 INFO 15736 [egg-security] use nosniff middleware
+2024-02-17 22:51:12,796 INFO 15736 [egg-security] use xssProtection middleware
+2024-02-17 22:51:12,796 INFO 15736 [egg-security] use xframe middleware
+2024-02-17 22:51:12,797 INFO 15736 [egg-security] use dta middleware
+2024-02-17 22:51:12,797 INFO 15736 [egg-security] compose 7 middlewares into one security middleware
+2024-02-17 22:51:13,320 INFO 15736 [egg:core] dump config after load, 520ms
+2024-02-17 22:51:13,328 INFO 15736 [egg-watcher:application] watcher start success
+2024-02-17 22:51:13,689 INFO 15736 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇▇ [362ms] - #0 Process Start
+            ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [707ms] - #1 Application Start
+            ▇ [6ms] - #2 Load Plugin
+             ▇ [9ms] - #3 Load Config
+             ▇ [0ms] - #4 Require(0) config/config.default.js
+             ▇ [0ms] - #5 Require(1) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/config/config.default.js
+             ▇ [1ms] - #6 Require(2) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.default.js
+             ▇ [0ms] - #7 Require(3) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/config/config.default.js
+             ▇ [0ms] - #8 Require(4) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/config/config.default.js
+             ▇ [0ms] - #9 Require(5) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/config/config.default.js
+             ▇ [1ms] - #10 Require(6) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.default.js
+             ▇ [0ms] - #11 Require(7) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/config/config.default.js
+             ▇ [0ms] - #12 Require(8) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/config/config.default.js
+             ▇ [0ms] - #13 Require(9) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/config/config.default.js
+             ▇ [0ms] - #14 Require(10) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/config/config.default.js
+             ▇ [0ms] - #15 Require(11) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-static/config/config.default.js
+             ▇ [0ms] - #16 Require(12) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.default.js
+             ▇ [0ms] - #17 Require(13) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.default.js
+             ▇ [0ms] - #18 Require(14) config/config.default.js
+             ▇ [0ms] - #19 Require(15) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.local.js
+             ▇ [0ms] - #20 Require(16) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.local.js
+             ▇ [0ms] - #21 Require(17) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.local.js
+             ▇ [0ms] - #22 Require(18) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.local.js
+             ▇ [19ms] - #23 Load extend/application.js
+             ▇ [0ms] - #24 Require(19) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/app/extend/application.js
+             ▇ [1ms] - #25 Require(20) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/application.js
+             ▇ [1ms] - #26 Require(21) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/app/extend/application.js
+              ▇ [1ms] - #27 Require(22) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/app/extend/application.js
+              ▇ [1ms] - #28 Require(23) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/app/extend/application.js
+              ▇ [1ms] - #29 Require(24) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/app/extend/application.js
+              ▇ [3ms] - #30 Load extend/request.js
+              ▇ [1ms] - #31 Require(25) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/request.js
+              ▇ [3ms] - #32 Load extend/response.js
+              ▇ [1ms] - #33 Require(26) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/response.js
+              ▇ [14ms] - #34 Load extend/context.js
+              ▇ [4ms] - #35 Require(27) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/context.js
+              ▇ [1ms] - #36 Require(28) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/app/extend/context.js
+              ▇ [0ms] - #37 Require(29) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/app/extend/context.js
+              ▇ [6ms] - #38 Require(30) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/app/extend/context.js
+              ▇ [0ms] - #39 Require(31) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/app/extend/context.js
+              ▇ [1ms] - #40 Require(32) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/context.js
+              ▇ [13ms] - #41 Load extend/helper.js
+              ▇ [11ms] - #42 Require(33) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/helper.js
+               ▇ [0ms] - #43 Require(34) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/helper.js
+               ▇ [21ms] - #44 Load app.js
+               ▇ [1ms] - #45 Require(35) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/app.js
+               ▇ [1ms] - #46 Require(36) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app.js
+               ▇ [6ms] - #47 Require(37) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/app.js
+               ▇ [8ms] - #48 Require(38) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/app.js
+               ▇ [1ms] - #49 Require(39) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/app.js
+               ▇ [0ms] - #50 Require(40) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/app.js
+               ▇ [1ms] - #51 Require(41) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/app.js
+                ▇ [1ms] - #52 Require(42) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/app.js
+                ▇ [0ms] - #53 Require(43) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/app.js
+                ▇ [0ms] - #54 Require(44) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-static/app.js
+                ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [604ms] - #55 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/lib/init.js:15:14
+                ▇ [3ms] - #56 Load Service
+                ▇ [3ms] - #57 Load "service" to Context
+                 ▇ [51ms] - #58 Load Middleware
+                 ▇ [45ms] - #59 Load "middlewares" to Application
+                  ▇ [1ms] - #60 Load Controller
+                  ▇ [1ms] - #61 Load "controller" to Application
+                  ▇ [2ms] - #62 Load Router
+                  ▇ [1ms] - #63 Require(45) app/router.js
+                  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [523ms] - #64 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-core/lib/egg.js:306:10
+2024-02-17 22:51:13,689 INFO 15736 [egg:core] dump config after ready, 359ms
+2024-02-17 22:51:13,431 INFO 5576 [egg:logger] init all loggers with options: {"dir":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\02-EggJS-使用\\logs\\egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"application","localStorage":{"enabled":false}}
+2024-02-17 22:51:13,431 INFO 5576 [egg-multipart] stream mode enable
+2024-02-17 22:51:13,584 INFO 5576 [egg-static] starting static serve /public/ -> F:\myCode\14-Node服务端开发\EggJS+项目实战\02-EggJS-使用\app\public
+2024-02-17 22:51:13,586 INFO 5576 [egg-security] use csrf middleware
+2024-02-17 22:51:13,586 INFO 5576 [egg-security] use methodnoallow middleware
+2024-02-17 22:51:13,586 INFO 5576 [egg-security] use noopen middleware
+2024-02-17 22:51:13,587 INFO 5576 [egg-security] use nosniff middleware
+2024-02-17 22:51:13,587 INFO 5576 [egg-security] use xssProtection middleware
+2024-02-17 22:51:13,587 INFO 5576 [egg-security] use xframe middleware
+2024-02-17 22:51:13,588 INFO 5576 [egg-security] use dta middleware
+2024-02-17 22:51:13,588 INFO 5576 [egg-security] compose 7 middlewares into one security middleware
+2024-02-17 22:51:13,691 INFO 5576 [egg:core] dump config after load, 101ms
+2024-02-17 22:51:13,699 INFO 5576 [egg-watcher:application] watcher start success
+2024-02-17 22:51:13,731 INFO 5576 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [326ms] - #0 Process Start
+                       ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [342ms] - #1 Application Start
+                       ▇ [6ms] - #2 Load Plugin
+                        ▇ [10ms] - #3 Load Config
+                        ▇ [0ms] - #4 Require(0) config/config.default.js
+                        ▇ [1ms] - #5 Require(1) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/config/config.default.js
+                        ▇ [0ms] - #6 Require(2) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.default.js
+                        ▇ [0ms] - #7 Require(3) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/config/config.default.js
+                        ▇ [0ms] - #8 Require(4) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/config/config.default.js
+                        ▇ [1ms] - #9 Require(5) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/config/config.default.js
+                        ▇ [0ms] - #10 Require(6) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.default.js
+                        ▇ [0ms] - #11 Require(7) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/config/config.default.js
+                        ▇ [0ms] - #12 Require(8) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/config/config.default.js
+                        ▇ [0ms] - #13 Require(9) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/config/config.default.js
+                        ▇ [0ms] - #14 Require(10) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/config/config.default.js
+                        ▇ [0ms] - #15 Require(11) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-static/config/config.default.js
+                        ▇ [0ms] - #16 Require(12) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.default.js
+                        ▇ [1ms] - #17 Require(13) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.default.js
+                        ▇ [0ms] - #18 Require(14) config/config.default.js
+                        ▇ [1ms] - #19 Require(15) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.local.js
+                        ▇ [0ms] - #20 Require(16) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.local.js
+                        ▇ [1ms] - #21 Require(17) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.local.js
+                         ▇ [0ms] - #22 Require(18) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.local.js
+                         ▇ [5ms] - #23 Load extend/application.js
+                         ▇ [0ms] - #24 Require(19) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/app/extend/application.js
+                         ▇ [1ms] - #25 Require(20) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/application.js
+                         ▇ [0ms] - #26 Require(21) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/app/extend/application.js
+                         ▇ [1ms] - #27 Require(22) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/app/extend/application.js
+                         ▇ [0ms] - #28 Require(23) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/app/extend/application.js
+                         ▇ [0ms] - #29 Require(24) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/app/extend/application.js
+                         ▇ [2ms] - #30 Load extend/request.js
+                         ▇ [1ms] - #31 Require(25) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/request.js
+                         ▇ [4ms] - #32 Load extend/response.js
+                         ▇ [1ms] - #33 Require(26) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/response.js
+                         ▇ [13ms] - #34 Load extend/context.js
+                         ▇ [3ms] - #35 Require(27) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/context.js
+                          ▇ [0ms] - #36 Require(28) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/app/extend/context.js
+                          ▇ [0ms] - #37 Require(29) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/app/extend/context.js
+                          ▇ [6ms] - #38 Require(30) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/app/extend/context.js
+                          ▇ [1ms] - #39 Require(31) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/app/extend/context.js
+                          ▇ [0ms] - #40 Require(32) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/context.js
+                          ▇ [9ms] - #41 Load extend/helper.js
+                          ▇ [7ms] - #42 Require(33) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/helper.js
+                           ▇ [0ms] - #43 Require(34) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/helper.js
+                           ▇ [14ms] - #44 Load app.js
+                           ▇ [0ms] - #45 Require(35) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/app.js
+                           ▇ [1ms] - #46 Require(36) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app.js
+                           ▇ [3ms] - #47 Require(37) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/app.js
+                           ▇ [7ms] - #48 Require(38) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/app.js
+                            ▇ [1ms] - #49 Require(39) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/app.js
+                            ▇ [0ms] - #50 Require(40) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/app.js
+                            ▇ [0ms] - #51 Require(41) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/app.js
+                            ▇ [0ms] - #52 Require(42) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/app.js
+                            ▇ [1ms] - #53 Require(43) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/app.js
+                            ▇ [0ms] - #54 Require(44) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-static/app.js
+                            ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [265ms] - #55 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/lib/init.js:15:14
+                              ▇ [2ms] - #56 Load Service
+                              ▇ [2ms] - #57 Load "service" to Context
+                              ▇▇▇▇▇▇▇▇▇ [133ms] - #58 Load Middleware
+                              ▇▇▇▇▇▇▇▇▇ [127ms] - #59 Load "middlewares" to Application
+                                       ▇ [1ms] - #60 Load Controller
+                                       ▇ [1ms] - #61 Load "controller" to Application
+                                       ▇ [1ms] - #62 Load Router
+                                       ▇ [0ms] - #63 Require(45) app/router.js
+                                       ▇▇▇▇▇▇▇ [104ms] - #64 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-core/lib/egg.js:306:10
+2024-02-17 22:51:13,731 INFO 5576 [egg:core] dump config after ready, 30ms
+2024-02-17 22:52:41,059 INFO 58168 [egg:logger] init all loggers with options: {"dir":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\02-EggJS-使用\\logs\\egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"application","localStorage":{"enabled":false}}
+2024-02-17 22:52:41,059 INFO 58168 [egg-multipart] stream mode enable
+2024-02-17 22:52:41,122 INFO 58168 [egg-static] starting static serve /public/ -> F:\myCode\14-Node服务端开发\EggJS+项目实战\02-EggJS-使用\app\public
+2024-02-17 22:52:41,124 INFO 58168 [egg-security] use csrf middleware
+2024-02-17 22:52:41,124 INFO 58168 [egg-security] use methodnoallow middleware
+2024-02-17 22:52:41,124 INFO 58168 [egg-security] use noopen middleware
+2024-02-17 22:52:41,125 INFO 58168 [egg-security] use nosniff middleware
+2024-02-17 22:52:41,125 INFO 58168 [egg-security] use xssProtection middleware
+2024-02-17 22:52:41,125 INFO 58168 [egg-security] use xframe middleware
+2024-02-17 22:52:41,126 INFO 58168 [egg-security] use dta middleware
+2024-02-17 22:52:41,126 INFO 58168 [egg-security] compose 7 middlewares into one security middleware
+2024-02-17 22:52:41,672 INFO 58168 [egg:core] dump config after load, 543ms
+2024-02-17 22:52:41,679 INFO 58168 [egg-watcher:application] watcher start success
+2024-02-17 22:52:42,156 INFO 58168 egg start timeline:
+▇▇▇▇▇▇▇▇▇▇▇ [363ms] - #0 Process Start
+           ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [698ms] - #1 Application Start
+            ▇ [6ms] - #2 Load Plugin
+            ▇ [10ms] - #3 Load Config
+            ▇ [0ms] - #4 Require(0) config/config.default.js
+            ▇ [0ms] - #5 Require(1) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/config/config.default.js
+            ▇ [0ms] - #6 Require(2) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.default.js
+            ▇ [0ms] - #7 Require(3) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/config/config.default.js
+            ▇ [0ms] - #8 Require(4) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/config/config.default.js
+            ▇ [0ms] - #9 Require(5) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/config/config.default.js
+            ▇ [0ms] - #10 Require(6) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.default.js
+            ▇ [0ms] - #11 Require(7) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/config/config.default.js
+            ▇ [0ms] - #12 Require(8) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/config/config.default.js
+            ▇ [0ms] - #13 Require(9) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/config/config.default.js
+            ▇ [0ms] - #14 Require(10) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/config/config.default.js
+            ▇ [0ms] - #15 Require(11) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-static/config/config.default.js
+            ▇ [0ms] - #16 Require(12) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.default.js
+            ▇ [0ms] - #17 Require(13) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.default.js
+            ▇ [0ms] - #18 Require(14) config/config.default.js
+            ▇ [0ms] - #19 Require(15) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.local.js
+            ▇ [0ms] - #20 Require(16) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.local.js
+            ▇ [0ms] - #21 Require(17) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.local.js
+            ▇ [0ms] - #22 Require(18) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.local.js
+            ▇ [5ms] - #23 Load extend/application.js
+            ▇ [0ms] - #24 Require(19) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/app/extend/application.js
+            ▇ [1ms] - #25 Require(20) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/application.js
+            ▇ [1ms] - #26 Require(21) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/app/extend/application.js
+            ▇ [1ms] - #27 Require(22) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/app/extend/application.js
+            ▇ [1ms] - #28 Require(23) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/app/extend/application.js
+            ▇ [1ms] - #29 Require(24) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/app/extend/application.js
+            ▇ [2ms] - #30 Load extend/request.js
+            ▇ [1ms] - #31 Require(25) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/request.js
+            ▇ [2ms] - #32 Load extend/response.js
+            ▇ [1ms] - #33 Require(26) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/response.js
+             ▇ [16ms] - #34 Load extend/context.js
+             ▇ [4ms] - #35 Require(27) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/context.js
+             ▇ [1ms] - #36 Require(28) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/app/extend/context.js
+             ▇ [0ms] - #37 Require(29) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/app/extend/context.js
+             ▇ [7ms] - #38 Require(30) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/app/extend/context.js
+             ▇ [0ms] - #39 Require(31) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/app/extend/context.js
+             ▇ [1ms] - #40 Require(32) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/context.js
+             ▇ [8ms] - #41 Load extend/helper.js
+             ▇ [7ms] - #42 Require(33) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/helper.js
+             ▇ [0ms] - #43 Require(34) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/helper.js
+             ▇ [15ms] - #44 Load app.js
+             ▇ [1ms] - #45 Require(35) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/app.js
+             ▇ [0ms] - #46 Require(36) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app.js
+             ▇ [4ms] - #47 Require(37) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/app.js
+             ▇ [6ms] - #48 Require(38) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/app.js
+              ▇ [1ms] - #49 Require(39) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/app.js
+              ▇ [0ms] - #50 Require(40) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/app.js
+              ▇ [1ms] - #51 Require(41) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/app.js
+              ▇ [0ms] - #52 Require(42) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/app.js
+              ▇ [0ms] - #53 Require(43) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/app.js
+              ▇ [1ms] - #54 Require(44) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-static/app.js
+              ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [617ms] - #55 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/lib/init.js:15:14
+               ▇ [2ms] - #56 Load Service
+               ▇ [2ms] - #57 Load "service" to Context
+               ▇ [42ms] - #58 Load Middleware
+               ▇ [36ms] - #59 Load "middlewares" to Application
+                ▇ [1ms] - #60 Load Controller
+                ▇ [1ms] - #61 Load "controller" to Application
+                ▇ [1ms] - #62 Load Router
+                ▇ [0ms] - #63 Require(45) app/router.js
+                ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [546ms] - #64 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-core/lib/egg.js:306:10
+2024-02-17 22:52:42,157 INFO 58168 [egg:core] dump config after ready, 477ms
+2024-02-17 22:52:42,562 INFO 51612 [egg:logger] init all loggers with options: {"dir":"F:\\myCode\\14-Node服务端开发\\EggJS+项目实战\\02-EggJS-使用\\logs\\egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"enableFastContextLogger":false,"type":"application","localStorage":{"enabled":false}}
+2024-02-17 22:52:42,562 INFO 51612 [egg-multipart] stream mode enable
+2024-02-17 22:52:42,617 INFO 51612 [egg-static] starting static serve /public/ -> F:\myCode\14-Node服务端开发\EggJS+项目实战\02-EggJS-使用\app\public
+2024-02-17 22:52:42,618 INFO 51612 [egg-security] use csrf middleware
+2024-02-17 22:52:42,618 INFO 51612 [egg-security] use methodnoallow middleware
+2024-02-17 22:52:42,618 INFO 51612 [egg-security] use noopen middleware
+2024-02-17 22:52:42,619 INFO 51612 [egg-security] use nosniff middleware
+2024-02-17 22:52:42,619 INFO 51612 [egg-security] use xssProtection middleware
+2024-02-17 22:52:42,619 INFO 51612 [egg-security] use xframe middleware
+2024-02-17 22:52:42,619 INFO 51612 [egg-security] use dta middleware
+2024-02-17 22:52:42,620 INFO 51612 [egg-security] compose 7 middlewares into one security middleware
+2024-02-17 22:52:44,219 INFO 51612 [egg:core] dump config after load, 2s
+2024-02-17 22:52:44,228 INFO 51612 [egg-watcher:application] watcher start success
+2024-02-17 22:52:44,867 INFO 51612 egg start timeline:
+▇▇▇▇▇ [315ms] - #0 Process Start
+     ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [1737ms] - #1 Application Start
+     ▇ [6ms] - #2 Load Plugin
+      ▇ [9ms] - #3 Load Config
+      ▇ [1ms] - #4 Require(0) config/config.default.js
+      ▇ [0ms] - #5 Require(1) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/config/config.default.js
+      ▇ [0ms] - #6 Require(2) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.default.js
+      ▇ [1ms] - #7 Require(3) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/config/config.default.js
+      ▇ [0ms] - #8 Require(4) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/config/config.default.js
+      ▇ [0ms] - #9 Require(5) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/config/config.default.js
+      ▇ [0ms] - #10 Require(6) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.default.js
+      ▇ [0ms] - #11 Require(7) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/config/config.default.js
+      ▇ [1ms] - #12 Require(8) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/config/config.default.js
+      ▇ [0ms] - #13 Require(9) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/config/config.default.js
+      ▇ [0ms] - #14 Require(10) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/config/config.default.js
+      ▇ [0ms] - #15 Require(11) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-static/config/config.default.js
+      ▇ [0ms] - #16 Require(12) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.default.js
+      ▇ [1ms] - #17 Require(13) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.default.js
+      ▇ [0ms] - #18 Require(14) config/config.default.js
+      ▇ [1ms] - #19 Require(15) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/config/config.local.js
+      ▇ [0ms] - #20 Require(16) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/config/config.local.js
+      ▇ [0ms] - #21 Require(17) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/config/config.local.js
+      ▇ [0ms] - #22 Require(18) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/config/config.local.js
+      ▇ [5ms] - #23 Load extend/application.js
+      ▇ [0ms] - #24 Require(19) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/app/extend/application.js
+      ▇ [1ms] - #25 Require(20) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/application.js
+      ▇ [0ms] - #26 Require(21) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/app/extend/application.js
+      ▇ [0ms] - #27 Require(22) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/app/extend/application.js
+      ▇ [0ms] - #28 Require(23) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/app/extend/application.js
+      ▇ [0ms] - #29 Require(24) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/app/extend/application.js
+      ▇ [2ms] - #30 Load extend/request.js
+      ▇ [1ms] - #31 Require(25) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/request.js
+      ▇ [2ms] - #32 Load extend/response.js
+      ▇ [1ms] - #33 Require(26) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/response.js
+      ▇ [14ms] - #34 Load extend/context.js
+      ▇ [4ms] - #35 Require(27) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/context.js
+      ▇ [1ms] - #36 Require(28) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-jsonp/app/extend/context.js
+      ▇ [0ms] - #37 Require(29) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/app/extend/context.js
+      ▇ [6ms] - #38 Require(30) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/app/extend/context.js
+      ▇ [1ms] - #39 Require(31) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-view/app/extend/context.js
+      ▇ [1ms] - #40 Require(32) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/context.js
+      ▇ [9ms] - #41 Load extend/helper.js
+      ▇ [6ms] - #42 Require(33) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app/extend/helper.js
+      ▇ [0ms] - #43 Require(34) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg/app/extend/helper.js
+      ▇ [13ms] - #44 Load app.js
+      ▇ [0ms] - #45 Require(35) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-session/app.js
+      ▇ [1ms] - #46 Require(36) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-security/app.js
+      ▇ [3ms] - #47 Require(37) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-onerror/app.js
+      ▇ [5ms] - #48 Require(38) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-i18n/app.js
+       ▇ [1ms] - #49 Require(39) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/app.js
+       ▇ [1ms] - #50 Require(40) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-schedule/app.js
+       ▇ [0ms] - #51 Require(41) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-multipart/app.js
+       ▇ [0ms] - #52 Require(42) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-development/app.js
+       ▇ [0ms] - #53 Require(43) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-logrotator/app.js
+       ▇ [0ms] - #54 Require(44) F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-static/app.js
+       ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [1663ms] - #55 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-watcher/lib/init.js:15:14
+       ▇ [3ms] - #56 Load Service
+       ▇ [2ms] - #57 Load "service" to Context
+       ▇ [35ms] - #58 Load Middleware
+       ▇ [31ms] - #59 Load "middlewares" to Application
+        ▇ [0ms] - #60 Load Controller
+        ▇ [0ms] - #61 Load "controller" to Application
+        ▇ [2ms] - #62 Load Router
+        ▇ [0ms] - #63 Require(45) app/router.js
+        ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [1600ms] - #64 Before Start in F:/myCode/14-Node服务端开发/EggJS+项目实战/node_modules/egg-core/lib/egg.js:306:10
+2024-02-17 22:52:44,867 INFO 51612 [egg:core] dump config after ready, 638ms

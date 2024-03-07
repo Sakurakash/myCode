@@ -1,0 +1,14 @@
+2020-06-16 12:41:04,762 INFO 17812 [egg:logger] init all loggers with options: {"dir":"C:\\Users\\Jonathan_Lee\\Desktop\\Node_Common\\05-EggJS+项目实战\\16-EggJS-使用Sequelize\\logs\\egg-example","encoding":"utf8","env":"local","level":"DEBUG","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-16 12:41:04,819 INFO 17812 [egg-multipart] stream mode enable
+2020-06-16 12:41:05,649 INFO 17812 [egg-static] starting static serve /public/ -> C:\Users\Jonathan_Lee\Desktop\Node_Common\05-EggJS+项目实战\16-EggJS-使用Sequelize\app\public
+2020-06-16 12:41:05,654 INFO 17812 [egg-security] use csrf middleware
+2020-06-16 12:41:05,657 INFO 17812 [egg-security] use methodnoallow middleware
+2020-06-16 12:41:05,658 INFO 17812 [egg-security] use noopen middleware
+2020-06-16 12:41:05,661 INFO 17812 [egg-security] use nosniff middleware
+2020-06-16 12:41:05,663 INFO 17812 [egg-security] use xssProtection middleware
+2020-06-16 12:41:05,664 INFO 17812 [egg-security] use xframe middleware
+2020-06-16 12:41:05,665 INFO 17812 [egg-security] use dta middleware
+2020-06-16 12:41:05,665 INFO 17812 [egg-security] compose 7 middlewares into one security middleware
+2020-06-16 12:41:05,684 INFO 17812 [egg:core] dump config after load, 11ms
+2020-06-16 12:41:05,747 INFO 17812 [egg-watcher:application] watcher start success
+2020-06-16 12:41:05,794 INFO 17812 [egg:core] dump config after ready, 16ms
